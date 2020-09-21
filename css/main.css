@@ -3524,10 +3524,10 @@ header .marca img {
 
 .menu-logado .icon-user {
   display: inline-block;
-  height: 3rem;
-  padding: 5px;
+  height: 3.2rem;
+  padding: 4px;
   background-color: #FFFFFF;
-  border: 1px solid #ffd201;
+  border: 2px solid #ffd201;
   border-radius: 50%;
   margin-right: 1rem;
 }
@@ -3545,6 +3545,7 @@ header .marca img {
 
 .menu-logado b {
   font-weight: 900;
+  color: #ffd201;
 }
 
 .menu-logado input {
@@ -3630,7 +3631,7 @@ header .marca img {
 .menu-logado .user-dropdown__list a {
   color: #212121;
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1rem 3rem;
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.2em;
@@ -5565,16 +5566,6 @@ header .marca img {
   animation: mostrarTabContent .3s ease-in;
 }
 
-.tabs_userdata .rd_userdata_tabs:checked ~ .tab-content__clubes {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  animation: mostrarTabContent .3s ease-in;
-}
-
 .tabs_userdata .li-tabs {
   display: flex;
   flex-direction: row;
@@ -5593,6 +5584,10 @@ header .marca img {
   }
 }
 
+.tabs_userdata .li-tabs .container-btn {
+  text-align: right;
+}
+
 .tabs_userdata .tab-content {
   width: 100%;
   display: none;
@@ -5607,10 +5602,11 @@ header .marca img {
   margin-top: 0;
   margin-bottom: 1.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  align-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 575px) {
@@ -5619,26 +5615,18 @@ header .marca img {
   }
 }
 
-.tabs_userdata .tab-content .codigo-postal-pt {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.tabs_userdata .tab-content .codigo-postal-pt p {
+.tabs_userdata .tab-content .localidade-postal {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.2em;
   color: #212121;
   margin-bottom: 0rem;
+  padding: .75rem .5rem;
 }
 
 @media (max-width: 767px) {
-  .tabs_userdata .tab-content .codigo-postal-pt p {
+  .tabs_userdata .tab-content .localidade-postal {
     margin: 1.5rem 0;
     padding: 0 .5rem;
   }
@@ -5799,10 +5787,24 @@ header .marca img {
   line-height: 1.2em;
   color: #212121;
   margin-bottom: 3rem;
+  text-align: right;
 }
 
 .tabs_userdata .tab-content .termos-condicoes strong {
   font-weight: 900;
+}
+
+.tabs_userdata .tab-content .termos-condicoes .checkbox-periodo {
+  justify-content: flex-end;
+}
+
+.tabs_userdata .tab-content .termos-condicoes .checkbox-periodo__item .cbx {
+  justify-content: flex-end;
+}
+
+.tabs_userdata .tab-content .termos-condicoes .checkbox-periodo__item .cbx p {
+  width: 80%;
+  text-align: right;
 }
 
 @media (max-width: 575px) {

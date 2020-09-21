@@ -102,15 +102,18 @@
     @include flex(column, flex-start, center, center);
     animation: mostrarTabContent .3s ease-in;
   }
-  .rd_userdata_tabs:checked~.tab-content__clubes {
-    @include flex(row, flex-start, flex-start, flex-start);
-    flex-wrap: wrap;
-    animation: mostrarTabContent .3s ease-in;
-  }
+  // .rd_userdata_tabs:checked~.tab-content__clubes {
+  //   @include flex(row, flex-start, flex-start, flex-start);
+  //   flex-wrap: wrap;
+  //   animation: mostrarTabContent .3s ease-in;
+  // }
   .li-tabs {
     @include flex(row, flex-start, flex-start, flex-start);
     @include xs {
       @include flex(column, flex-start, flex-start, flex-start);
+    }
+    .container-btn{
+      text-align: right;
     }
   }
   .tab-content {
@@ -120,24 +123,21 @@
     form {
       margin-top: 0;
       margin-bottom: 1.5rem;
-      @include flex(column, center, flex-end, flex-end);
+      @include flex(row, flex-start, flex-start, flex-start);
+      flex-wrap: wrap;
       @include xs {
         padding: 1.5rem 0;
       }
     }
-    .codigo-postal-pt {
-      @include flex(row, flex-start, center, center);
-      margin-bottom: 1.5rem;
-      p {
-        width: 100%;
-        @include font(1.6rem, 300, 1.2em);
-        color: $primary-01;
-        margin-bottom: 0rem;
-        // padding: 0 .5rem;
-        @include sm {
-          margin: 1.5rem 0;
-          padding: 0 .5rem;
-        }
+    .localidade-postal {
+      width: 100%;
+      @include font(1.6rem, 300, 1.2em);
+      color: $primary-01;
+      margin-bottom: 0rem;
+      padding:.75rem .5rem;
+      @include sm {
+        margin: 1.5rem 0;
+        padding: 0 .5rem;
       }
     }
     .clube__socio {
@@ -235,8 +235,21 @@
       @include font(1.3rem, 300, 1.2em);
       color: $primary-01;
       margin-bottom: 3rem;
+      text-align: right;
       strong {
         font-weight: 900;
+      }
+      .checkbox-periodo{
+        justify-content: flex-end;
+        &__item{
+          .cbx{
+            justify-content: flex-end;
+            p{
+              width:80%;
+              text-align: right;
+            }
+          }
+        }
       }
     }
     @include xs {

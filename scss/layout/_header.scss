@@ -110,10 +110,10 @@ header {
 
   .icon-user {
     display: inline-block;
-    height: 3rem;
-    padding: 5px;
+    height: 3.2rem;
+    padding: 4px;
     background-color: $white-01;
-    border: 1px solid $secondary-01;
+    border: 2px solid $secondary-01;
     border-radius: 50%;
     margin-right: 1rem;
 
@@ -129,6 +129,7 @@ header {
 
   b {
     font-weight: 900;
+    color:$secondary-01;
   }
 
   input {
@@ -201,7 +202,7 @@ header {
     a {
       color: $primary-01;
       display: inline-block;
-      padding: 1rem 1.5rem;
+      padding: 1rem 3rem;
       @include font(1.2rem, 700, 1.2em);
       transition: all .3s ease-in;
 
