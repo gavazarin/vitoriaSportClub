@@ -19,44 +19,50 @@
     display: block;
     cursor: pointer;
     text-align: center;
-    border: 2px solid $primary-01;
-    color: $black-01;
+    border: 2px solid $gray-02;
+    background-color: #ececec;
+    color: $gray-02;
     margin: 0;
-  }
-
-  .tab-pane {
-    height: auto;
-    width: 100%;
-    background-color: #fff;
-    padding: 1.5rem 3rem;
-    margin-bottom: 3rem;
-
-    @include sm {
-      padding: 1.5rem;
-    }
-
-    h2 {
-      width: 75%;
-      margin: 1rem 0 2rem;
-      color: $secondary-01;
-    }
-
-    h3 {
-      width: 80%;
-    }
-
-    form {
-      width: 80%;
-      margin: 0 auto;
-
-      @include md {
-        width: 100%;
-      }
-    }
+    transition: all .3s ease-out;
   }
 
   .tab-content>.active {
     @include flex(column, flex-start, center, center);
+  }
+}
+
+
+.tab-content {
+  width: 100%;
+}
+
+.tab-pane {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5rem 3rem;
+  margin-bottom: 3rem;
+
+  @include sm {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    width: 100%;
+    margin: 1rem 0 2rem;
+  }
+
+  h3 {
+    width: 80%;
+  }
+
+  form {
+    width: 75%;
+    margin: 0 auto;
+
+    @include md {
+      width: 100%;
+    }
   }
 }
 
@@ -67,8 +73,9 @@
 .nav-tabs .nav-item.open .nav-link:focus,
 .nav-tabs .nav-item.open .nav-link:hover {
   color: $primary-01;
-  border: 2px solid $secondary-02;
-  border-bottom: none;
+  border: none;
+  border-bottom: 2px solid $secondary-02;
+  transition: all .3s ease-out;
 }
 
 
@@ -144,7 +151,6 @@
 
 .userfrommember {
   width: 100%;
-  margin-top: 1.5rem;
   @include flex(column, flex-start, center, flex-start);
 }
 

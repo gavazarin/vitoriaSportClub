@@ -2771,6 +2771,315 @@ table .btn {
   }
 }
 
+.nav__ligas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.nav__ligas li {
+  margin: 0 .5rem;
+}
+
+.pc-tab {
+  width: 100%;
+}
+
+.pc-tab input {
+  display: none;
+}
+
+.pc-tab section .tab1,
+.pc-tab section .tab2,
+.pc-tab section .tab3,
+.pc-tab section .tab4 {
+  display: none;
+}
+
+#tab1:checked ~ section .tab1,
+#tab2:checked ~ section .tab2,
+#tab3:checked ~ section .tab3,
+#tab4:checked ~ section .tab4 {
+  display: block;
+  animation: entrar-tab-content .3s ease-in;
+}
+
+#tab1:checked ~ nav .tab1 label img,
+#tab2:checked ~ nav .tab2 label img,
+#tab3:checked ~ nav .tab3 label img,
+#tab4:checked ~ nav .tab4 label img {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+#tab1:checked ~ nav .tab1 label:before,
+#tab2:checked ~ nav .tab2 label:before,
+#tab3:checked ~ nav .tab3 label:before,
+#tab4:checked ~ nav .tab4 label:before {
+  transform: scale(1, 1);
+  transition: all .3s ease-in;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+}
+
+label img {
+  height: 4.2rem;
+  opacity: .7;
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  label img {
+    height: 3rem;
+  }
+}
+
+label:before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #ffd201;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -1rem;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: 0 0;
+  transition: all .3s ease-in;
+}
+
+label:hover img {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.jornada {
+  width: 100%;
+  color: #212121;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1em;
+  padding-left: 1rem;
+}
+
+.jogos {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .jogos {
+    margin-bottom: 1.5rem;
+  }
+  .jogos:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.jogos__item {
+  padding: 0 .5rem;
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .jogos__item {
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
+}
+
+.jogos__item--infos {
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+  overflow-y: hidden;
+}
+
+@media (max-width: 992px) {
+  .jogos__item--infos {
+    margin-bottom: .5rem;
+  }
+}
+
+.jogos__item--infos li {
+  padding: 0 .5rem;
+  text-align: center;
+}
+
+.jogos__item--infos .div-hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  background-color: rgba(3, 39, 90, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 1rem;
+  transform: translateY(100%);
+  transition: all .3s ease-out;
+}
+
+@media (max-width: 992px) {
+  .jogos__item--infos .div-hover {
+    display: none;
+  }
+}
+
+.jogos__item--infos:hover .div-hover {
+  transform: translateY(0);
+  transition: all .3s ease-out;
+}
+
+.jogos .infos__team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.jogos .infos__team img {
+  height: 3.5rem;
+  margin-bottom: .5rem;
+}
+
+.jogos .infos__team span {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1em;
+  color: #000000;
+}
+
+.jogos .infos__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #000000;
+}
+
+.jogos .infos__list--liga, .jogos .infos__list--local {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.jogos .infos__list--data {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: .5rem 0;
+}
+
+.jogos .div-btnMobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .jogos .div-btnMobile {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+.jogos__verMais {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .jogos__verMais {
+    margin: 1.5rem 0;
+  }
+}
+
+.no-games {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 3rem 0;
+}
+
+.no-games img {
+  width: 8rem;
+  height: auto;
+  margin: 0 .5rem;
+}
+
+.no-games h1 {
+  width: 25%;
+  color: #ffd201;
+  margin: 0 .5rem;
+  text-align: center;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .no-games h1 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  .no-games h1 {
+    width: 65%;
+  }
+}
+
+.pag_comprar-ingresso .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@keyframes entrar-tab-content {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .div-wait,
 .div-error {
   width: 100%;
@@ -2830,12 +3139,6 @@ table .btn {
 
 .estruturaPadrao .mainContent {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
 }
 
 footer {
@@ -3736,44 +4039,11 @@ header .marca img {
   display: block;
   cursor: pointer;
   text-align: center;
-  border: 2px solid #212121;
-  color: #000000;
+  border: 2px solid #707070;
+  background-color: #ececec;
+  color: #707070;
   margin: 0;
-}
-
-.nav-tabs .tab-pane {
-  height: auto;
-  width: 100%;
-  background-color: #fff;
-  padding: 1.5rem 3rem;
-  margin-bottom: 3rem;
-}
-
-@media (max-width: 767px) {
-  .nav-tabs .tab-pane {
-    padding: 1.5rem;
-  }
-}
-
-.nav-tabs .tab-pane h2 {
-  width: 75%;
-  margin: 1rem 0 2rem;
-  color: #ffd201;
-}
-
-.nav-tabs .tab-pane h3 {
-  width: 80%;
-}
-
-.nav-tabs .tab-pane form {
-  width: 80%;
-  margin: 0 auto;
-}
-
-@media (max-width: 992px) {
-  .nav-tabs .tab-pane form {
-    width: 100%;
-  }
+  transition: all .3s ease-out;
 }
 
 .nav-tabs .tab-content > .active {
@@ -3784,13 +4054,52 @@ header .marca img {
   align-content: center;
 }
 
+.tab-content {
+  width: 100%;
+}
+
+.tab-pane {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5rem 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .tab-pane {
+    padding: 1.5rem;
+  }
+}
+
+.tab-pane h2 {
+  width: 100%;
+  margin: 1rem 0 2rem;
+}
+
+.tab-pane h3 {
+  width: 80%;
+}
+
+.tab-pane form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .tab-pane form {
+    width: 100%;
+  }
+}
+
 .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover,
 .nav-tabs .nav-item.open .nav-link,
 .nav-tabs .nav-item.open .nav-link:focus,
 .nav-tabs .nav-item.open .nav-link:hover {
   color: #212121;
-  border: 2px solid #f1c500;
-  border-bottom: none;
+  border: none;
+  border-bottom: 2px solid #f1c500;
+  transition: all .3s ease-out;
 }
 
 .modal-msg {
@@ -3874,7 +4183,6 @@ header .marca img {
 
 .userfrommember {
   width: 100%;
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -3977,6 +4285,437 @@ header .marca img {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+.proximos-jogos {
+  margin-bottom: 3rem;
+}
+
+.proximos-jogos h1 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.proximos-jogos .jornada {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.proximos-jogos .jogos {
+  width: 49%;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .proximos-jogos .jogos {
+    width: 100%;
+  }
+}
+
+.vantagens-socio-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.vantagens-socio-container .sou-socio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background: #212121;
+  height: 35rem;
+  padding: 3rem 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.vantagens-socio-container .sou-socio h1,
+.vantagens-socio-container .sou-socio p {
+  color: #FFFFFF;
+}
+
+.vantagens-socio-container .sou-socio p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.vantagens-socio-container .sou-socio i {
+  display: inline-block;
+  width: 10rem;
+}
+
+.vantagens-socio-container .vantagens {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .vantagens-socio-container .vantagens {
+    margin-top: 3rem;
+  }
+}
+
+.vantagens-socio-container .vantagens h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.vantagens-socio-container .vantagens__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+@media (max-width: 575px) {
+  .vantagens-socio-container .vantagens__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.vantagens-socio-container .vantagens li {
+  width: 32%;
+  height: 22rem;
+  position: relative;
+  border: 2px solid #212121;
+  border-radius: 1rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.vantagens-socio-container .vantagens li i {
+  width: 40%;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.vantagens-socio-container .vantagens li h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.4em;
+  color: #0a0a0a;
+  text-align: center;
+  text-transform: initial;
+}
+
+.vantagens-socio-container .vantagens li .only-mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .vantagens-socio-container .vantagens li {
+    height: auto;
+  }
+  .vantagens-socio-container .vantagens li h2 {
+    height: 5rem;
+  }
+  .vantagens-socio-container .vantagens li .only-mobile {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 575px) {
+  .vantagens-socio-container .vantagens li {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  .vantagens-socio-container .vantagens li i {
+    width: 40%;
+  }
+  .vantagens-socio-container .vantagens li h2 {
+    height: auto;
+    margin: 1.5rem;
+    font-size: 2rem;
+  }
+  .vantagens-socio-container .vantagens li .only-mobile {
+    display: block;
+  }
+}
+
+.vantagens-socio-container .vantagens li:hover .vantagens__hover {
+  transform: translateY(0);
+  transition: all .3s ease-in-out;
+}
+
+.vantagens-socio-container .vantagens__hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  background-color: rgba(2, 28, 64, 0.9);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+  transform: translateY(100%);
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .vantagens-socio-container .vantagens__hover {
+    display: none;
+  }
+}
+
+.container-img-clube {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.container-img-clube a {
+  display: inline-block;
+}
+
+.container-img-clube img {
+  width: 100%;
+  height: auto;
+}
+
+.redes-sociais {
+  width: 100%;
+  position: relative;
+  margin-top: 4.5rem;
+  flex-wrap: wrap;
+}
+
+.redes-sociais h1 {
+  margin-bottom: .5rem;
+}
+
+.redes-sociais .hashtags_clubes {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-style: italic;
+  text-transform: initial;
+  margin-bottom: 1rem;
+}
+
+.redes-sociais__container {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: .5rem;
+}
+
+@media (max-width: 767px) {
+  .redes-sociais__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.redes-sociais .twitter-clube {
+  width: 40%;
+  height: 35rem;
+  overflow-y: scroll;
+}
+
+.redes-sociais .twitter-clube::-webkit-scrollbar {
+  width: 1.2rem;
+  margin-left: .5rem;
+}
+
+.redes-sociais .twitter-clube::-webkit-scrollbar-track {
+  background: #AFAFAF;
+  border-radius: .5rem;
+}
+
+.redes-sociais .twitter-clube::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: .5rem;
+}
+
+.redes-sociais .twitter-clube::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+}
+
+@media (max-width: 767px) {
+  .redes-sociais .twitter-clube {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .redes-sociais .twitter-clube {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+.redes-sociais .youtube-clube {
+  width: 59%;
+  margin-left: 1%;
+}
+
+@media (max-width: 767px) {
+  .redes-sociais .youtube-clube {
+    width: 90%;
+  }
+}
+
+@media (max-width: 575px) {
+  .redes-sociais .youtube-clube {
+    width: 100%;
+  }
+}
+
+.sidebar__social-media {
+  width: 100%;
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #212121;
+}
+
+.sidebar__social-media:before {
+  content: '';
+  width: 60%;
+  height: 1px;
+  background-color: #000000;
+  opacity: .2;
+  position: absolute;
+  top: 0;
+  right: 20%;
+  bottom: auto;
+  left: auto;
+}
+
+.sidebar__social-media .clube-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 1.5rem 0;
+}
+
+.sidebar__social-media .clube-social-media li {
+  margin: 0 .5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.sidebar__social-media .clube-social-media li strong {
+  font-weight: 900;
+}
+
+.sidebar__social-media .clube-social-media img {
+  width: auto;
+  height: 4rem;
+}
+
+.sidebar__social-media .links-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 1.5rem 0;
+}
+
+.sidebar__social-media .links-social-media li {
+  margin: 0 1rem;
+}
+
+.sidebar__social-media .icon-social-media {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.sidebar__social-media .icon-social-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: .5rem;
+}
+
+@media (max-width: 992px) {
+  .sidebar__social-media .icon-social-media {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1.5rem;
+  }
+}
+
+.sidebar__social-media .icon-social-media:hover {
+  transform: scale(0.9);
+  transition: all .3s ease-in-out;
+}
+
+.last-game,
+.classificacao {
+  width: 100%;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.last-game h1,
+.classificacao h1 {
+  margin-top: 0;
+}
+
+.last-game .infos__list--liga,
+.classificacao .infos__list--liga {
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.4em;
+}
+
+.last-game .infos__list--placar,
+.classificacao .infos__list--placar {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.4em;
 }
 
 .load-screen {

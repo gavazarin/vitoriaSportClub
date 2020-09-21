@@ -1,0 +1,223 @@
+.nav__ligas {
+  @include flex(row, center, center, center);
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  li {
+    margin: 0 .5rem;
+  }
+}
+
+.pc-tab {
+  width: 100%;
+  input {
+    display: none;
+  }
+  section {
+    .tab1,
+    .tab2,
+    .tab3,
+    .tab4 {
+      display: none;
+    }
+  }
+}
+
+#tab1:checked~section .tab1,
+#tab2:checked~section .tab2,
+#tab3:checked~section .tab3,
+#tab4:checked~section .tab4 {
+  display: block;
+  animation: entrar-tab-content .3s ease-in;
+}
+
+#tab1:checked~nav .tab1 label,
+#tab2:checked~nav .tab2 label,
+#tab3:checked~nav .tab3 label,
+#tab4:checked~nav .tab4 label {
+  img {
+    opacity: 1;
+    transition: all .3s ease-in-out;
+  }
+  &:before {
+    transform: scale(1, 1);
+    transition: all .3s ease-in;
+  }
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  img {
+    height: 4.2rem;
+    opacity: .7;
+    transition: all .3s ease-in-out;
+    @include sm {
+      height: 3rem;
+    }
+  }
+  &:before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: $secondary-01;
+    @include absolute(auto, auto, -1rem, 0);
+    transform: scale(0, 1);
+    transform-origin: 0 0;
+    transition: all .3s ease-in;
+  }
+  &:hover {
+    img {
+      opacity: 1;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.jornada {
+  width: 100%;
+  color: $primary-01;
+  @include font(1.6rem, 900, 1em);
+  padding-left: 1rem;
+}
+
+.jogos {
+  width: 100%;
+  position: relative;
+  @include flex(row, flex-start, center, center);
+  flex-wrap: wrap;
+  @include sm {
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    padding: 0 .5rem;
+    text-align: left;
+    @include md {
+      padding-bottom: 1.5rem;
+      position: relative;
+    }
+  }
+  &__item--infos {
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    background-color: $white-01;
+    @include flex(row, space-between, center, center);
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    overflow-y: hidden;
+    @include md {
+      margin-bottom: .5rem;
+    }
+    li {
+      padding: 0 .5rem;
+      text-align: center;
+    }
+    .div-hover {
+      width: 100%;
+      height: 100%;
+      @include absolute(0, auto, auto, 0);
+      background-color: rgba(3, 39, 90, 0.5);
+      @include flex(column, center, center, center);
+      border-radius: 1rem;
+      transform: translateY(100%);
+      transition: all .3s ease-out;
+      @include md {
+        display: none;
+      }
+    }
+    &:hover {
+      .div-hover {
+        transform: translateY(0);
+        transition: all .3s ease-out;
+      }
+    }
+  }
+  .infos__team {
+    @include flex(column, center, center, center);
+    img {
+      height: 3.5rem;
+      margin-bottom: .5rem;
+    }
+    span {
+      @include font(1rem, 300, 1em);
+      color: $black-01;
+    }
+  }
+  .infos__list {
+    @include flex(column, center, center, center);
+    color: $black-01;
+    &--liga,
+    &--local {
+      @include font(1.2rem, 300, 1em);
+    }
+    &--data {
+      @include font(1.2rem, 700, 1em);
+      text-transform: uppercase;
+      margin: .5rem 0;
+    }
+  }
+  .div-btnMobile {
+    display: none;
+    @include md {
+      display: block;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+  &__verMais {
+    text-align: center;
+    @include md {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.no-games {
+  width: 100%;
+  height: auto;
+  @include flex(row, center, center, center);
+  padding: 3rem 0;
+  img {
+    width: 8rem;
+    height: auto;
+    margin: 0 .5rem;
+  }
+  h1 {
+    width: 25%;
+    color: $secondary-01;
+    margin: 0 .5rem;
+    text-align: center;
+    border:none;
+  }
+  @include sm {
+    h1 {
+      width: 50%;
+    }
+  }
+  @include xs {
+    h1 {
+      width: 65%;
+    }
+  }
+}
+
+.pag_comprar-ingresso {
+  .row {
+    @include flex(column, center, center, center);
+  }
+}
+
+@keyframes entrar-tab-content {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
