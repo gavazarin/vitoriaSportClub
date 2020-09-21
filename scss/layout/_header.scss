@@ -69,7 +69,7 @@ header {
         transition: all .3s ease-in;
       }
 
-      &--active {
+      &-active {
         &:before {
           transform: scale(1, 1);
         }
@@ -86,6 +86,12 @@ header {
           transform: scale(1, 1);
           transition: all .3s ease-in;
         }
+      }
+    }
+
+    &__btn{
+      &::before{
+        display: none;
       }
     }
   }

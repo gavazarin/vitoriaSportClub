@@ -1,15 +1,19 @@
 .proximos-jogos {
   margin-bottom: 3rem;
+
   h1 {
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
+
   .jornada {
     @include font(1.4rem, 900, 1em);
   }
+
   .jogos {
     width: 49%;
     display: inline-block;
+
     @include sm {
       width: 100%;
     }
@@ -21,41 +25,51 @@
   position: relative;
   @include flex(row, center, center, center);
   flex-wrap: wrap;
+
   .sou-socio {
     @include flex(column, space-between, center, center);
     background: $primary-01;
     height: 35rem;
     padding: 3rem 1.5rem;
     border-radius: 1.5rem;
+
     h1,
     p {
       color: $white-01;
     }
+
     p {
       @include font(1.6rem, 300, 1.2em);
       text-align: center;
     }
+
     i {
       display: inline-block;
       width: 10rem;
     }
   }
+
   .vantagens {
     width: 100%;
+
     @include sm {
       margin-top: 3rem;
     }
+
     h1 {
       text-align: center;
       margin-bottom: 2rem;
     }
+
     &__list {
       @include flex(row, space-between, center, center);
+
       @include xs {
         @include flex(row, center, center, center);
         flex-wrap: wrap;
       }
     }
+
     li {
       width: 32%;
       height: 22rem;
@@ -66,45 +80,56 @@
       text-align: center;
       @include flex(column, space-around, center, center);
       overflow: hidden;
+
       i {
         width: 40%;
         display: inline-block;
         margin-bottom: 1.5rem;
       }
+
       h2 {
         @include font(2rem, 900, 1.4em);
-        color: $primary-dark;
+        color: $primary-01;
         text-align: center;
         text-transform: initial;
       }
+
       .only-mobile {
         display: none;
       }
+
       @include md {
         height: auto;
+
         h2 {
           height: 5rem;
         }
+
         .only-mobile {
           display: inline-block;
         }
       }
+
       @include xs {
         width: 100%;
         margin-bottom: 1.5rem;
         padding: 1rem;
+
         i {
           width: 40%;
         }
+
         h2 {
           height: auto;
           margin: 1.5rem;
           font-size: 2rem;
         }
+
         .only-mobile {
           display: block;
         }
       }
+
       &:hover {
         .vantagens__hover {
           transform: translateY(0);
@@ -112,15 +137,17 @@
         }
       }
     }
+
     &__hover {
       width: 100%;
       height: 100%;
       @include absolute(auto, 0, 0, auto);
-      background-color: rgba(2, 28, 64, 0.9);
+      background-color: rgba(20, 20, 20, 0.8);
       padding: 1.5rem;
       @include flex(column, flex-end, center, flex-end);
       transform: translateY(100%);
       transition: all .3s ease-in-out;
+
       @include md {
         display: none;
       }
@@ -132,9 +159,11 @@
   width: 100%;
   height: auto;
   position: relative;
+
   a {
     display: inline-block;
   }
+
   img {
     width: 100%;
     height: auto;
@@ -146,15 +175,18 @@
   position: relative;
   margin-top: 4.5rem;
   flex-wrap: wrap;
+
   h1 {
     margin-bottom: .5rem;
   }
+
   .hashtags_clubes {
     @include font(1.8rem, 300, 1.2em);
     font-style: italic;
     text-transform: initial;
     margin-bottom: 1rem;
   }
+
   &__container {
     width: 100%;
     background-color: $white-01;
@@ -163,44 +195,55 @@
     @include flex(row, center, center, center);
     flex-wrap: wrap;
     border-radius: .5rem;
+
     @include sm {
       @include flex(column, center, center, center);
     }
   }
+
   .twitter-clube {
     width: 40%;
-    height: 35rem;
+    height: 50rem;
     overflow-y: scroll;
+
     &::-webkit-scrollbar {
       width: 1.2rem;
       margin-left: .5rem;
     }
+
     &::-webkit-scrollbar-track {
       background: $gray-01;
       border-radius: .5rem;
     }
+
     &::-webkit-scrollbar-thumb {
       background: $gray-02;
       border-radius: .5rem;
     }
+
     &::-webkit-scrollbar-thumb:hover {
       background: $gray-02;
     }
+
     @include sm {
       width: 50%;
       margin-bottom: 3rem;
     }
+
     @include xs {
       width: 100%;
       margin-bottom: 3rem;
     }
   }
+
   .youtube-clube {
     width: 59%;
     margin-left: 1%;
+
     @include sm {
       width: 90%;
     }
+
     @include xs {
       width: 100%;
     }
@@ -215,6 +258,7 @@
   position: relative;
   @include flex(column, center, center, center);
   color: $primary-01;
+
   &:before {
     content: '';
     width: 60%;
@@ -223,28 +267,35 @@
     opacity: .2;
     @include absolute(0, 20%, auto, auto);
   }
+
   .clube-social-media {
     @include flex(row, center, center, center);
     margin: 1.5rem 0;
+
     li {
       margin: 0 .5rem;
       @include font(1.8rem, 300, 1.2em);
+
       strong {
         font-weight: 900;
       }
     }
+
     img {
       width: auto;
       height: 4rem;
     }
   }
+
   .links-social-media {
     @include flex(row, center, center, center);
     margin: 1.5rem 0;
+
     li {
       margin: 0 1rem;
     }
   }
+
   .icon-social-media {
     width: 3rem;
     height: 3rem;
@@ -252,17 +303,20 @@
     position: relative;
     // margin: 0 .5rem;
     transition: all .3s ease-in-out;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       border-radius: .5rem;
     }
+
     @include md {
       width: 5rem;
       height: 5rem;
       margin: 0 1.5rem;
     }
+
     &:hover {
       transform: scale(.9);
       transition: all .3s ease-in-out;
@@ -273,18 +327,24 @@
 .last-game,
 .classificacao {
   width: 100%;
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
   position: relative;
+
   h1 {
     margin-top: 0;
   }
+
   .infos__list {
     &--liga {
       @include font(1.2rem, 900, 1.4em);
     }
+
     &--placar {
       @include font(2rem, 900, 1.4em);
     }
   }
+}
+
+.last-game {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }

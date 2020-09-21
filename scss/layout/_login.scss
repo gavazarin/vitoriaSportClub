@@ -19,7 +19,7 @@
     display: block;
     cursor: pointer;
     text-align: center;
-    border: 2px solid $gray-02;
+    border-bottom: 2px solid $gray-02;
     background-color: #ececec;
     color: $gray-02;
     margin: 0;
@@ -31,6 +31,22 @@
   }
 }
 
+.closeModal{
+  background-color: $primary-01;
+  border:2px solid $secondary-02;
+  padding:.5rem;
+  border-radius: 50%;
+  @include absolute(0, 0, auto, auto);
+  z-index: 11;
+  transform: translateX(130%);
+  img{
+  width:10px;
+  height: 10px;
+  }
+  &:focus{
+    outline: none;
+  }
+}
 
 .tab-content {
   width: 100%;
@@ -42,9 +58,14 @@
   background-color: #fff;
   padding: 1.5rem 3rem;
   margin-bottom: 3rem;
+  text-align: center;
 
   @include sm {
     padding: 1.5rem;
+  }
+
+  .logo-clube{
+    height: 8rem;
   }
 
   h2 {
