@@ -1,0 +1,101 @@
+form {
+  width: 100%;
+  margin-top: 1.5rem;
+  @include flex(column, flex-start, center, flex-start);
+  fieldset {
+    border: none;
+  }
+  .container-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: .5rem;
+    padding-bottom: 1rem;
+    @include flex(row, flex-start, center, center);
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  input,
+  select {
+    width: 100%;
+    height: 3.7rem;
+    padding: .75rem 1.5rem;
+    border: 2px solid $gray-01;
+    border-radius: 1rem;
+    @include font(1.6rem, 300, 1em);
+    color: $primary-01;
+    &:focus {
+      outline: none;
+      border: 2px solid $primary-01;
+    }
+    &:disabled {
+      background-color: $gray-01;
+    }
+  }
+  label {
+    width: 100%;
+    text-align: left;
+    @include font(1.6rem, 700, 1em);
+    color: $primary-01;
+    text-transform: lowercase;
+    padding-left: .5rem;
+    &:disabled {
+      color: $gray-01;
+    }
+  }
+  .input-validate {
+    border: 2px solid $secondary-02;
+    color: $secondary-02;
+  }
+  span.input-validate {
+    @include font(1.2rem, 700, 1em);
+    border: none;
+  }
+  // .btn {
+  //   margin-top: .5rem;
+  // }
+}
+
+// cartão de sócio!
+.container-input {
+  .info-cartao {
+    @include absolute(0, .5rem, auto, auto);
+    display: inline-block;
+    cursor: pointer;
+    img {
+      width: 1.8rem;
+    }
+    .member-card {
+      width: 35rem;
+      height: auto;
+      z-index: 22;
+      @include absolute(0, 0, auto, auto);
+      transform: translate(100%, 0);
+      display: none;
+      transition: all .3s ease-in-out;
+      animation-name: animation-card;
+      animation-duration: .4s;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+      }
+    }
+    &:hover {
+      .member-card {
+        display: inline-block;
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes animation-card {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}

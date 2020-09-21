@@ -1,0 +1,170 @@
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0;
+  thead {
+    border-bottom: 2px solid $secondary-01;
+  }
+  tr {
+    border-radius: 1rem;
+  }
+  th,
+  td {
+    width: 25%;
+    padding: 1rem .5rem;
+    text-align: center;
+    @include font(1.4rem, 700, 1.2em);
+    text-transform: uppercase;
+    color: $black-01;
+    b,
+    strong {
+      font-weight: 900;
+    }
+  }
+  th {
+    font-weight: 900;
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background: #f5f5f5;
+      }
+    }
+    tr.totalpayment {
+      background: $black-01;
+      td {
+        color: $white-01;
+      }
+    }
+  }
+  .status__atrasado {
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 2px solid $secondary-01;
+    font-size: 1.2rem;
+    color: $secondary-01;
+  }
+  .btn {
+    @include font(1.2rem, 900, 1.2em);
+  }
+  @include xs {
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    th,
+    td {
+      width: 100%;
+    }
+    td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      text-align: right;
+      &:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.table__border {
+  border-bottom: 2px solid $black-01;
+}
+
+.tab {
+  table {
+    td {
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+      @include xs {
+        text-align: right;
+      }
+    }
+    tr.totalpayment {
+      background: $black-01;
+      td {
+        color: $white-01;
+      }
+    }
+  }
+}
+
+.classificacao {
+  th,
+  td {
+    width: auto;
+    text-align: left;
+  }
+  td {
+    font-weight: 300;
+    text-transform: none;
+    &:nth-child(1),
+    &:nth-child(4) {
+      font-weight: 900;
+    }
+  }
+  .time-destaque {
+    background-color: rgba(243, 114, 2, 0.8);
+    td {
+      font-weight: 900;
+    }
+  }
+  @include xs {
+    width: 75%;
+    table {
+      thead {
+        clip: auto;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+      }
+      tr {
+        border-bottom: 2px solid #ddd;
+        border-radius: 0;
+        @include flex(row, space-between, center, center);
+        margin-bottom: 0;
+      }
+      th,
+      td {
+        width: auto;
+        &:nth-child(2) {
+          width: 60%;
+        }
+      }
+      td {
+        border-bottom: 1px solid #ddd;
+        display: inline-block;
+        text-align: left;
+        &:before {
+          display: none;
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

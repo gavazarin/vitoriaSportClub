@@ -1,0 +1,365 @@
+.bannerUserData {
+  width: 100%;
+  height: 17.5rem;
+  position: relative;
+  @include flex(column, flex-end, center, center);
+  margin-bottom: 5rem;
+  z-index: 1;
+  @include sm {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    @include absolute(0, auto, auto, 0);
+    z-index: -1;
+  }
+  .profile-picture {
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include flex(row, flex-start, flex-start, center);
+    margin-bottom: -3rem;
+    a {
+      width: 10rem;
+      height: 10rem;
+      background-color: $white-01;
+      padding: 1.5rem;
+      border: 3px solid $primary-01;
+      border-radius: 50%;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h1 {
+      margin-top: 2rem;
+      margin-left: 1.5rem;
+      color: $white-01;
+      border:none;
+      @include xs {
+        width: 55%;
+      }
+    }
+  }
+}
+
+.userdata {
+  margin-bottom: 3rem;
+  position: relative;
+  height: 65vh;
+  @include md {
+    height: 75vh;
+  }
+  @include xs {
+    height: auto;
+  }
+}
+
+.tabs_userdata {
+  .rd_userdata_tabs {
+    display: none;
+  }
+  .label-userdata {
+    @include font(1.6rem, 300, 1.2em);
+    color: $primary-01;
+    cursor: pointer;
+    padding: .5rem 0;
+    margin-bottom: .5rem;
+    position: relative;
+    @include sm {
+      padding: .75rem 0;
+      margin-bottom: .75rem;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $secondary-01;
+      @include absolute(auto, 0, 0, auto);
+      transform: scale(0, 1);
+      transform-origin: 0 0;
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      &:before {
+        transform: scale(1, 1);
+        transition: all .3s ease-in;
+      }
+    }
+  }
+  .rd_userdata_tabs:checked~.label-userdata {
+    @include font(1.6rem, 900, 1.2em);
+    &:before {
+      transform: scale(1, 1);
+    }
+  }
+  .rd_userdata_tabs:checked~.tab-content {
+    @include flex(column, flex-start, center, center);
+    animation: mostrarTabContent .3s ease-in;
+  }
+  .rd_userdata_tabs:checked~.tab-content__clubes {
+    @include flex(row, flex-start, flex-start, flex-start);
+    flex-wrap: wrap;
+    animation: mostrarTabContent .3s ease-in;
+  }
+  .li-tabs {
+    @include flex(row, flex-start, flex-start, flex-start);
+    @include xs {
+      @include flex(column, flex-start, flex-start, flex-start);
+    }
+  }
+  .tab-content {
+    width: 100%;
+    display: none;
+    @include absolute(0, 0, auto, auto);
+    form {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      @include flex(column, center, flex-end, flex-end);
+      @include xs {
+        padding: 1.5rem 0;
+      }
+    }
+    .codigo-postal-pt {
+      @include flex(row, flex-start, center, center);
+      margin-bottom: 1.5rem;
+      p {
+        width: 100%;
+        @include font(1.6rem, 300, 1.2em);
+        color: $primary-01;
+        margin-bottom: 0rem;
+        // padding: 0 .5rem;
+        @include sm {
+          margin: 1.5rem 0;
+          padding: 0 .5rem;
+        }
+      }
+    }
+    .clube__socio {
+      width: 100%;
+      @include flex(column, center, center, center);
+      &--infos {
+        @include flex(row, center, center, center);
+        color: $primary-01;
+        @include font(1.6rem, 300, 1.2em);
+        margin-bottom: 2.4rem;
+        strong {
+          font-weight: 900;
+        }
+        img {
+          width: 6rem;
+          margin: 0 .8rem;
+        }
+        ul {
+          margin: 0 .8rem;
+          li {
+            margin: .8rem 0;
+          }
+          .aviso-quotas {
+            @include flex(row, flex-start, center, center);
+          }
+          .quotas-atrasadas {
+            strong {
+              color: $secondary-01;
+            }
+          }
+          .icon-quotas {
+            width: 2rem;
+            margin: 0;
+            margin-right: .8rem;
+          }
+        }
+      }
+      @include sm {
+        margin: 1.5rem 0;
+      }
+    }
+    .clube__fan {
+      width: 100%;
+      @include flex(column, flex-start, flex-start, flex-start);
+      h1 {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        .destaque {
+          color: $secondary-01;
+        }
+      }
+      &__list {
+        width: 100%;
+        @include flex(row, space-around, center, center);
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+        li {
+          margin: 0 .5rem;
+        }
+        img {
+          width: 4rem;
+        }
+      }
+      .not-fan {
+        border: 2px solid $primary-01;
+        border-radius: .5rem;
+        color: $secondary-01;
+        @include font(1.6rem, 300, 1.4em);
+        padding: .8rem;
+        text-align: center;
+        strong {
+          font-weight: 900;
+        }
+      }
+      @include sm {
+        margin: 1.5rem 0;
+      }
+    }
+    &__conta {
+      @include flex(column, flex-start, flex-end, flex-end);
+      margin-bottom: 1.5rem;
+      .email-pwd-atual {
+        width: 100%;
+        margin-bottom: 3rem;
+        @include flex(column, flex-start, flex-start, flex-start);
+        color: $primary-01;
+        @include font(1.6rem, 300, 1.2em);
+        span {
+          margin-bottom: .5rem;
+        }
+      }
+    }
+    .termos-condicoes {
+      @include font(1.3rem, 300, 1.2em);
+      color: $primary-01;
+      margin-bottom: 3rem;
+      strong {
+        font-weight: 900;
+      }
+    }
+    @include xs {
+      position: relative;
+      // border-bottom: 1px solid #21212150;
+    }
+  }
+}
+
+// MODAL CLUBE FAN
+.clube-fan-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 111;
+  @include absolute(0, auto, auto, 0);
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.clube-fan-container.mostrar {
+  @include flex(column, center, center, center);
+  padding: 3rem 0;
+}
+
+.close-clubes-fan {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  opacity: .5rem;
+  z-index: 222;
+  @include absolute(1rem, 1.5rem, auto, auto);
+  transition: all .3s ease-in;
+  &:hover {
+    transform: scale(.9);
+    transition: all .3s ease-in;
+  }
+}
+
+.clube-fan-content {
+  width: 30%;
+  background-color: #FFF;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  border-radius: .5rem;
+  // animation: modal .6s;
+  .row {
+    @include flex(column, center, center, center);
+  }
+  @include md {
+    width: 70%;
+  }
+  @include xs {
+    width: 90%;
+  }
+  h1 {
+    width: 80%;
+    margin: 0;
+    padding-bottom: .5rem;
+    text-align: center;
+    .destaque {
+      color: $secondary-01;
+    }
+  }
+  .clubes-fan__list {
+    width: 100%;
+    max-height: 70vh;
+    padding: 1.5rem;
+    margin-bottom: .5rem;
+    overflow-y: scroll;
+    @include flex(row, flex-start, flex-start, flex-start);
+    flex-wrap: wrap;
+    li {
+      width: 100%;
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+    .clube-fan__select {
+      background: $white-01;
+      border: 2px solid $secondary-01;
+      border-radius: 50%;
+    }
+  }
+}
+
+.span-aviso {
+  @include font(1.4rem, 700, 1.2em);
+}
+
+//modal alterar email + pwd
+.modal-content {
+  .modal-msg {
+    @include flex(column, center, center, center);
+    p {
+      width: 75%;
+      @include font(1.6rem, 300, 1.2em);
+      color: $primary-01;
+    }
+  }
+  @include xs {
+    width: 100%;
+    .modal-msg {
+      padding: 3rem .5rem;
+      form {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@keyframes mostrarTabContent {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}

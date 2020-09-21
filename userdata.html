@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFan - Editar Perfil</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <header>
+    <img src="images/svg/pattern_smartFan.svg" alt="Pattern SmartFan" class="pattern__smartFan">
+
+    <div class="container">
+      <div class="row">
+        <ul class="socialMedias_header">
+          <li>
+            SmartFAN<b>.Tickets</b>
+          </li>
+
+          <li>
+            <input id="language-dropdown" type="checkbox">
+            <label for="language-dropdown" class="language-dropdown">
+              <img src="images/svg/flag-portugal.svg" alt="Idioma português">
+            </label>
+            <ul class="language-dropdown-list">
+              <li>
+                <a onclick="setLanguage('pt');"><img src="images/svg/flag-portugal.svg" alt=""></a>
+              </li>
+              <li>
+                <a onclick="setLanguage('en');"><img src="images/svg/flag-uk.svg" alt=""></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <input id="menu-desporto" type="checkbox">
+    <nav class="navMenu col-lg-12">
+      <img src="images/svg/pattern_smartFan-white.svg" alt="Pattern SmartFan" class="pattern__smartFan">
+      <div class="container">
+        <div class="row">
+          <a href="index.html" class="marca col-lg-2"><img src="images/svg/logo_smartFan-white.svg"
+              alt="Logo do SmartFan"></a>
+
+          <ul class="menu col-lg-10">
+            <li class="menu__list">
+              <ul class="menu__list--ul">
+                <li class="menu__item menu__item--desportos">
+                  <label for="menu-desporto">
+                    <p>futebol <i class="icon-down"><img src="images/svg/icon-down.svg" alt=""></i></p>
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__list">
+              <ul class="menu__list--ul">
+                <li class="menu__item"><a href="pagar-quotas.html">pagar quotas</a></li>
+                <li class="menu__item"><a href="comprar-bilhetes.html">comprar bilhetes</a></li>
+                <li class="menu__item">
+                  <a href="#"><img src="images/svg/search_white.svg" alt="Ícone de pesquisa" class="icon-search"></a>
+                </li>
+                <li class="menu__item menu__btn" style="display:none;"><a href="#"
+                    class="btn-login btn btn__blue">login</a></li>
+
+                <li class="menu__item menu__logado">
+                  <i class="icon-user"><img src="images/svg/user-avatar.svg" alt=""></i>
+                  <input id="user-dropdown" type="checkbox">
+                  <label for="user-dropdown">
+                    <p class="user-dropdown">
+                      Olá, <span><b>Usuário</b></span>! <i><img src="images/svg/icon-down.svg" alt=""></i></p>
+                  </label>
+
+                  <ul class="user-dropdown__list">
+                    <li>
+                      <a href="userdata.html">Perfil</a>
+                    </li>
+                    <li>
+                      <a href="#">Sair</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="teamsBar teamsBar__header">
+      <div class="container">
+        <div class="row">
+          <ul class="list_ligas">
+            <li>
+              <a href="https://www.fpf.pt/"><img src="images/liga_federacao_portuguesa-black.png"
+                  alt="Federação Portuguesa de Futebol"></a>
+            </li>
+            <li>
+              <a href="https://www.ligaportugal.pt/pt/homepage/"><img src="images/liga_portugal-black.png"
+                  alt="Liga Portugal"></a>
+            </li>
+          </ul>
+
+          <div class="list_clubs">
+            <ul class="list_clubs_01">
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Boavista FC</span><img
+                    src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">FC Porto</span><img src="images/logo-1fcporto.png"
+                    alt="Futebol Clube do Porto"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Gil Vicente FC</span><img
+                    src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Os Belenenses</span><img
+                    src="images/logo-1osbelenenses.png" alt="Os Belenenses"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Rio Ave FC</span><img
+                    src="images/logo-1rioavefc.png" alt="Rio Ave Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Sporting CP</span><img
+                    src="images/logo-1sporting.png" alt="Sporting Clube de Portugal"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Vitória FC</span><img
+                    src="images/logo-1vitoriafc.png" alt="Vitória Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Vitória SC</span><img
+                    src="images/logo-1vitoriasc.png" alt="Vitória Sport Clube"></a>
+              </li>
+            </ul>
+
+            <ul class="list_clubs_02">
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">CD Nacional</span><img
+                    src="images/logo-2cdnmadeira.png" alt="Clube Desportivo Nacional Madeira"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">GD Chaves</span><img
+                    src="images/logo-2gdchaves.png" alt="Grupo Desportivo de Chaves"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">SC Covilhã</span><img
+                    src="images/logo-2sccovilha.png" alt="Sporting Clube da Covilhã"></a>
+              </li>
+              <li>
+                <a href="#" class="tooltip"><span class="tooltiptext">Varzim SC</span><img
+                    src="images/logo-2varzimsc.png" alt="Varzim Sport Club"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== MENU MOBILE ==== -->
+    <nav class="navMenu-mobile col-md-12">
+      <a href="index.html" class="marca"><img src="images/svg/logo_smartFan-white.svg" alt="SmartFan"></a>
+
+      <a href="#" class="btnMenu btnMenu__open"><img src="images/svg/icon-menu-white.svg" alt="Abrir Menu"></a>
+
+      <div id="#menuMobile" class="menuMobile">
+        <!-- <div class="container-btn">
+        </div> -->
+        <a href="#menuMobile" class="btnMenu btnMenu__close"><img src="images/svg/close-menu.svg" alt="Fechar Menu"></a>
+
+        <a href="index.html" class="marca"><img src="images/svg/logo_smartFan-white.svg" alt="Logo do SmartFan"></a>
+
+        <section class="teamsBar teamsBar__mobile">
+          <ul class="list_ligas">
+            <li>
+              <a href="https://www.fpf.pt/"><img src="images/liga_federacao_portuguesa.png"
+                  alt="Federação Portuguesa de Futebol"></a>
+            </li>
+            <li>
+              <a href="https://www.ligaportugal.pt/pt/homepage/"><img src="images/liga_portugal.png"
+                  alt="Liga Portugal"></a>
+            </li>
+          </ul>
+
+          <div class="list_clubs">
+            <ul class="list_clubs_01">
+              <li>
+                <a href="#"><img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1fcporto.png" alt="Futebol Clube do Porto"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1osbelenenses.png" alt="Clube de Futebol Os Belenenses"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1rioavefc.png" alt="Rio Ave Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1sporting.png" alt="Sporting Clube de Portugal"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1vitoriafc.png" alt="Vitória Futebol Clube"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-1vitoriasc.png" alt="Vitória Sport Clube"></a>
+              </li>
+            </ul>
+
+            <ul class="list_clubs_02">
+              <li>
+                <a href="#"><img src="images/logo-2cdnmadeira.png" alt="Clube Desportivo Nacional Madeira"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-2gdchaves.png" alt="Grupo Desportivo de Chaves"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-2sccovilha.png" alt="Sporting Clube da Covilhã"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/logo-2varzimsc.png" alt="Varzim Sport Club"></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <ul class="menuMobile__list">
+          <li class="menuMobile__list__item"><a href="pagar-quotas.html">pagar quotas</a></li>
+          <li class="menuMobile__list__item"><a href="comprar-bilhetes.html">comprar bilhetes</a></li>
+          <li class="menuMobile__list__item"><a href="userdata.html">perfil</a></li>
+          <!-- <li class="menuMobile__list__item">
+            <a href="#"><img src="images/svg/search.svg" alt="" class="icon-search"></a>
+          </li> -->
+          <li class="menu__item menu__btn" style="display:none;"><a href="#" class="btn-login btn btn__blue">login</a>
+          </li>
+
+          <li class="menu__item menu__logado">
+            <i class="icon-user"><img src="images/svg/user-avatar.svg" alt=""></i>
+            <p class="user-dropdown">
+              Olá, <span><b>Usuário</b></span>!
+            </p>
+
+            <!-- <a href="#" class="btn__verMais">sair</a> -->
+          </li>
+
+          <li class="menu__item menu__item__sair">
+            <a href="#">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="bannerUserData">
+    <img src="images/banner_smartFan_noWrite.jpg" alt="Banner Smartfan" class="background">
+    <div class="container">
+      <div class="row">
+        <div class="profile-picture col-lg-10 offset-lg-1">
+          <a href="#">
+            <img src="images/svg/user-avatar.svg" alt="">
+          </a>
+          <h1>João Taveira Jesus</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="userdata">
+    <div class="container">
+      <div class="row">
+        <nav class="tabs_userdata col-lg-10 offset-lg-1">
+          <ul class="ul-tabs">
+            <!-------- DADOS PESSOAIS ------->
+            <li class="li-tabs">
+              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-pessoais" checked>
+              <label for="dados-pessoais" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6" checked>Dados
+                Pessoais</label>
+              <div class="tab-content col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <form class="col-lg-7 col-md-10 col-xs-12">
+                  <div class="container-input">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
+                  </div>
+
+                  <div class="container-input">
+                    <label for="data-nascimento">Data de Nascimento</label>
+                    <input type="text" id="data-nascimento">
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
+                  </div>
+
+                  <div class="container-input">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo" aria-placeholder="Selecione">
+                      <option value="#"></option>
+                      <option value="Feminino">Feminino</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                    <!-- <span>obrigatório</span> -->
+                  </div>
+
+                  <a href="#" class="btn btn__orange">
+                    <span>salvar</span>
+                  </a>
+                </form>
+              </div>
+            </li>
+
+            <!------- DADOS DE CONTA ------->
+            <li class="li-tabs">
+              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-conta">
+              <label for="dados-conta" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6">Dados de Conta</label>
+              <div class="tab-content col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <div class="tab-content__conta col-lg-7 col-md-10 col-sm-12 col-xs-12">
+                  <div class="email-pwd-atual">
+                    <h2>email</h2>
+                    <span>taveira.joao@gmail.com</span>
+                    <span id="smv_UserChangeMailText" smv-langtext="umailchangefrase" smv-externallogin="NONE"
+                      class="span-aviso">
+                      Existe um pedido de alteração para confirmar
+                      <a href="javascript:smv_udataChangeMailDetails()" class="btn__verMais">(ver mais)</a>
+                    </span>
+                    <a href="#" class="btn__verMais">editar</a>
+                  </div>
+
+                  <div class="email-pwd-atual">
+                    <h2>password</h2>
+                    <a href="#" class="btn__verMais">editar</a>
+                  </div>
+
+                  <div class="termos-condicoes">
+                    <ul class="checkbox-periodo">
+                      <li class="checkbox-periodo__item">
+                        <input type="checkbox" id="smv_ufm_privacy" name="smv_ufm_privacy" value="1" class="inp-cbx"
+                          style="display: none;">
+                        <label class="cbx" for="smv_ufm_privacy">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                          <!-- smv-langrepltext-widgetname="userfrommember" -->
+                          <p smv-langtext="pisco_privacy" smv-langrepltext-widgetname="userfrommember">Li e
+                            <strong>CONCORDO</strong> com a <a
+                              href="javascript:smv_piscoEXIT_Privacy('userfrommember')">Política de Privacidade</a>.</p>
+                        </label>
+                      </li>
+
+                      <li class="checkbox-periodo__item">
+                        <input type="checkbox" id="smv_ufm_pubsend" name="smv_ufm_pubsend" value="1" class="inp-cbx"
+                          style="display: none;">
+                        <label class="cbx" for="smv_ufm_pubsend">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                          <p smv-langtext="pisco_allowcontact">Autorizo que me enviem comunicações comerciais de
+                            terceiros</p>
+                        </label>
+                      </li>
+
+                      <li class="checkbox-periodo__item">
+                        <input type="checkbox" id="smv_ufm_sharedata" name="smv_ufm_sharedata" value="1" class="inp-cbx"
+                          style="display: none;">
+                        <label class="cbx" for="smv_ufm_sharedata">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                          <p smv-langtext="pisco_sharedata">Autorizo a partilhar os meus dados com terceiros</p>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <a href="#" class="btn btn__orange">
+                    <span>salvar</span>
+                  </a>
+                </div>
+                <!-- <a href="#" class="btn btn__orange">
+                  <span>salvar</span>
+                </a> -->
+              </div>
+            </li>
+
+            <!------- DADOS CONTATO ------->
+            <li class="li-tabs">
+              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-contato">
+              <label for="dados-contato" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6">Dados de
+                Contato</label>
+              <div class="tab-content col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <form class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
+                  <div class="container-input">
+                    <label for="pais">País</label>
+                    <select name="pais" id="pais" aria-placeholder="Selecione">
+                      <option value="#"></option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                    <!-- <span>obrigatório</span> -->
+                  </div>
+
+                  <!-- Código Postal - Portugal -->
+                  <div class="container-input codigo-postal-pt">
+                    <label for="codigo-postal">Código postal</label>
+                    <input type="text" class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="col-lg-6 col-md-6 col-sm-6">
+                      Local da Morada
+                    </p>
+                  </div>
+
+
+                  <!-- Fim Código Postal - Portugal -->
+
+                  <!-- Código Postal - resto Mundo -->
+                  <!-- <div class="container-input">
+                    <label for="codigo-postal">Código postal</label>
+                    <input type="text">
+                  </div> -->
+                  <!-- Fim Código Postal - resto Mundo -->
+
+                  <a href="#" class="btn btn__orange">
+                    <span>salvar</span>
+                  </a>
+                </form>
+
+              </div>
+            </li>
+
+            <!------- Clubes ------->
+            <li class="li-tabs">
+              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="clubes">
+              <label for="clubes" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6">Clubes</label>
+              <div class="tab-content tab-content__clubes col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <div class="clube__socio col-lg-6 col-md-6 col-sm-12">
+                  <div class="clube__socio--infos">
+                    <img src="images/logo-1sporting.png" alt="Logo Sporting Clube de Portugal">
+                    <ul>
+                      <li><strong>Sócio Nº.</strong> <span>125870</span></li>
+                      <li>Categoria <span><strong>+ Leão</strong></span></li>
+                      <li class="aviso-quotas"><img src="images/svg/check-icon.svg" alt="" class="icon-quotas">
+                        <span>Tens as quotas <strong>em dia</strong>!</span></li>
+                      <!-- <li class="aviso-quotas quotas-atrasadas"><img src="images/svg/alert-icon.svg" alt="icone de alerta" class="icon-quotas"> <span>Tens quotas <strong>em atraso</strong>!</span></li> -->
+                    </ul>
+                  </div>
+                  <a href="#" class="btn btn__orange">
+                    <span>pagar quotas</span>
+                  </a>
+                </div>
+
+                <div class="clube__fan col-lg-6 col-md-6 col-sm-12">
+                  <h1>Clubes que és <span class="destaque">fan</span>!</h1>
+                  <ul class="clube__fan__list">
+                    <li><img src="images/logo-1sporting.png" alt=""></li>
+                    <li><img src="images/logo-1vitoriasc.png" alt=""></li>
+                    <li><img src="images/logo-2cdnmadeira.png" alt=""></li>
+                  </ul>
+                  <!-- <p class="not-fan">Ainda <strong>não és fan</strong> de nenhum clube. Escolhe já os clubes que és <strong>fan</strong>!</p> -->
+                  <a href="#" class="btn__verMais open-clubes-fan">editar</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li><a href="#">Termos e Compromissos</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+
+        <ul class="footerList footerList__center col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li>
+            <span>Apoio ao cliente</span>
+            <a href="#">helpdesk@smartticketing.pt</a>
+          </li>
+        </ul>
+
+        <ul class="payList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
+          <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+          <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape">
+      <div class="container">
+        <div class="row">
+          <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <li>
+              <span>SmartFan.Tickets</span>
+              <a href="#">contato@contato.pt</a>
+            </li>
+          </ul>
+
+          <div class="logoSmartmove col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg"
+                alt="Smartmove"></a>
+          </div>
+
+          <ul class="socialmedia_list col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <li>
+              <a href="https://www.linkedin.com/company/smartmove---servi-os-de-mobilidade-s.a." target="_blank"
+                class="icon-socialmedia"><img src="images/linkedin.png" alt="Linkedin"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================== MODAL CLUBES FAN ================== -->
+  <div id="modalClubesFan" class="clube-fan-container">
+
+    <div class="clube-fan-content">
+      <a href="#" class="close-clubes-fan"><img src="images/svg/close-popUp.svg" alt=""></a>
+
+      <div class="container">
+        <div class="row">
+          <h1>Escolhe os clubes que és <span class="destaque">fan</span>!</h1>
+
+          <ul class="clubes-fan__list">
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-1fcporto.png" alt="Futebol Clube do Porto">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-1osbelenenses.png" alt="Clube de Futebol Os Belenenses">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-1rioavefc.png" alt="Rio Ave Futebol Clube">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4 clube-fan__select">
+              <img src="images/logo-1sporting.png" alt="Sporting Clube de Portugal">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-1vitoriafc.png" alt="Vitória Futebol Clube">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4 clube-fan__select">
+              <img src="images/logo-1vitoriasc.png" alt="Vitória Sport Clube">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4 clube-fan__select">
+              <img src="images/logo-2cdnmadeira.png" alt="Clube Desportivo Nacional Madeira">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-2gdchaves.png" alt="Grupo Desportivo de Chaves">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-2sccovilha.png" alt="Sporting Clube da Covilhã">
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+              <img src="images/logo-2varzimsc.png" alt="Varzim Sport Club">
+            </li>
+          </ul>
+
+          <a href="#" class="btn btn__orange"><span>Escolher!</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= MODAL LOGIN ================= -->
+  <div id="modalLogin" class="modal-login-container">
+    <div class="modal-content">
+      <nav class="nav_tabs">
+        <a href="#" class="closeModal"><img src="images/svg/close-popUp.svg" alt=""></a>
+        <ul>
+          <!-------- ENTRAR ------->
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="entrar" checked>
+            <label for="entrar" class="tab_label" checked>login</label>
+
+            <div class="tab-content">
+              <h2>Insere o teu e-mail e password e faz login!</h2>
+              <form>
+                <div class="container-input">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" name="email" class="input-validate">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <div class="container-input">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" name="password">
+                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                </div>
+
+                <a href="#" class="esqueci-senha">esqueci a password</a>
+
+                <a href="#" class="btn btn__orange">
+                  <span>entrar</span>
+                </a>
+              </form>
+            </div>
+          </li>
+
+          <!------- REGISTAR ------->
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="registrar">
+            <label for="registrar" class="tab_label">registo</label>
+
+            <div class="tab-content">
+              <h2>Escolhe o teu clube, insere os teus dados de sócio e regista-te!</h2>
+
+              <ul class="listTeams_popUp">
+                <li>
+                  <a href="#"><img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1fcporto.png" alt="Futebol Clube do Porto"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1osbelenenses.png" alt="Clube de Futebol Os Belenenses"></a>
+                </li>
+                <li class="team-select">
+                  <a href="#"><img src="images/logo-1rioavefc.png" alt="Rio Ave Futebol Clube"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1sporting.png" alt="Sporting Clube de Portugal"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1vitoriafc.png" alt="Vitória Futebol Clube"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1vitoriasc.png" alt="Vitória Sport Clube"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2cdnmadeira.png" alt="Clube Desportivo Nacional Madeira"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2gdchaves.png" alt="Grupo Desportivo de Chaves"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2sccovilha.png" alt="Sporting Clube da Covilhã"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2varzimsc.png" alt="Varzim Sport Club"></a>
+                </li>
+              </ul>
+
+              <p class="team-select-name">Rio Ave Futebol Clube</p>
+
+              <form>
+                <div class="container-input">
+                  <label for="numero-socio" class="form-label">Número de Sócio</label>
+                  <input type="text" name="numero-socio" id="numero-socio">
+                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                </div>
+
+                <div class="container-input">
+                  <label for="ultimos-digitos" class="form-label">Últimos 5 dígitos do código de barras</label>
+                  <input type="number" name="ultimos-digitos" id="ultimos-digitos">
+                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                  <i class="info-cartao"><img src="images/svg/information.svg"
+                      alt="Informação sobre o cartão de sócio"></i>
+                </div>
+
+                <a href="#" class="btn btn__orange">
+                  <span>validar</span>
+                </a>
+              </form>
+            </div>
+
+            <!-------- CONFIRMAR SENHA/EMAIL -------->
+            <!-- <div class="tab-content">
+              <h2>Insere o teu e-mail e password</h2>
+
+              <ul class="infos-socio">
+                <li><img src="images/logo-1gilvicentefc.png" alt=""></li>
+                <li>
+                  <span>Gabriel Vazarin Perez</span>
+                  <span>33325-9</span>
+                </li>
+              </ul>
+
+              <form>
+                <div class="container-input">
+                  <label for="email-socio">E-mail</label>
+                  <input type="email" name="email-socio" id="email-socio">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <div class="container-input">
+                  <label for="password-socio">Password</label>
+                  <input type="number" name="password-socio" id="password-socio">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <div class="container-input">
+                  <label for="confirmar-password">Confirme a password</label>
+                  <input type="number" name="confirmar-password" id="confirmar-password" class="input-validate">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <a href="#" class="btn btn__orange">
+                  <span>registar</span>
+                </a>
+              </form>
+            </div> -->
+          </li>
+        </ul>
+
+        <!-- CONCLUÍDO -->
+        <div class="cadastro-finalizado alert-link" style="display:none;">
+          <i><img src="images/svg/check-icon.svg" alt="Ícone de confirmação"></i>
+
+          <h2>Login efetuado com sucesso!</h2>
+
+          <button class="btn btn__blue">
+            <span>continuar</span>
+          </button>
+        </div>
+
+        <!-- ERRO -->
+        <div class="cadastro-finalizado alert-link" style="display: none;">
+          <i><img src="images/svg/error-icon.svg" alt="Ícone de erro"></i>
+
+          <h2>Os dados de login estão inválidos. Por favor, verifique os dados</h2>
+
+          <button class="btn btn__orange">
+            <span>voltar</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= MODAL ALTERAR E-MAIL ================= -->
+  <div id="smv-modal-changemaildetails" smv-ismodal="1" smv-modalcontainer="smv_wp_userdata"
+    class="modal-login-container mostrar" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-msg">
+        <h2 smv-langtext="headusernewemail">Alterar e-mail</h2>
+
+        <form name="smv_fUserData_Email" id="smv_fUserData_Email" class="form-contato col-lg-12 col-md-12"
+          novalidate="novalidate">
+          <div class="container-input col-lg-12 col-md-12">
+            <label for="smv_udata_Email" class="form-label" smv-langtext="lblemail">E-mail</label>
+            <input name="smv_udata_Email" id="smv_udata_Email" onblur="javascript:smv_fieldTrim('smv_udata_Email')"
+              type="email" value="teste.testudo12345678@gmail.com" smv-inival="teste.testudo12345678@gmail.com"
+              autocapitalize="none" autocorrect="off" maxlength="75">
+          </div>
+        </form>
+
+        <div style="display:inline-block">
+          <button type="button" class="btn btn__orange" onclick="javascript:smv_userRefreshDataFromChangeMail()">
+            <span smv-langtext="btrefresh">Atualizar</span>
+          </button>
+          <button type="button" class="btn btn__orange" onclick="javascript:smv_UserCancelEmailChange()">
+            <span smv-langtext="btcancel">Cancelar</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/menu.js"></script>
+  <script src="js/popUpLogin.js"></script>
+</body>
+
+</html>

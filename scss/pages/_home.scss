@@ -1,0 +1,99 @@
+.load-screen {
+  width: 100%;
+  height: 100%;
+  background: url(../images/loading.gif) no-repeat center center $black-01;
+  background-size: 100px auto;
+  position: fixed;
+  opacity: 0.8;
+  z-index: 2000;
+  text-align: center;
+}
+
+.homeBanner {
+  height: 17.5rem;
+  width: 100%;
+  position: relative;
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    position: relative;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      @include flex(column, center, center, center);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    img {
+      @include absolute(0, 0, auto, auto);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+      z-index: -1;
+    }
+    .slide-content {
+      width: 65%;
+      @include flex(row, flex-start, center, center);
+      color: $white-01;
+      li {
+        margin: 0 1.5rem;
+      }
+      &__name {
+        width: 60%;
+        @include font(2.5rem, 900, 1.3em);
+        text-transform: uppercase;
+        text-align: left;
+        @include sm {
+          font-size: 2.2rem;
+        }
+      }
+      &__logo {
+        width: auto;
+        img {
+          width: 8rem;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $black-01;
+      opacity: .6;
+      @include absolute(0, auto, auto, 0);
+      transition: all .3s ease-in;
+    }
+  }
+  .swiper-slide-active {
+    &:before {
+      display: none;
+      opacity: 0;
+      transition: all .3s ease-out;
+    }
+  }
+  .swiper-pagination-bullet {
+    background: $white-01;
+    opacity: .5;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $white-01;
+    opacity: 1;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after {
+      font-size: 3rem;
+      color: $white-01;
+    }
+  }
+}

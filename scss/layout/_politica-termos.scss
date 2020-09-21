@@ -1,0 +1,74 @@
+.politica-termos {
+  z-index: 1;
+  margin-top: 1.5rem;
+  h1 {
+    font-size: 2.2rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  @include font(1.6rem, 300, 1.4em);
+  color:$black-01;
+  strong {
+    font-weight: 900;
+  }
+  a {
+    color: $black-01;
+    text-decoration: underline;
+    transition: all .3s ease-in;
+    &:hover {
+      color: $primary-01;
+      transition: all .3s ease-in;
+    }
+  }
+  .list-geral {
+    &__item {
+      margin-bottom: 3rem;
+    }
+  }
+  .list-interna {
+    padding-left: 3rem;
+  }
+  .list-bullet,
+  .list-latin,
+  .list-roman {
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+    li {
+      margin-bottom: .5rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .list-bullet {
+    li {
+      list-style: disc;
+    }
+  }
+  .list-latin {
+    li {
+      list-style: lower-latin;
+    }
+  }
+  .list-roman {
+    li {
+      list-style: lower-roman;
+    }
+  }
+  dl {
+    margin-left: 3rem;
+    dt {
+      font-weight: 900;
+    }
+  }
+  .number-list {
+    @include font(1.4rem, 900, 1.4em);
+    margin-right: 1rem;
+  }
+}

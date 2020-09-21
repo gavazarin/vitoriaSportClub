@@ -1,0 +1,15 @@
+.estruturaPadrao {
+  position: relative;
+  padding: 3rem 0;
+  background-color: #FFFFFF;
+
+  .row {
+    @include flex(row, center, flex-start, flex-start);
+  }
+
+  .mainContent {
+    width: 100%;
+    @include flex(row, center, center, center);
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,68 @@
+.error-404 {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #ffffff;
+  position: relative;
+  padding-top: 6rem;
+  .row {
+    @include flex(row, center, center, center);
+  }
+  .icon-404 {
+    text-align: center;
+    padding-right: 3rem;
+    img {
+      width: 90%;
+    }
+  }
+  .text-error404 {
+    @include flex(column, flex-start, flex-start, flex-start);
+    h1 {
+      @include font(5rem, 900, 1.2em);
+      color: $secondary-01;
+      margin: 0;
+      text-align: left;
+      border:none;
+    }
+    h2 {
+      @include font(1.8rem, 900, 1.2em);
+      margin: 0;
+      text-align: left;
+    }
+    p {
+      color: $primary-01;
+      @include font(1.8rem, 300, 1.4em);
+      a {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  @include sm {
+    padding: 3rem 0;
+    .icon-404 {
+      text-align: center;
+      margin-bottom: 3rem;
+      img {
+        width: 50%;
+      }
+    }
+    .text-error404 {
+      @include flex(column, center, center, center);
+    }
+  }
+  @include xs {
+    .text-error404 {
+      h1 {
+        text-align: center;
+        font-size: 3.5rem;
+      }
+      h2 {
+        text-align: center;
+        font-size: 1.6rem;
+      }
+      p {
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+    }
+  }
+}
