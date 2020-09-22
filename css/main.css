@@ -2424,6 +2424,12 @@ table .btn {
   text-align: left;
 }
 
+.classificacao th:nth-child(3), .classificacao th:nth-child(4),
+.classificacao td:nth-child(3),
+.classificacao td:nth-child(4) {
+  text-align: center;
+}
+
 .classificacao td {
   font-weight: 300;
   text-transform: none;
