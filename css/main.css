@@ -2063,6 +2063,11 @@ form span.input-validate {
   transition: all .3s ease-in-out;
 }
 
+.btn-primary:hover span {
+  color: #AFAFAF;
+  transition: all .3s ease-in-out;
+}
+
 .btn-secondary {
   background-color: #AFAFAF;
   transition: all .3s ease-in;
@@ -2071,6 +2076,11 @@ form span.input-validate {
 .btn-secondary:hover {
   background-color: #707070;
   transition: all .3s ease-in;
+}
+
+.btn-secondary:hover span {
+  color: #707070;
+  transition: all .3s ease-in-out;
 }
 
 .btn__fullContainer {
@@ -2499,8 +2509,7 @@ table .btn {
 
 @media (max-width: 767px) {
   .bannerFullScreen {
-    height: auto;
-    padding: 1.5rem 0;
+    height: 20rem;
   }
 }
 
@@ -2906,6 +2915,12 @@ label:hover img {
   }
 }
 
+@media (max-width: 575px) {
+  .jogos__item:last-child {
+    padding-bottom: 0;
+  }
+}
+
 .jogos__item--infos {
   padding: 1.5rem 0;
   margin-bottom: 1.5rem;
@@ -3020,12 +3035,6 @@ label:hover img {
 
 .jogos__verMais {
   text-align: center;
-}
-
-@media (max-width: 992px) {
-  .jogos__verMais {
-    margin: 1.5rem 0;
-  }
 }
 
 .no-games {
@@ -3539,7 +3548,9 @@ header .marca img {
 @media (max-width: 767px) {
   .menu-logado .icon-user {
     height: 4rem;
-    border: 2px solid #ffd201;
+    padding: 6px;
+    background-color: #000000;
+    border: 1px solid #ffd201;
   }
 }
 
@@ -5300,6 +5311,12 @@ header .marca img {
   margin-right: 1.5rem;
 }
 
+@media (max-width: 767px) {
+  .aviso-multibanco {
+    max-width: 90%;
+  }
+}
+
 .terms {
   width: 100%;
   display: flex;
@@ -5375,6 +5392,24 @@ header .marca img {
   margin-bottom: 0;
 }
 
+.payreturn__multibanco table tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.payreturn__multibanco table tr:last-child {
+  border-bottom: none;
+}
+
+.payreturn__multibanco table tr td:first-child {
+  text-align: left;
+}
+
 .payreturn__mbway {
   border: 2px solid #f1c500;
   border-radius: .5rem;
@@ -5394,6 +5429,12 @@ header .marca img {
 .container-detalhes {
   width: 50%;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .container-detalhes {
+    width: 100%;
+  }
 }
 
 .clube-detalhes {
@@ -5429,8 +5470,9 @@ header .marca img {
 
 @media (max-width: 767px) {
   .bannerUserData {
-    height: auto;
+    height: 15rem;
     padding: 1.5rem 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -5663,6 +5705,12 @@ header .marca img {
   margin: 0 .8rem;
 }
 
+@media (max-width: 767px) {
+  .tabs_userdata .tab-content .clube__socio--infos img {
+    margin-left: 0;
+  }
+}
+
 .tabs_userdata .tab-content .clube__socio--infos ul {
   margin: 0 .8rem;
 }
@@ -5687,6 +5735,12 @@ header .marca img {
   width: 2rem;
   margin: 0;
   margin-right: .8rem;
+}
+
+@media (max-width: 767px) {
+  .tabs_userdata .tab-content .clube__socio--infos ul {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 767px) {

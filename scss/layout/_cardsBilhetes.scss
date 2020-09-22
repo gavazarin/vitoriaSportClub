@@ -98,6 +98,11 @@ label {
       padding-bottom: 1.5rem;
       position: relative;
     }
+    @include xs{
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
   }
   &__item--infos {
     padding: 1.5rem 0;
@@ -170,9 +175,6 @@ label {
   }
   &__verMais {
     text-align: center;
-    @include md {
-      margin: 1.5rem 0;
-    }
   }
 }
 

@@ -28,6 +28,19 @@
   }
   table {
     margin-bottom: 0;
+    tr{
+      @include flex(row, space-between, center, center);
+      border-radius: 0;
+      margin-bottom: 0;
+      &:last-child{
+        border-bottom:none;
+      }
+      td{
+        &:first-child{
+          text-align: left;
+        }
+      }
+    }
   }
 }
 
@@ -47,6 +60,9 @@
 .container-detalhes{
   width:50%;
   margin-bottom: 3rem;
+  @include sm{
+    width:100%;
+  }
 }
 
 // .accordion-detalhes {

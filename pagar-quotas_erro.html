@@ -11,66 +11,22 @@
 
 <body>
   <header>
-    <img src="images/svg/pattern_smartFan.svg" alt="Pattern SmartFan" class="pattern__smartFan">
-
-    <div class="container">
-      <div class="row">
-        <ul class="socialMedias_header">
-          <li>
-            SmartFAN<b>.Tickets</b>
-          </li>
-
-          <li>
-            <input id="language-dropdown" type="checkbox">
-            <label for="language-dropdown" class="language-dropdown">
-              <img src="images/svg/flag-portugal.svg" alt="Idioma português">
-            </label>
-            <ul class="language-dropdown-list">
-              <li>
-                <a onclick="setLanguage('pt');"><img src="images/svg/flag-portugal.svg" alt=""></a>
-              </li>
-              <li>
-                <a onclick="setLanguage('en');"><img src="images/svg/flag-uk.svg" alt=""></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <input id="menu-desporto" type="checkbox">
     <nav class="navMenu col-lg-12">
-      <img src="images/svg/pattern_smartFan-white.svg" alt="Pattern SmartFan" class="pattern__smartFan">
       <div class="container">
         <div class="row">
-          <a href="index.html" class="marca col-lg-2"><img src="images/svg/logo_smartFan-white.svg"
-              alt="Logo do SmartFan"></a>
+          <a href="index.html" class="marca col-lg-2 col-md-2"><img src="images/logo-vitoriasc.png" alt="Logo do Vitória SC"></a>
 
-          <ul class="menu col-lg-10">
-            <li class="menu__list">
-              <ul class="menu__list--ul">
-                <li class="menu__item menu__item--desportos">
-                  <label for="menu-desporto">
-                    <p>futebol <i class="icon-down"><img src="images/svg/icon-down.svg" alt=""></i></p>
-                  </label>
-                </li>
-              </ul>
-            </li>
-
-            <li class="menu__list">
-              <ul class="menu__list--ul">
-                <li class="menu__item"><a href="pagar-quotas.html">pagar quotas</a></li>
-                <li class="menu__item"><a href="faz-te-socio.html">faz-te sócio</a></li>
-                <li class="menu__item"><a href="comprar-bilhetes.html">comprar bilhetes</a></li>
-                <li class="menu__item">
-                  <a href="#"><img src="images/svg/search_white.svg" alt="Ícone de pesquisa" class="icon-search"></a>
-                </li>
-                <li class="menu__item menu__btn">
-                  <button type="button" class="btn btn__blue" data-toggle="modal"
+          <ul class="menu col-lg-10 col-md-10">
+            <li class="menu-list">
+              <ul class="menu-list-ul">
+                <li class="menu-item menu-item-active"><a href="pagar-quotas_inicio.html">pagar quotas</a></li>
+                <li class="menu-item"><a href="userdata.html">perfil</a></li>
+                <li class="menu-item menu__btn" style="display:none;">
+                  <button type="button" class="btn btn-secondary" data-toggle="modal"
                     data-target="#exampleModal">login</button>
                 </li>
 
-                <li class="menu__item menu__logado" style="display:none;">
+                <li class="menu-item menu-logado">
                   <i class="icon-user"><img src="images/svg/user-avatar.svg" alt=""></i>
                   <input id="user-dropdown" type="checkbox">
                   <label for="user-dropdown">
@@ -79,9 +35,6 @@
                   </label>
 
                   <ul class="user-dropdown__list">
-                    <li>
-                      <a href="userdata.html">Perfil</a>
-                    </li>
                     <li>
                       <a href="#">Sair</a>
                     </li>
@@ -94,195 +47,34 @@
       </div>
     </nav>
 
-    <section class="teamsBar teamsBar__header">
-      <div class="container">
-        <div class="row">
-          <ul class="list_ligas">
-            <li>
-              <a href="https://desporto.sapo.pt/futebol/competicao/mocambola-36" target="_blank"><img
-                  src="images/logo-mocambola.png" alt="Moçambola"></a>
-            </li>
-          </ul>
-
-          <div class="list_clubs">
-            <ul class="list_clubs_01">
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Costa do Sol</span><img
-                    src="images/logo-costadosol.png" alt="Costa do Sol"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">UD Songo</span><img
-                    src="images/logo-udsongo.png" alt="UD Songo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Maputo</span><img
-                    src="images/logo-ferroviariomaputo.png" alt="Ferroviário Maputo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Beira</span><img
-                    src="images/logo-ferroviariobeira.png" alt="Ferroviário Beira"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferro Nacala</span><img
-                    src="images/logo-ferronacala.png" alt="Ferro Nacala"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Vilankulo</span><img
-                    src="images/logo-vilankulo.png" alt="Vilankulo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Incomáti</span><img
-                    src="images/logo-incomati.png" alt="Incomáti"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Desportivo Maputo</span><img
-                    src="images/logo-desportivomaputo.png" alt="Desportivo Maputo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Textáfrica</span><img
-                    src="images/logo-textafrica.png" alt="Textáfrica"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Liga Muçulmana</span><img
-                    src="images/logo-ligamuculmana.png" alt="Liga Muçulmana"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Nampula</span><img
-                    src="images/logo-ferroviarionampula.png" alt="Ferroviário Nampula"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Maxaquene</span><img
-                    src="images/logo-maxaquene.png" alt="Maxaquene"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Chibuto</span><img
-                    src="images/logo-chibuto.png" alt="Chibuto"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Nacala</span><img
-                    src="images/logo-nacala.png" alt="Nacala"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Baía de Pemba</span><img
-                    src="images/logo-baiapemba.png" alt="Baía de Pemba"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Têxtil de Punguè</span><img
-                    src="images/logo-textildepungue.png" alt="Têxtil de Punguè"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ==== MENU MOBILE ==== -->
     <nav class="navMenu-mobile col-md-12">
-      <a href="index.html" class="marca"><img src="images/svg/logo_smartFan-white.svg" alt="SmartFan"></a>
+      <a href="index.html" class="marca"><img src="images/logo-vitoriasc.png" alt="Vitória SC"></a>
 
       <a href="#" class="btnMenu btnMenu__open"><img src="images/svg/icon-menu-white.svg" alt="Abrir Menu"></a>
 
       <div id="#menuMobile" class="menuMobile">
         <a href="#menuMobile" class="btnMenu btnMenu__close"><img src="images/svg/close-menu.svg" alt="Fechar Menu"></a>
 
-        <a href="index.html" class="marca"><img src="images/svg/logo_smartFan-white.svg" alt="Logo do SmartFan"></a>
-
-        <section class="teamsBar teamsBar__mobile">
-          <ul class="list_ligas">
-            <li>
-              <a href="https://desporto.sapo.pt/futebol/competicao/mocambola-36" target="_blank"><img
-                  src="images/logo-mocambola.png" alt="Moçambola"></a>
-            </li>
-          </ul>
-
-          <div class="list_clubs">
-            <ul class="list_clubs_01">
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Costa do Sol</span><img
-                    src="images/logo-costadosol.png" alt="Costa do Sol"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">UD Songo</span><img
-                    src="images/logo-udsongo.png" alt="UD Songo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Maputo</span><img
-                    src="images/logo-ferroviariomaputo.png" alt="Ferroviário Maputo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Beira</span><img
-                    src="images/logo-ferroviariobeira.png" alt="Ferroviário Beira"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferro Nacala</span><img
-                    src="images/logo-ferronacala.png" alt="Ferro Nacala"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Vilankulo</span><img
-                    src="images/logo-vilankulo.png" alt="Vilankulo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Incomáti</span><img
-                    src="images/logo-incomati.png" alt="Incomáti"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Desportivo Maputo</span><img
-                    src="images/logo-desportivomaputo.png" alt="Desportivo Maputo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Textáfrica</span><img
-                    src="images/logo-textafrica.png" alt="Textáfrica"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Liga Muçulmana</span><img
-                    src="images/logo-ligamuculmana.png" alt="Liga Muçulmana"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Nampula</span><img
-                    src="images/logo-ferroviarionampula.png" alt="Ferroviário Nampula"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Maxaquene</span><img
-                    src="images/logo-maxaquene.png" alt="Maxaquene"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Chibuto</span><img
-                    src="images/logo-chibuto.png" alt="Chibuto"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Nacala</span><img
-                    src="images/logo-nacala.png" alt="Nacala"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Baía de Pemba</span><img
-                    src="images/logo-baiapemba.png" alt="Baía de Pemba"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Têxtil de Punguè</span><img
-                    src="images/logo-textildepungue.png" alt="Têxtil de Punguè"></a>
-              </li>
-            </ul>
-          </div>
-        </section>
+        <a href="index.html" class="marca"><img src="images/logo-vitoriasc.png" alt="Vitória SC"></a>
 
         <ul class="menuMobile__list">
-          <li class="menuMobile__list__item"><a href="pagar-quotas.html">pagar quotas</a></li>
-          <li class="menuMobile__list__item"><a href="faz-te-socio.html">faz-te sócio</a></li>
-          <li class="menuMobile__list__item"><a href="comprar-bilhetes.html">comprar bilhetes</a></li>
-          <!-- <li class="menuMobile__list__item"><a href="userdata.html">perfil</a></li> -->
+          <li class="menuMobile__list__item"><a href="pagar-quotas_inicio.html">pagar quotas</a></li>
+          <li class="menuMobile__list__item"><a href="userdata.html">perfil</a></li>
 
-          <li class="menu__item menu__btn">
-            <button type="button" class="btn btn__blue" data-toggle="modal" data-target="#exampleModal">login</button>
+          <li class="menu-item menu__btn">
+            <button type="button" class="btn btn-secondary" data-toggle="modal"
+              data-target="#exampleModal">login</button>
           </li>
 
-          <li class="menu__item menu__logado" style="display:none;">
+          <li class="menu-item menu-logado" style="display:none;">
             <i class="icon-user"><img src="images/svg/user-avatar.svg" alt=""></i>
             <p class="user-dropdown">
               Olá, <span><b>Usuário</b></span>!
             </p>
           </li>
 
-          <li class="menu__item menu__item__sair" style="display:none;">
+          <li class="menu-item menu__item__sair" style="display:none;">
             <a href="#">Sair</a>
           </li>
         </ul>
@@ -311,8 +103,8 @@
           <h2>Por favor, tente mais tarde.</h2>
 
           <div class="container-btn">
-            <a href="pagar-quotas_inicio.html" class="btn__verMais">Cancelar</a>
-            <a href="pagar-quotas_sucesso.html" class="btn btn__orange">Atualizar</a>
+            <a href="pagar-quotas_inicio.html" class="btn-link">Cancelar</a>
+            <a href="pagar-quotas_sucesso.html" class="btn btn-primary">Atualizar</a>
           </div>
         </div>
       </div>
@@ -338,88 +130,6 @@
   </section>
 
   <footer>
-    <section class="teamsBar">
-      <div class="container">
-        <div class="row">
-          <ul class="list_ligas">
-            <li>
-              <a href="https://desporto.sapo.pt/futebol/competicao/mocambola-36" target="_blank"><img
-                  src="images/logo-mocambola.png" alt="Moçambola"></a>
-            </li>
-          </ul>
-
-          <div class="list_clubs">
-            <ul class="list_clubs_01">
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Costa do Sol</span><img
-                    src="images/logo-costadosol.png" alt="Costa do Sol"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">UD Songo</span><img
-                    src="images/logo-udsongo.png" alt="UD Songo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Maputo</span><img
-                    src="images/logo-ferroviariomaputo.png" alt="Ferroviário Maputo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Beira</span><img
-                    src="images/logo-ferroviariobeira.png" alt="Ferroviário Beira"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferro Nacala</span><img
-                    src="images/logo-ferronacala.png" alt="Ferro Nacala"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Vilankulo</span><img
-                    src="images/logo-vilankulo.png" alt="Vilankulo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Incomáti</span><img
-                    src="images/logo-incomati.png" alt="Incomáti"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Desportivo Maputo</span><img
-                    src="images/logo-desportivomaputo.png" alt="Desportivo Maputo"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Textáfrica</span><img
-                    src="images/logo-textafrica.png" alt="Textáfrica"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Liga Muçulmana</span><img
-                    src="images/logo-ligamuculmana.png" alt="Liga Muçulmana"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Ferroviário Nampula</span><img
-                    src="images/logo-ferroviarionampula.png" alt="Ferroviário Nampula"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Maxaquene</span><img
-                    src="images/logo-maxaquene.png" alt="Maxaquene"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Chibuto</span><img
-                    src="images/logo-chibuto.png" alt="Chibuto"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Nacala</span><img
-                    src="images/logo-nacala.png" alt="Nacala"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Baía de Pemba</span><img
-                    src="images/logo-baiapemba.png" alt="Baía de Pemba"></a>
-              </li>
-              <li>
-                <a href="clube-interna.html" class="tooltip"><span class="tooltiptext">Têxtil de Punguè</span><img
-                    src="images/logo-textildepungue.png" alt="Têxtil de Punguè"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <div class="container">
       <div class="row">
         <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -483,117 +193,62 @@
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <!-------- ENTRAR ------->
             <li class="nav-item" role="presentation">
-              <a class="tab_label nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab"
-                aria-controls="login" aria-selected="true">login</a>
+              <a class="tab_label nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                aria-controls="login" aria-selected="false">login</a>
             </li>
 
             <!------- CADASTRAR ------->
             <li class="nav-item" role="presentation">
               <a class="tab_label nav-link" id="cadastro-tab" data-toggle="tab" href="#cadastro" role="tab"
-                aria-controls="cadastro" aria-selected="false">cadastro</a>
+                aria-controls="cadastro" aria-selected="true">cadastro</a>
             </li>
           </ul>
 
           <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <div class="tab-pane fade active in" id="login" role="tabpanel" aria-labelledby="login-tab"
+              aria-expanded="true">
+              <img src="images/logo-vitoriasc.png" alt="" class="logo-clube">
               <h2>Insere o teu e-mail e password e faz login!</h2>
               <form>
                 <div class="container-input">
                   <label for="email" class="form-label">E-mail</label>
-                  <input type="email" name="email">
+                  <input type="email" id="email">
                   <!-- <span class="input-validate">Obrigatório!</span> -->
                 </div>
 
                 <div class="container-input">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" name="password">
+                  <input type="password" id="password">
                   <!-- <span class="input-validate">Obrigatório!</span> -->
                 </div>
 
                 <a href="#" class="esqueci-senha">Recuperar a password</a>
 
-                <a href="#" class="btn btn__blue">
+                <a href="#" class="btn btn-primary">
                   <span>entrar</span>
                 </a>
 
-                <a href="#" class="esqueci-senha link-registo">Ainda não tem sua conta Smartfan?
-                  Cadastre-te aqui.</a>
+                <a class="esqueci-senha link-registo" href="#">Ainda não tens conta?
+                  Regista-te aqui.</a>
               </form>
             </div>
 
             <div class="tab-pane fade" id="cadastro" role="tabpanel" aria-labelledby="cadastro-tab">
               <div class="userfrommember">
-                <h2>Escolhe o teu clube, insere os teus dados de sócio e regista-te!</h2>
+                <img src="images/logo-vitoriasc.png" alt="" class="logo-clube">
+                <h2>Insere os teus dados de sócio e regista-te!</h2>
                 <form>
-                  <ul class="listTeams_popUp">
-                    <li>
-                      <a href="#"><img src="images/logo-costadosol.png" alt="Costa do Sol"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-udsongo.png" alt="UD Songo"></a>
-                    </li>
-                    <li class="team-select">
-                      <a href="#"><img src="images/logo-ferroviariomaputo.png" alt="Ferroviário Maputo"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-ferroviariobeira.png" alt="Ferroviário Beira"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-ferronacala.png" alt="Ferro Nacala"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-vilankulo.png" alt="Vilankulo"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-incomati.png" alt="Incomáti"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-desportivomaputo.png" alt="Desportivo Maputo"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-textafrica.png" alt="Textáfrica"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-ligamuculmana.png" alt="Liga Muçulmana"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-ferroviarionampula.png" alt="Ferroviário Nampula"></a>
-                    </li>
-                    <li>
-                      <a href="#">><img src="images/logo-maxaquene.png" alt="Maxaquene"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-chibuto.png" alt="Chibuto"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-nacala.png" alt="Nacala"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-baiapemba.png" alt="Baía de Pemba"></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/logo-textildepungue.png" alt="Têxtil de Punguè"></a>
-                    </li>
-                  </ul>
-
-                  <p class="team-select-name">Ferroviário Maputo</p>
-
                   <div class="container-input">
-                    <label for="smv_ufm_SocNum" class="form-label">E-mail</label>
-                    <input type="email" id="smv_ufm_SocNum" maxlength="10">
+                    <label for="smv_ufm_SocNum" class="form-label">número de sócio</label>
+                    <input type="text" id="smv_ufm_SocNum" maxlength="10">
                   </div>
 
                   <div class="container-input">
-                    <label for="smv_ufm_CardDigits" class="form-label">Senha</label>
-                    <input type="password" id="smv_ufm_CardDigits">
+                    <label for="smv_ufm_CardDigits" class="form-label">últimos 5 dígitos do código de barras</label>
+                    <input type="text" id="smv_ufm_CardDigits">
                   </div>
 
-                  <div class="container-input">
-                    <label for="smv_ufm_CardDigits2" class="form-label">Confirme sua senha</label>
-                    <input type="password" id="smv_ufm_CardDigits2">
-                  </div>
-
-                  <div class="registo_captcha">
+                  <div class="registo_captcha" style="display: none;">
                     <div align="center" class="g-recaptcha" id="smv_ufm_gre">
                       <div style="width: 304px; height: 78px;">
                         <div><iframe
@@ -609,12 +264,12 @@
                     <!-- <input type="hidden" name="smv_ufm_valBLAH" id="smv_ufm_valBLAH" value="" smv-captchaon="1" smv-rcwidgetid="1"> -->
                   </div>
 
-                  <a href="javascript:smv_UserFromMemberValidate()" class="btn btn__orange">
+                  <a href="javascript:smv_UserFromMemberValidate()" class="btn btn-primary">
                     <span smv-langtext="btvalidate">Validar</span>
                   </a>
                 </form>
 
-                <a href="#" class="esqueci-senha link-registo">Já tem sua conta Smartfan? Faça seu login
+                <a href="#" class="esqueci-senha link-registo">Já tem sua conta? Faça o teu login
                   aqui.</a>
               </div>
 
@@ -624,12 +279,8 @@
                 <ul class="infos-socio">
                   <li><img src="images/logo-1gilvicentefc.png" alt=""></li>
 
-
                   <li>
-                    <!-- <span id="smv_ufm_MemberName"></span>-->
                     <span><span smv-langtext="lblsocio">Sócio</span> <span id="smv_ufm_MemberNum"></span>
-
-                    </span>
                   </li>
 
                 </ul>
@@ -717,18 +368,15 @@
                     </ul>
                   </div>
 
-                  <a href="javascript:smv_UserFromMemberRequest()" class="btn btn__orange">
+                  <a href="javascript:smv_UserFromMemberRequest()" class="btn btn-primary">
                     <span smv-langtext="btregister">Registar</span>
                   </a>
                 </form>
               </div>
 
-
               <div smv-type="wufmbrarea" id="smv_ufmaccountemailsent" style="display:none">
-
                 <div smv-langtext="ufm_confirmemaillink">Foi enviado um email para concluir o processo.
                 </div>
-
               </div>
             </div>
           </div>
@@ -739,7 +387,7 @@
 
             <h2>Login efetuado com sucesso!</h2>
 
-            <button class="btn btn__blue">
+            <button class="btn btn-secondary">
               <span>continuar</span>
             </button>
           </div>
@@ -750,7 +398,7 @@
 
             <h2>Os dados de login estão inválidos. Por favor, verifique os dados</h2>
 
-            <button class="btn btn__orange">
+            <button class="btn btn-primary">
               <span>voltar</span>
             </button>
           </div>
@@ -771,7 +419,7 @@
                 <input id="smv_uacc_ConfirmCod" type="text" maxlength="10">
               </div>
 
-              <a href="#" class="btn btn__blue">Avançar</a>
+              <a href="#" class="btn btn-secondary">Avançar</a>
             </form>
           </div>
 
@@ -787,7 +435,7 @@
                   smv-langplaceholder="plholderuseremail" autocapitalize="none" autocorrect="off">
               </div>
 
-              <button type="button" class="btn btn__orange">
+              <button type="button" class="btn btn-primary">
                 <span>Recuperar password</span>
               </button>
 

@@ -123,7 +123,9 @@ header {
 
     @include sm {
       height: 4rem;
-      border: 2px solid $secondary-01;
+      padding:6px;
+      background-color: $black-01;
+      border: 1px solid $secondary-01;
     }
   }
 

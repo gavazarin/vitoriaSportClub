@@ -175,6 +175,9 @@
     width: 3rem;
     margin-right: 1.5rem;
   }
+  @include sm{
+    max-width: 90%;
+  }
 }
 
 .terms {
