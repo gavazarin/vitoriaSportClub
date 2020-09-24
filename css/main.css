@@ -2079,7 +2079,7 @@ form span.input-validate {
 }
 
 .btn-secondary:hover span {
-  color: #707070;
+  color: #000000;
   transition: all .3s ease-in-out;
 }
 
@@ -4063,6 +4063,50 @@ header .marca img {
     -webkit-transform: translateY(0);
     -webkit-animation: slideDown 2.5s 5.0s 1 ease forwards;
   }
+}
+
+.modal-login-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding-top: 7rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  position: fixed;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.modal-content {
+  width: 45%;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    width: 95%;
+  }
+}
+
+.modal-login-container.mostrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.mostrar .modal-content {
+  animation: modal .6s;
 }
 
 .nav-tabs {

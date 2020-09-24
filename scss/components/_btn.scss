@@ -16,8 +16,9 @@
     color: $black-01;
     text-decoration: none;
     transition: all .3s ease-in-out;
-    span{
-      color:$black-01;
+
+    span {
+      color: $black-01;
     }
   }
 
@@ -29,7 +30,8 @@
       background-color: $primary-02;
       color: $gray-01;
       transition: all .3s ease-in-out;
-      span{
+
+      span {
         color: $gray-01;
         transition: all .3s ease-in-out;
       }
@@ -43,8 +45,9 @@
     &:hover {
       background-color: $gray-02;
       transition: all .3s ease-in;
-      span{
-        color: $gray-02;
+
+      span {
+        color: $black-01;
         transition: all .3s ease-in-out;
       }
     }
