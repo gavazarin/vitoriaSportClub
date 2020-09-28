@@ -1927,7 +1927,7 @@ form input,
 form select {
   width: 100%;
   height: 3.7rem;
-  padding: .75rem 1.5rem;
+  padding: .75rem 1rem;
   border: 2px solid #AFAFAF;
   border-radius: 1rem;
   font-size: 1.6rem;
@@ -3510,6 +3510,10 @@ header .marca img {
   color: #AFAFAF;
 }
 
+.navMenu .menu-item .btn {
+  color: #FFFFFF;
+}
+
 .navMenu .menu-item:before {
   content: '';
   width: 100%;
@@ -4415,6 +4419,94 @@ header .marca img {
   }
 }
 
+.check-new-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 4.5rem;
+}
+
+.check-new-number h1 {
+  width: 100%;
+}
+
+.check-new-number-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  text-align: right;
+  padding-top: 1.5rem;
+}
+
+.check-new-number-content i {
+  display: inline-block;
+  width: auto;
+  height: 20rem;
+}
+
+.check-new-number-content i img {
+  height: 100%;
+}
+
+.check-new-number-content-text {
+  padding-top: 2rem;
+  text-align: left;
+}
+
+.check-new-number-content-text h2 {
+  width: 50%;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.check-new-number form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  margin-bottom: 3rem;
+}
+
+.check-new-number form .container-input {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.check-new-number form .btn {
+  margin-left: 1.2rem;
+}
+
+.check-new-number .btn__verMais {
+  margin-left: .8rem;
+}
+
+.check-new-number p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.check-new-number p .span-number {
+  font-weight: 900;
+  color: #212121;
+}
+
+.check-new-number p strong {
+  font-weight: 900;
+}
+
+.check-new-number .p-erro {
+  color: #ffd201;
+}
+
 .proximos-jogos {
   margin-bottom: 3rem;
 }
@@ -4729,19 +4821,15 @@ header .marca img {
 .sidebar__social-media {
   width: 100%;
   position: relative;
-  margin: 1.5rem 0;
-  padding: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   color: #212121;
 }
 
 .sidebar__social-media:before {
   content: '';
+  display: none;
   width: 60%;
   height: 1px;
   background-color: #000000;
@@ -4759,7 +4847,6 @@ header .marca img {
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 1.5rem 0;
 }
 
 .sidebar__social-media .clube-social-media li {
@@ -4789,6 +4876,15 @@ header .marca img {
 
 .sidebar__social-media .links-social-media li {
   margin: 0 1rem;
+}
+
+.sidebar__social-media .links-social-media .logo-vitoriasc a {
+  width: 5rem;
+  height: 5rem;
+}
+
+.sidebar__social-media .links-social-media .logo-vitoriasc a:hover {
+  transform: none;
 }
 
 .sidebar__social-media .icon-social-media {
@@ -4823,11 +4919,6 @@ header .marca img {
 .classificacao {
   width: 100%;
   position: relative;
-}
-
-.last-game h1,
-.classificacao h1 {
-  margin-top: 0;
 }
 
 .last-game .infos__list--liga,
@@ -5612,16 +5703,10 @@ header .marca img {
 .userdata {
   margin-bottom: 3rem;
   position: relative;
-  height: 65vh;
+  height: 130vh;
 }
 
 @media (max-width: 992px) {
-  .userdata {
-    height: 75vh;
-  }
-}
-
-@media (max-width: 575px) {
   .userdata {
     height: auto;
   }
@@ -5696,7 +5781,7 @@ header .marca img {
   align-content: flex-start;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 992px) {
   .tabs_userdata .li-tabs {
     display: flex;
     flex-direction: column;
@@ -5737,18 +5822,29 @@ header .marca img {
   }
 }
 
-.tabs_userdata .tab-content .localidade-postal {
+.tabs_userdata .tab-content .codigo-postal-pt {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.tabs_userdata .tab-content .codigo-postal-pt input {
+  padding: .75rem 1rem;
+}
+
+.tabs_userdata .tab-content .codigo-postal-pt p {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.2em;
   color: #212121;
   margin-bottom: 0rem;
-  padding: .75rem .5rem;
 }
 
 @media (max-width: 767px) {
-  .tabs_userdata .tab-content .localidade-postal {
+  .tabs_userdata .tab-content .codigo-postal-pt p {
     margin: 1.5rem 0;
     padding: 0 .5rem;
   }
@@ -5761,6 +5857,7 @@ header .marca img {
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-bottom: 3rem;
 }
 
 .tabs_userdata .tab-content .clube__socio--infos {
@@ -5773,7 +5870,7 @@ header .marca img {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.2em;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .tabs_userdata .tab-content .clube__socio--infos strong {
@@ -5826,6 +5923,36 @@ header .marca img {
 @media (max-width: 767px) {
   .tabs_userdata .tab-content .clube__socio {
     margin: 1.5rem 0;
+  }
+}
+
+.tabs_userdata .tab-content .dados-socio-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.tabs_userdata .tab-content .dados-socio-list li {
+  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: .4rem;
+  border-right: 1px solid #AFAFAF;
+}
+
+.tabs_userdata .tab-content .dados-socio-list li:last-child {
+  border-right: none;
+}
+
+@media (max-width: 992px) {
+  .tabs_userdata .tab-content .dados-socio-list li {
+    padding: .8rem 0;
+    border-right: none;
+    border-bottom: 1px solid #AFAFAF;
   }
 }
 
@@ -5941,7 +6068,7 @@ header .marca img {
   text-align: right;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 992px) {
   .tabs_userdata .tab-content {
     position: relative;
   }

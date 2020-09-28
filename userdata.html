@@ -19,7 +19,8 @@
         style="display: none;">
       <div class="container">
         <div class="row">
-          <a href="index.html" class="marca col-lg-2 col-md-2"><img src="images/logo-vitoriasc.png" alt="Logo do Vitória SC"></a>
+          <a href="index.html" class="marca col-lg-2 col-md-2"><img src="images/logo-vitoriasc.png"
+              alt="Logo do Vitória SC"></a>
 
           <ul class="menu col-lg-10 col-md-10">
             <li class="menu-list">
@@ -84,7 +85,7 @@
           </li>
         </ul>
       </div>
-    </nav>  
+    </nav>
   </header>
 
   <section class="bannerUserData">
@@ -106,67 +107,12 @@
       <div class="row">
         <nav class="tabs_userdata col-lg-10 offset-lg-1">
           <ul class="ul-tabs">
-            <!-------- DADOS DE SÓCIO ------->
-            <li class="li-tabs">
-              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-socio" checked>
-              <label for="dados-socio" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6" checked>Dados de Sócio</label>
-              <div class="tab-content col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <form class="col-lg-7 col-md-10 col-xs-12">
-                  <div class="container-input col-lg-12">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome">
-                    <!-- <span class="input-validate">Obrigatório!</span> -->
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="numero-socio">Número de Sócio</label>
-                    <input type="text" id="numero-socio">
-                    <!-- <span class="input-validate">Obrigatório!</span> -->
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="bilhete-identidade">Bilhete de Identidade</label>
-                    <input type="text" id="bilhete-identidade">
-                    <!-- <span class="input-validate">Obrigatório!</span> -->
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="nif">NIF</label>
-                    <input type="text" id="nif">
-                    <!-- <span class="input-validate">Obrigatório!</span> -->
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="data-nascimento">Data de Nascimento</label>
-                    <input type="text" id="data-nascimento">
-                    <!-- <span class="input-validate">Obrigatório!</span> -->
-                  </div>
-
-                  <div class="container-input col-lg-6" style="display: none;">
-                    <label for="sexo">Sexo</label>
-                    <select name="sexo" id="sexo" aria-placeholder="Selecione">
-                      <option value="#"></option>
-                      <option value="Feminino">Feminino</option>
-                      <option value="Masculino">Masculino</option>
-                      <option value="Outro">Outro</option>
-                    </select>
-                    <!-- <span class="input-validate">obrigatório</span> -->
-                  </div>
-
-                  <div class="container-btn col-lg-12">
-                    <a href="#" class="btn btn-secondary">
-                      <span>salvar</span>
-                    </a>
-                  </div>
-                </form>
-              </div>
-            </li>
-
             <!------- DADOS DE CONTA ------->
             <li class="li-tabs">
               <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-conta">
-              <label for="dados-conta" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6">Dados de Conta</label>
-              <div class="tab-content col-lg-9 col-md-9 col-sm-9 col-xs-12">
+              <label for="dados-conta" class="label-userdata col-lg-3 col-md-6 col-sm-6 col-xs-6">Dados de Conta</label>
+
+              <div class="tab-content col-lg-9 col-md-12">
                 <div class="tab-content__conta col-lg-7 col-md-10 col-sm-12 col-xs-12">
                   <div class="email-pwd-atual">
                     <h2>email</h2>
@@ -240,6 +186,167 @@
               </div>
             </li>
 
+            <!-------- DADOS DE SÓCIO ------->
+            <li class="li-tabs">
+              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-socio" checked>
+              <label for="dados-socio" class="label-userdata col-lg-3 col-md-6 col-sm-6 col-xs-6" checked>Dados de
+                Sócio</label>
+
+              <div class="tab-content tab-content__clubes col-lg-9 col-md-12">
+                <div class="clube__socio col-lg-6 col-md-6 col-sm-12">
+                  <div class="clube__socio--infos">
+                    <ul>
+                      <li>
+                        <strong smv-langtext="lblsocnumber">Sócio Nº</strong> <span>30</span>
+                      </li>
+                      <li>
+                        <span smv-langtext="lblsoccat">Categoria</span> <span><strong>H +60</strong></span>
+                      </li>
+                      <li class="aviso-quotas"><img src="images/svg/check-icon.svg" alt="" class="icon-quotas">
+                        <span smv-langtext="quotasdia">Tens as quotas <strong>em dia</strong>!</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <a href="javascript:smv_udata_ExitMemberFees('SMAMBRSHIPVITSCMEMBERS')" class="btn btn-primary">
+                    <span smv-langtext="btgofees">Ver quotas</span>
+                  </a>
+                </div>
+
+                <form name="smv_fUserData_Member" id="smv_fUserData_Member" class="col-lg-7 col-md-10 col-xs-12"
+                  novalidate="novalidate">
+
+                  <ul class="dados-socio-list">
+                    <li class="col-lg-4">
+                      <h2 smv-langtext="lblname">Nome</h2>
+                      <span>João Fátima Novais Nobre</span>
+                    </li>
+                    <li class="col-lg-4">
+                      <h2 smv-langtext="lbldocid">Bilhete de Identidade</h2>
+                      <span></span>
+                    </li>
+                    <li class="col-lg-4">
+                      <h2 smv-langtext="lblbdate">Data de Nascimento</h2>
+                      <span>01-01-1937</span>
+                    </li>
+                  </ul>
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_VAT" smv-langtext="lblnif">NIF</label>
+                    <input name="smv_udata_VAT" id="smv_udata_VAT" type="tel" value="" smv-inival="">
+                  </div>
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_Gender" smv-langtext="lblgender">Sexo</label>
+                    <select name="smv_udata_Gender" id="smv_udata_Gender" smv-inival="M">
+                      <!--<option value=""></option>-->
+                      <option value="M" smv-langtext="xgenderM" smv-langtext-default="Masculino" selected="selected">
+                        Masculino</option>
+                      <option value="F" smv-langtext="xgenderF" smv-langtext-default="Feminino">Feminino</option>
+                      <option value="ND" smv-langtext="xgenderND" smv-langtext-default="">-</option>
+                    </select>
+                  </div>
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_Country" smv-langtext="lblcountry">País</label>
+                    <select id="smv_udata_Country" name="smv_udata_Country"
+                      onchange="smv_uData_ChangeCountry('smv_udata_', true,true)" smv-inival="">
+                      <option value="" smv-langtext="optselect">Selecionar</option>
+                      <option value="182" smv-isdefaultcountry="true" smv-countrycode="PT" smv-langtext="xcountry182"
+                        smv-langtext-default="Portugal" selected="selected">Portugal</option>
+                      <option value="33" smv-isdefaultcountry="false" smv-countrycode="BR" smv-langtext="xcountry33"
+                        smv-langtext-default="Brasil">Brasil</option>
+                      <option value="257" smv-isdefaultcountry="false" smv-countrycode="XX" smv-langtext="xcountry257"
+                        smv-langtext-default="Outro">Outro</option>
+                    </select>
+                  </div>
+
+                  <div class="container-input col-lg-12">
+                    <label for="smv_udata_Address" class="form-label" smv-langtext="lbladdress">Morada</label>
+                    <input name="smv_udata_Address" id="smv_udata_Address" smv-filterchars="addy" type="text"
+                      value="RUA RAÚL BRANDÃO 152 RC ESQ" smv-inival="RUA RAÚL BRANDÃO 152 RC ESQ">
+                  </div>
+
+                  <!-- Código Postal - Portugal  smv-countryfilter="smv_udata_PT" -->
+                  <div class="container-input codigo-postal-pt col-lg-6">
+                    <label for="smv_udata_CP" smv-langtext="lblpostalcode">Código Postal</label>
+                    <input name="smv_udata_CP" id="smv_udata_CP" onblur="javascript:smv_CountryValidateCP('smv_udata_')"
+                      onkeyup="javascript:smv_changeCP('smv_udata_')" value="1000-100" smv-inival="1000-100" type="text"
+                      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                      class="col-lg-6 col-md-6 col-sm-6">
+                    <input name="smv_udata_CPValid" id="smv_udata_CPValid" type="hidden" value="1" smv-inival="1">
+                    <p class="col-lg-6 col-md-6 col-sm-6" id="smv_udata_CPLocDisplay">
+                      Lisboa
+                    </p>
+                  </div>
+
+                  <!-- 
+                        <div class="container-input codigo-postal-pt" smv-countryfilter="smv_udata_OTHER" style="display:none">
+                            <label for="smv_udata_CPOther" smv-langtext="lblpostalcode">Código postal</label>
+                            <input name="smv_udata_CPOther" id="smv_udata_CPOther" value="1000-100" smv-inival="1000-100" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="col-lg-6 col-md-6 col-sm-6"/>
+                        </div>
+-->
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_Loc" smv-langtext="lblloc">Localidade</label>
+                    <input name="smv_udata_Loc" id="smv_udata_Loc" smv-filterchars="addy" type="text" value="LISBOA"
+                      smv-inival="LISBOA">
+                  </div>
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País Telemóvel</label>
+                    <select id="smv_udata_MobileCountry" name="smv_udata_MobileCountry"
+                      onchange="smv_uData_ChangeContactCountry('smv_udata_', 'Mobile', true)" smv-inival="182"
+                      class="valid">
+                      <option value="">Selecione país</option>
+                      <!--  smv-langtext="xcountry182" smv-langtext-default="Portugal" -->
+                      <option value="182" smv-isdefaultcountry="true" smv-countrycode="PT" selected="selected">Portugal
+                        (+351)</option>
+                      <!--  smv-langtext="xcountry33" smv-langtext-default="Brasil" -->
+                      <option value="33" smv-isdefaultcountry="false" smv-countrycode="BR">Brasil (+55)</option>
+                      <!--  smv-langtext="xcountry257" smv-langtext-default="Outro" -->
+                      <option value="257" smv-isdefaultcountry="false" smv-countrycode="XX">Outro ()</option>
+                    </select>
+                  </div>
+
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_Mobile" smv-langtext="lblmobile">Telemóvel</label>
+                    <input name="smv_udata_Mobile" id="smv_udata_Mobile" type="tel" value="444444111"
+                      smv-inival="444444111">
+                  </div>
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País Telefone</label>
+                    <select id="smv_udata_PhoneCountry" name="smv_udata_PhoneCountry"
+                      onchange="smv_uData_ChangeContactCountry('smv_udata_', 'Phone', true)" smv-inival="182">
+                      <option value="">Selecione país</option>
+                      <!-- smv-langtext="xcountry182" smv-langtext-default="Portugal"-->
+                      <option value="182" smv-isdefaultcountry="true" smv-countrycode="PT" selected="selected">Portugal
+                        (+351)</option>
+                      <!-- smv-langtext="xcountry33" smv-langtext-default="Brasil"-->
+                      <option value="33" smv-isdefaultcountry="false" smv-countrycode="BR">Brasil (+55)</option>
+                      <!-- smv-langtext="xcountry257" smv-langtext-default="Outro"-->
+                      <option value="257" smv-isdefaultcountry="false" smv-countrycode="XX">Outro ()</option>
+                    </select>
+                  </div>
+
+                  <div class="container-input col-lg-6">
+                    <label for="smv_udata_Phone" smv-langtext="lblphone">Telefone</label>
+                    <input name="smv_udata_Phone" id="smv_udata_Phone" type="tel" value="654644655"
+                      smv-inival="654644655">
+                  </div>
+
+                  <div class="container-btn col-lg-12">
+                    <a href="javascript:smv_udata_UpdMember()" class="btn btn-secondary">
+                      <span smv-langtext="btsave">Gravar</span>
+                    </a>
+                  </div>
+
+                </form>
+              </div>
+            </li>
+
             <!------- DADOS CONTATO ------->
             <li class="li-tabs">
               <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-contato">
@@ -293,40 +400,6 @@
                     </a>
                   </div>
                 </form>
-              </div>
-            </li>
-
-            <!------- Clubes ------->
-            <li class="li-tabs">
-              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="clubes">
-              <label for="clubes" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6">Quotas</label>
-              <div class="tab-content tab-content__clubes col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <div class="clube__socio col-lg-7 col-md-7 col-sm-12">
-                  <div class="clube__socio--infos">
-                    <img src="images/logo-vitoriasc.png" alt="Vitória SC">
-                    <ul>
-                      <li><strong>Sócio Nº.</strong> <span>125870</span></li>
-                      <!-- <li>Categoria <span><strong>+ Leão</strong></span></li> -->
-                      <li class="aviso-quotas"><img src="images/svg/check-icon.svg" alt="" class="icon-quotas">
-                        <span>Tens as quotas <strong>em dia</strong>!</span></li>
-                      <!-- <li class="aviso-quotas quotas-atrasadas"><img src="images/svg/alert-icon.svg" alt="icone de alerta" class="icon-quotas"> <span>Tens quotas <strong>em atraso</strong>!</span></li> -->
-                    </ul>
-                  </div>
-                  <a href="#" class="btn btn__orange">
-                    <span>pagar quotas</span>
-                  </a>
-                </div>
-
-                <div class="clube__fan col-lg-6 col-md-6 col-sm-12" style="display: none;">
-                  <h1>Clubes que és <span class="destaque">fan</span>!</h1>
-                  <ul class="clube__fan__list">
-                    <li><img src="images/logo-1sporting.png" alt=""></li>
-                    <li><img src="images/logo-1vitoriasc.png" alt=""></li>
-                    <li><img src="images/logo-2cdnmadeira.png" alt=""></li>
-                  </ul>
-                  <!-- <p class="not-fan">Ainda <strong>não és fan</strong> de nenhum clube. Escolhe já os clubes que és <strong>fan</strong>!</p> -->
-                  <a href="#" class="btn-link open-clubes-fan">editar</a>
-                </div>
               </div>
             </li>
           </ul>

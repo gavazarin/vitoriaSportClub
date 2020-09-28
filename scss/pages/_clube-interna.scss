@@ -1,3 +1,77 @@
+.check-new-number {
+  @include flex(column, flex-start, center, center);
+  margin-bottom: 4.5rem;
+
+  h1 {
+    width: 100%;
+  }
+
+  &-content {
+    @include flex(row, center, flex-start, flex-start);
+    flex-wrap: wrap;
+    text-align: right;
+    padding-top: 1.5rem;
+
+    i {
+      display: inline-block;
+      width: auto;
+      height: 20rem;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &-text {
+      padding-top: 2rem;
+      text-align: left;
+
+      h2 {
+        width: 50%;
+        font-size: 1.8rem;
+        text-align: left;
+      }
+    }
+  }
+
+  form {
+    @include flex(row, center, flex-end, flex-end);
+    margin-bottom: 3rem;
+
+    .container-input {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .btn {
+      margin-left: 1.2rem;
+    }
+  }
+
+  .btn__verMais {
+    margin-left: .8rem;
+  }
+
+  p {
+    @include font(1.8rem, 300, 1.4em);
+    text-transform: uppercase;
+    color: $black-01;
+
+    .span-number {
+      font-weight: 900;
+      color: $primary-01;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+  }
+
+  .p-erro {
+    color: $secondary-01;
+  }
+}
+
 .proximos-jogos {
   margin-bottom: 3rem;
 
@@ -250,17 +324,22 @@
   }
 }
 
+
 .sidebar__social-media {
   width: 100%;
   position: relative;
-  margin: 1.5rem 0;
-  padding: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   position: relative;
-  @include flex(column, center, center, center);
+  // padding: 1.5rem;
+  // @include flex(column, center, center, center);
   color: $primary-01;
+  // border-top: 1px solid $gray-02;
+
 
   &:before {
     content: '';
+    display: none;
     width: 60%;
     height: 1px;
     background-color: $black-01;
@@ -270,7 +349,6 @@
 
   .clube-social-media {
     @include flex(row, center, center, center);
-    margin: 1.5rem 0;
 
     li {
       margin: 0 .5rem;
@@ -293,6 +371,17 @@
 
     li {
       margin: 0 1rem;
+    }
+
+    .logo-vitoriasc {
+      a {
+        width: 5rem;
+        height: 5rem;
+
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
 
@@ -328,10 +417,6 @@
 .classificacao {
   width: 100%;
   position: relative;
-
-  h1 {
-    margin-top: 0;
-  }
 
   .infos__list {
     &--liga {

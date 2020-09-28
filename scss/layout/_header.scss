@@ -58,6 +58,10 @@ header {
         color: $gray-01;
       }
 
+      .btn {
+        color: $white-01;
+      }
+
       &:before {
         content: '';
         width: 100%;
@@ -89,8 +93,8 @@ header {
       }
     }
 
-    &__btn{
-      &::before{
+    &__btn {
+      &::before {
         display: none;
       }
     }
@@ -123,7 +127,7 @@ header {
 
     @include sm {
       height: 4rem;
-      padding:6px;
+      padding: 6px;
       background-color: $black-01;
       border: 1px solid $secondary-01;
     }
@@ -131,7 +135,7 @@ header {
 
   b {
     font-weight: 900;
-    color:$secondary-01;
+    color: $secondary-01;
   }
 
   input {
