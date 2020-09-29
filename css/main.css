@@ -4113,10 +4113,41 @@ header .marca img {
   animation: modal .6s;
 }
 
-.nav-tabs {
+.closeModal {
+  width: 3rem;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  padding: .6rem;
+  background-color: #FFFFFF;
+  border: 1px solid #ffd201;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.closeModal img {
+  width: 100%;
+  height: 100%;
+}
+
+.closeModal:hover {
+  opacity: .8;
+  transform: scale(0.9);
+  transition: all .3s ease-in-out;
+}
+
+.nav_tabs {
   width: 100%;
   height: auto;
+  background: #FFFFFF;
   position: relative;
+}
+
+.nav_tabs ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4125,7 +4156,7 @@ header .marca img {
   border-bottom: 2px solid #FFFFFF;
 }
 
-.nav-tabs li {
+.nav_tabs ul li {
   width: 50%;
   display: flex;
   flex-direction: row;
@@ -4137,20 +4168,28 @@ header .marca img {
   line-height: 1em;
 }
 
-.nav-tabs .tab_label {
+.nav_tabs .tab_label {
   width: 100%;
   padding: 2rem;
   display: block;
   cursor: pointer;
   text-align: center;
-  border-bottom: 2px solid #707070;
-  background-color: #ececec;
-  color: #707070;
+  background-color: #dfdfdf;
+  color: #ffd201;
   margin: 0;
-  transition: all .3s ease-out;
 }
 
-.nav-tabs .tab-content > .active {
+.nav_tabs .rd_tabs {
+  display: none;
+  position: absolute;
+}
+
+.nav_tabs .rd_tabs:checked ~ label {
+  background-color: #FFFFFF;
+  color: #ffd201;
+}
+
+.nav_tabs .rd_tabs:checked ~ .tab-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -4158,80 +4197,185 @@ header .marca img {
   align-content: center;
 }
 
-.closeModal {
-  background-color: #212121;
-  border: 2px solid #f1c500;
-  padding: .5rem;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: auto;
-  z-index: 11;
-  transform: translateX(130%);
-}
-
-.closeModal img {
-  width: 10px;
-  height: 10px;
-}
-
-.closeModal:focus {
-  outline: none;
-}
-
-.tab-content {
-  width: 100%;
-}
-
-.tab-pane {
+.nav_tabs .tab-content {
   height: auto;
   width: 100%;
   background-color: #fff;
+  display: none;
+  position: absolute;
+  top: 6rem;
+  right: auto;
+  bottom: auto;
+  left: 0;
   padding: 1.5rem 3rem;
   margin-bottom: 3rem;
-  text-align: center;
 }
 
 @media (max-width: 767px) {
-  .tab-pane {
+  .nav_tabs .tab-content {
     padding: 1.5rem;
   }
 }
 
-.tab-pane .logo-clube {
-  height: 8rem;
+.nav_tabs .tab-content h2 {
+  margin: 1rem 0;
 }
 
-.tab-pane h2 {
-  width: 100%;
-  margin: 1rem 0 2rem;
-}
-
-.tab-pane h3 {
+.nav_tabs .tab-content h3 {
   width: 80%;
 }
 
-.tab-pane form {
-  width: 75%;
+.nav_tabs .tab-content .logo-clube {
+  height: 8rem;
+}
+
+.nav_tabs .tab-content form {
+  width: 50%;
   margin: 0 auto;
 }
 
 @media (max-width: 992px) {
-  .tab-pane form {
+  .nav_tabs .tab-content form {
     width: 100%;
   }
 }
 
-.nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover,
-.nav-tabs .nav-item.open .nav-link,
-.nav-tabs .nav-item.open .nav-link:focus,
-.nav-tabs .nav-item.open .nav-link:hover {
-  color: #212121;
-  border: none;
-  border-bottom: 2px solid #f1c500;
+.nav_tabs .tab-content .select-club {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-transform: initial;
+  padding-left: 0;
+  margin-top: 1.2rem;
+}
+
+.nav_tabs .tab-content .select-club img {
+  opacity: 1;
+}
+
+.nav_tabs .tab-content .select-club p {
+  margin: 0 .5rem;
+  color: #000000;
+}
+
+.nav_tabs .tab-content .select-club i {
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+.nav_tabs .tab-content .select-club i img {
+  width: 2.4rem;
+}
+
+.nav_tabs #select-club:checked ~ .listTeams_popUp {
+  display: block;
+}
+
+.nav_tabs #select-club:checked ~ .select-club i {
+  transform: rotate(180deg);
+  animation: rotateImg .3s ease-out;
+}
+
+.nav_tabs .listTeams_popUp {
+  width: 100%;
+  max-height: 28rem;
+  overflow-y: scroll;
+  display: none;
+  position: absolute;
+  top: 5.8rem;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  transform: translateX(50%);
+  background-color: #FFFFFF;
+  border: 1px solid #ffd201;
+  border-radius: .5rem;
   transition: all .3s ease-out;
+  z-index: 99;
+}
+
+.nav_tabs .listTeams_popUp::-webkit-scrollbar {
+  width: .8rem;
+  background: #AFAFAF;
+  border-radius: 1rem;
+}
+
+.nav_tabs .listTeams_popUp::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.nav_tabs .listTeams_popUp li {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 1.6rem .8rem;
+  cursor: pointer;
+}
+
+.nav_tabs .listTeams_popUp li img {
+  height: 3.5rem;
+  margin: 0 .5rem;
+}
+
+.nav_tabs .listTeams_popUp li p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin: 0 .5rem;
+}
+
+.nav_tabs .listTeams_popUp li:hover {
+  background-color: #FFFFFF;
+  transition: all .3s ease-out;
+}
+
+.nav_tabs .team-select-name {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: #404040;
+  animation: nameTeam .3s ease-in;
+}
+
+.nav_tabs .infos-socio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: none;
+  margin: .5rem 0;
+}
+
+.nav_tabs .infos-socio li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  margin: 0 .5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  color: #212121;
+}
+
+.nav_tabs .infos-socio li span {
+  margin: .5rem 0;
+}
+
+.nav_tabs .infos-socio img {
+  width: 4rem;
 }
 
 .modal-msg {
@@ -4482,7 +4626,7 @@ header .marca img {
   margin-left: 1.2rem;
 }
 
-.check-new-number .btn__verMais {
+.check-new-number .btn-link {
   margin-left: .8rem;
 }
 
@@ -4504,7 +4648,11 @@ header .marca img {
 }
 
 .check-new-number .p-erro {
-  color: #ffd201;
+  color: #212121;
+}
+
+.check-new-number .p-erro strong {
+  color: #f1c500;
 }
 
 .proximos-jogos {
@@ -5938,10 +6086,20 @@ header .marca img {
 }
 
 .tabs_userdata .tab-content .dados-socio-list li {
-  text-align: center;
+  text-align: left;
   font-size: 1.6rem;
   padding-bottom: .4rem;
-  border-right: 1px solid #AFAFAF;
+  margin-bottom: 1.2rem;
+}
+
+.tabs_userdata .tab-content .dados-socio-list li h2 {
+  width: 100%;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1em;
+  color: #212121;
+  text-transform: lowercase;
 }
 
 .tabs_userdata .tab-content .dados-socio-list li:last-child {

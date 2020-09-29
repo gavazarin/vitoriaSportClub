@@ -48,7 +48,7 @@
     }
   }
 
-  .btn__verMais {
+  .btn-link {
     margin-left: .8rem;
   }
 
@@ -68,7 +68,11 @@
   }
 
   .p-erro {
-    color: $secondary-01;
+    color: $primary-01;
+
+    strong {
+      color: $secondary-02;
+    }
   }
 }
 

@@ -36,20 +36,46 @@
   }
 }
 
-.nav-tabs {
-  width: 100%;
+.closeModal {
+  width: 3rem;
   height: auto;
-  position: relative;
+  display: inline-block;
+  @include absolute(-4rem, 0, auto, auto);
+  padding: .6rem;
+  background-color: #FFFFFF;
+  border: 1px solid $secondary-01;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
 
-  @include flex(row, center, center, center);
-  border-bottom: 2px solid #FFFFFF;
-
-  li {
-    width: 50%;
-    @include flex(row, center, center, center);
-    @include font(1.8rem, 700, 1em);
+  img {
+    width: 100%;
+    height: 100%;
   }
 
+  &:hover {
+    opacity: .8;
+    transform: scale(.9);
+    transition: all .3s ease-in-out;
+  }
+}
+
+.nav_tabs {
+  width: 100%;
+  height: auto;
+  background: $white-01;
+  position: relative;
+
+  ul {
+    @include flex(row, center, center, center);
+    border-bottom: 2px solid #FFFFFF;
+
+    li {
+      width: 50%;
+      @include flex(row, center, center, center);
+      //   font-family: $font-03;
+      @include font(1.8rem, 700, 1em);
+    }
+  }
 
   .tab_label {
     width: 100%;
@@ -57,88 +83,172 @@
     display: block;
     cursor: pointer;
     text-align: center;
-    border-bottom: 2px solid $gray-02;
-    background-color: #ececec;
-    color: $gray-02;
+    background-color: rgb(223, 223, 223);
+    color: $secondary-01;
     margin: 0;
-    transition: all .3s ease-out;
   }
 
-  .tab-content>.active {
+  .rd_tabs {
+    display: none;
+    position: absolute;
+  }
+
+  .rd_tabs:checked~label {
+    background-color: #FFFFFF;
+    color: $secondary-01;
+  }
+
+  .rd_tabs:checked~.tab-content {
     @include flex(column, flex-start, center, center);
   }
-}
 
-.closeModal {
-  background-color: $primary-01;
-  border: 2px solid $secondary-02;
-  padding: .5rem;
-  border-radius: 50%;
-  @include absolute(0, 0, auto, auto);
-  z-index: 11;
-  transform: translateX(130%);
-
-  img {
-    width: 10px;
-    height: 10px;
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
-.tab-content {
-  width: 100%;
-}
-
-.tab-pane {
-  height: auto;
-  width: 100%;
-  background-color: #fff;
-  padding: 1.5rem 3rem;
-  margin-bottom: 3rem;
-  text-align: center;
-
-  @include sm {
-    padding: 1.5rem;
-  }
-
-  .logo-clube {
-    height: 8rem;
-  }
-
-  h2 {
+  .tab-content {
+    height: auto;
     width: 100%;
-    margin: 1rem 0 2rem;
+    background-color: #fff;
+    display: none;
+    @include absolute(6rem, auto, auto, 0);
+    padding: 1.5rem 3rem;
+    margin-bottom: 3rem;
+
+    @include sm {
+      padding: 1.5rem;
+    }
+
+    h2 {
+      margin: 1rem 0;
+    }
+
+    h3 {
+      width: 80%;
+    }
+
+    .logo-clube {
+      height: 8rem;
+    }
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+
+      @include md {
+        width: 100%;
+      }
+    }
+
+    .select-club {
+      @include flex(row, center, center, center);
+      text-transform: initial;
+      padding-left: 0;
+      margin-top: 1.2rem;
+
+      img {
+        opacity: 1;
+      }
+
+      p {
+        margin: 0 .5rem;
+        color: $black-01;
+      }
+
+      i {
+        display: inline-block;
+        margin-left: 3rem;
+
+        img {
+          width: 2.4rem;
+        }
+      }
+    }
   }
 
-  h3 {
-    width: 80%;
+  #select-club:checked~.listTeams_popUp {
+    display: block;
   }
 
-  form {
-    width: 75%;
-    margin: 0 auto;
+  #select-club:checked~.select-club i {
+    transform: rotate(180deg);
+    animation: rotateImg .3s ease-out;
+  }
 
-    @include md {
-      width: 100%;
+  .listTeams_popUp {
+    width: 100%;
+    max-height: 28rem;
+    overflow-y: scroll;
+    display: none;
+    @include absolute(5.8rem, 50%, auto, auto);
+    transform: translateX(50%);
+    background-color: #FFFFFF;
+    border: 1px solid $secondary-01;
+    border-radius: .5rem;
+    transition: all .3s ease-out;
+    z-index: 99;
+
+    &::-webkit-scrollbar {
+      width: .8rem;
+      background: $gray-01;
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 1rem;
+      border-radius: 1rem;
+      background: $white-01;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+
+    li {
+      width: auto;
+      @include flex(row, center, center, center);
+      padding: 1.6rem .8rem;
+      cursor: pointer;
+
+      img {
+        height: 3.5rem;
+        margin: 0 .5rem;
+      }
+
+      p {
+        @include font(1.6rem, 700, 1.2em);
+        margin: 0 .5rem;
+      }
+
+      &:hover {
+        background-color: $white-01;
+        transition: all .3s ease-out;
+      }
+    }
+  }
+
+  .team-select-name {
+    @include font(1.6rem, 900, 1.2em);
+    text-transform: uppercase;
+    color: #404040;
+    animation: nameTeam .3s ease-in;
+  }
+
+  .infos-socio {
+    @include flex(row, center, center, center);
+    border: none;
+    margin: .5rem 0;
+
+    li {
+      @include flex(column, center, center, center);
+      width: auto;
+      margin: 0 .5rem;
+      @include font(1.6rem, 300, 1.2rem);
+      color: $primary-01;
+
+      span {
+        margin: .5rem 0;
+      }
+    }
+
+    img {
+      width: 4rem;
     }
   }
 }
-
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link.active:focus,
-.nav-tabs .nav-link.active:hover,
-.nav-tabs .nav-item.open .nav-link,
-.nav-tabs .nav-item.open .nav-link:focus,
-.nav-tabs .nav-item.open .nav-link:hover {
-  color: $primary-01;
-  border: none;
-  border-bottom: 2px solid $secondary-02;
-  transition: all .3s ease-out;
-}
-
 
 // ESTILO DO MODAL EXTERNALOPS
 .modal-msg {

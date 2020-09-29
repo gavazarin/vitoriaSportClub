@@ -235,10 +235,22 @@
       margin-bottom: 3rem;
 
       li {
-        text-align: center;
+        text-align: left;
         font-size: 1.6rem;
         padding-bottom: .4rem;
-        border-right: 1px solid $gray-01;
+        margin-bottom: 1.2rem;
+        // border-right: 1px solid $gray-01;
+
+        h2 {
+          width: 100%;
+          text-align: left;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1em;
+          color: #212121;
+          text-transform: lowercase;
+          // padding-left: .5rem;
+        }
 
         &:last-child {
           border-right: none;
