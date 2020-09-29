@@ -3440,7 +3440,7 @@ header {
   }
 }
 
-header .marca {
+header .marca a {
   display: inline-block;
 }
 
@@ -3502,23 +3502,27 @@ header .marca img {
 .navMenu .menu-item {
   margin-left: 3rem;
   position: relative;
-  color: #AFAFAF;
+  color: #000000;
   cursor: pointer;
 }
 
 .navMenu .menu-item a {
-  color: #AFAFAF;
+  color: #000000;
 }
 
 .navMenu .menu-item .btn {
-  color: #FFFFFF;
+  color: #000000;
+}
+
+.navMenu .menu-item .btn:hover {
+  color: #AFAFAF;
 }
 
 .navMenu .menu-item:before {
   content: '';
   width: 100%;
   height: .2rem;
-  background: #AFAFAF;
+  background: #000000;
   position: absolute;
   top: auto;
   right: auto;
@@ -6112,6 +6116,24 @@ header .marca img {
     border-right: none;
     border-bottom: 1px solid #AFAFAF;
   }
+}
+
+.tabs_userdata .tab-content .last-update,
+.tabs_userdata .tab-content .no-edit-msg {
+  width: 100%;
+  padding: 0 1.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin: .8rem 0;
+}
+
+.tabs_userdata .tab-content .no-edit-msg {
+  font-weight: 900;
+  padding: .8rem 1.5rem;
+  border: 2px solid #ffd201;
+  border-radius: .5rem;
 }
 
 .tabs_userdata .tab-content .clube__fan {

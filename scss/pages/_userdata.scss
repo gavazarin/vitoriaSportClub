@@ -239,7 +239,6 @@
         font-size: 1.6rem;
         padding-bottom: .4rem;
         margin-bottom: 1.2rem;
-        // border-right: 1px solid $gray-01;
 
         h2 {
           width: 100%;
@@ -262,6 +261,22 @@
           border-bottom: 1px solid $gray-01;
         }
       }
+    }
+
+    .last-update,
+    .no-edit-msg {
+      width: 100%;
+      padding: 0 1.5rem;
+      text-align: left;
+      @include font(1.4rem, 300, 1.4em);
+      margin: .8rem 0;
+    }
+
+    .no-edit-msg {
+      font-weight: 900;
+      padding: .8rem 1.5rem;
+      border: 2px solid $secondary-01;
+      border-radius: .5rem;
     }
 
     .clube__fan {

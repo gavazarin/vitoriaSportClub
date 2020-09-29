@@ -10,7 +10,9 @@ header {
   }
 
   .marca {
-    display: inline-block;
+    a {
+      display: inline-block;
+    }
 
     img {
       height: 7rem;
@@ -20,7 +22,6 @@ header {
       @include flex(row, center, center, center);
     }
   }
-
 }
 
 .navMenu {
@@ -51,22 +52,26 @@ header {
     &-item {
       margin-left: 3rem;
       position: relative;
-      color: $gray-01;
+      color: $black-01;
       cursor: pointer;
 
       a {
-        color: $gray-01;
+        color: $black-01;
       }
 
       .btn {
-        color: $white-01;
+        color: $black-01;
+
+        &:hover {
+          color: $gray-01;
+        }
       }
 
       &:before {
         content: '';
         width: 100%;
         height: .2rem;
-        background: $gray-01;
+        background: $black-01;
         @include absolute(auto, auto, -.5rem, 0);
         transform: scale(0, 1);
         transform-origin: 0 0;
