@@ -1929,7 +1929,7 @@ form select {
   height: 3.7rem;
   padding: .75rem 1rem;
   border: 2px solid #AFAFAF;
-  border-radius: 1rem;
+  border-radius: .5rem;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1em;
@@ -2030,7 +2030,7 @@ form span.input-validate {
   cursor: pointer;
   padding: 1rem 1.5rem;
   display: inline-block;
-  border-radius: .7rem;
+  border-radius: .5rem;
   border: none;
   background: #707070;
   color: #212121;
@@ -4149,6 +4149,8 @@ header .marca img {
   height: auto;
   background: #FFFFFF;
   position: relative;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
 }
 
 .nav_tabs ul {
@@ -4178,9 +4180,17 @@ header .marca img {
   display: block;
   cursor: pointer;
   text-align: center;
-  background-color: #dfdfdf;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #000000;
   color: #ffd201;
   margin: 0;
+  transition: all .3s ease-out;
+}
+
+.nav_tabs .tab_label:hover {
+  background-color: #212121;
+  transition: all .3s ease-out;
 }
 
 .nav_tabs .rd_tabs {
@@ -4191,6 +4201,8 @@ header .marca img {
 .nav_tabs .rd_tabs:checked ~ label {
   background-color: #FFFFFF;
   color: #ffd201;
+  cursor: default;
+  border: none;
 }
 
 .nav_tabs .rd_tabs:checked ~ .tab-content {
@@ -4231,6 +4243,7 @@ header .marca img {
 
 .nav_tabs .tab-content .logo-clube {
   height: 8rem;
+  margin-top: 1.5rem;
 }
 
 .nav_tabs .tab-content form {
