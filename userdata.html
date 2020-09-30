@@ -243,12 +243,12 @@
                     </li>
                   </ul>
 
-                  <div class="container-input col-lg-6">
+                  <div class="container-input col-lg-12" style="display: none;">
                     <label for="smv_udata_VAT" smv-langtext="lblnif">NIF</label>
                     <input name="smv_udata_VAT" id="smv_udata_VAT" type="tel" value="" smv-inival="">
                   </div>
 
-                  <div class="container-input col-lg-6">
+                  <div class="container-input col-lg-12" style="display: none;">
                     <label for="smv_udata_Gender" smv-langtext="lblgender">Sexo</label>
                     <select name="smv_udata_Gender" id="smv_udata_Gender" smv-inival="M">
                       <!--<option value=""></option>-->
@@ -259,7 +259,7 @@
                     </select>
                   </div>
 
-                  <div class="container-input col-lg-6">
+                  <div class="container-input col-lg-12">
                     <label for="smv_udata_Country" smv-langtext="lblcountry">País</label>
                     <select id="smv_udata_Country" name="smv_udata_Country"
                       onchange="smv_uData_ChangeCountry('smv_udata_', true,true)" smv-inival="">
@@ -280,7 +280,7 @@
                   </div>
 
                   <!-- Código Postal - Portugal  smv-countryfilter="smv_udata_PT" -->
-                  <div class="container-input codigo-postal-pt col-lg-6">
+                  <div class="container-input codigo-postal-pt col-lg-12">
                     <label for="smv_udata_CP" smv-langtext="lblpostalcode">Código Postal</label>
                     <input name="smv_udata_CP" id="smv_udata_CP" onblur="javascript:smv_CountryValidateCP('smv_udata_')"
                       onkeyup="javascript:smv_changeCP('smv_udata_')" value="1000-100" smv-inival="1000-100" type="text"
@@ -299,14 +299,14 @@
                         </div>
 -->
 
-                  <div class="container-input col-lg-6">
+                  <div class="container-input col-lg-12">
                     <label for="smv_udata_Loc" smv-langtext="lblloc">Localidade</label>
                     <input name="smv_udata_Loc" id="smv_udata_Loc" smv-filterchars="addy" type="text" value="LISBOA"
                       smv-inival="LISBOA">
                   </div>
 
-                  <div class="container-input col-lg-6">
-                    <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País Telemóvel</label>
+                  <div class="container-input col-lg-4" style="display: none;">
+                    <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País</label>
                     <select id="smv_udata_MobileCountry" name="smv_udata_MobileCountry"
                       onchange="smv_uData_ChangeContactCountry('smv_udata_', 'Mobile', true)" smv-inival="182"
                       class="valid">
@@ -315,21 +315,80 @@
                       <option value="182" smv-isdefaultcountry="true" smv-countrycode="PT" selected="selected">Portugal
                         (+351)</option>
                       <!--  smv-langtext="xcountry33" smv-langtext-default="Brasil" -->
-                      <option value="33" smv-isdefaultcountry="false" smv-countrycode="BR">Brasil (+55)</option>
+                      <option value="33" smv-isdefaultcountry="false" smv-countrycode="BR">
+                        <img src="images/flag/br.svg"> BR (+55)
+                      </option>
                       <!--  smv-langtext="xcountry257" smv-langtext-default="Outro" -->
                       <option value="257" smv-isdefaultcountry="false" smv-countrycode="XX">Outro ()</option>
                     </select>
                   </div>
 
+                  <div class="container-input col-lg-4">
+                    <!-- <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País</label> -->
+                    <input type="checkbox" id="select-country-movel" style="display: none;">
+                    <label for="select-country-movel" class="select-country">
+                      <img src="images/flag/pt.svg" alt="">
+                      <p>País</p>
+                      <i><img src="images/svg/icon-down.svg" alt=""></i>
+                    </label>
 
-                  <div class="container-input col-lg-6">
+                    <ul class="country-list">
+                      <li>
+                        <img src="images/flag/pt.svg" alt="Portugal" title="Portugal">
+                        <span>PT</span> <span>+351</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/br.svg" alt="Brasil" title="Brasil"></a>
+                        <span>BR</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/gb-eng.svg" alt="Brasil" title="Gra Bretanha"></a>
+                        <span>ENG</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/us.svg" alt="Brasil" title="United States"></a>
+                        <span>US</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/mx.svg" alt="Brasil" title="Brasil"></a>
+                        <span>MEX</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/es.svg" alt="Brasil" title="Brasil"></a>
+                        <span>ES</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/fr.svg" alt="France" title="France"></a>
+                        <span>FR</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/cr.svg" alt="Coreia Norte" title="Coreia Norte"></a>
+                        <span>CR</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/ru.svg" alt="Coreia Norte" title="Coreia Norte"></a>
+                        <span>RU</span> <span>+55</span>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <div class="container-input col-lg-8">
                     <label for="smv_udata_Mobile" smv-langtext="lblmobile">Telemóvel</label>
                     <input name="smv_udata_Mobile" id="smv_udata_Mobile" type="tel" value="444444111"
                       smv-inival="444444111">
                   </div>
 
-                  <div class="container-input col-lg-6">
-                    <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País Telefone</label>
+                  <div class="container-input col-lg-4" style="display: none;">
+                    <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País</label>
                     <select id="smv_udata_PhoneCountry" name="smv_udata_PhoneCountry"
                       onchange="smv_uData_ChangeContactCountry('smv_udata_', 'Phone', true)" smv-inival="182">
                       <option value="">Selecione país</option>
@@ -343,17 +402,74 @@
                     </select>
                   </div>
 
-                  <div class="container-input col-lg-6">
+                  <div class="container-input col-lg-4">
+                    <!-- <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País</label>-->
+                    <input type="checkbox" id="select-country-phone" style="display: none;">
+                    <label for="select-country-phone" class="select-country">
+                      <img src="images/flag/pt.svg" alt="">
+                      <p>País</p>
+                      <i><img src="images/svg/icon-down.svg" alt=""></i>
+                    </label>
+
+                    <ul class="country-list">
+                      <li>
+                        <img src="images/flag/pt.svg" alt="Portugal" title="Portugal">
+                        <span>PT</span> <span>+351</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/br.svg" alt="Brasil" title="Brasil"></a>
+                        <span>BR</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/gb-eng.svg" alt="Brasil" title="Gra Bretanha"></a>
+                        <span>ENG</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/us.svg" alt="Brasil" title="United States"></a>
+                        <span>US</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/mx.svg" alt="Brasil" title="Brasil"></a>
+                        <span>MEX</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/es.svg" alt="Brasil" title="Brasil"></a>
+                        <span>ES</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/fr.svg" alt="France" title="France"></a>
+                        <span>FR</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/cr.svg" alt="Coreia Norte" title="Coreia Norte"></a>
+                        <span>CR</span> <span>+55</span>
+                      </li>
+
+                      <li>
+                        <a href="#"><img src="images/flag/ru.svg" alt="Coreia Norte" title="Coreia Norte"></a>
+                        <span>RU</span> <span>+55</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="container-input col-lg-8">
                     <label for="smv_udata_Phone" smv-langtext="lblphone">Telefone</label>
                     <input name="smv_udata_Phone" id="smv_udata_Phone" type="tel" value="654644655"
                       smv-inival="654644655">
                   </div>
 
-                  <div class="last-update">
+                  <div class="last-update" style="display:none;">
                     <span smv-langtext="lbllastupdated">Última atualização</span> 29-09-2020 12:57
                   </div>
 
-                  <div class="no-edit-msg" style="display:block">Não é possível alterar
+                  <div class="no-edit-msg">Não é possível alterar
                     os dados neste momento.</div>
 
                   <div class="container-btn col-lg-12">

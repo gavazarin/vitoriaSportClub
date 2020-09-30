@@ -1927,7 +1927,7 @@ form input,
 form select {
   width: 100%;
   height: 3.7rem;
-  padding: .75rem 1rem;
+  padding: .75rem;
   border: 2px solid #AFAFAF;
   border-radius: .5rem;
   font-size: 1.6rem;
@@ -5868,7 +5868,7 @@ header .marca img {
 .userdata {
   margin-bottom: 3rem;
   position: relative;
-  height: 130vh;
+  height: 180vh;
 }
 
 @media (max-width: 992px) {
@@ -5976,8 +5976,8 @@ header .marca img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -6094,12 +6094,11 @@ header .marca img {
 .tabs_userdata .tab-content .dados-socio-list {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
 }
 
 .tabs_userdata .tab-content .dados-socio-list li {
@@ -6117,6 +6116,11 @@ header .marca img {
   line-height: 1em;
   color: #212121;
   text-transform: lowercase;
+  padding-left: .5rem;
+}
+
+.tabs_userdata .tab-content .dados-socio-list li span {
+  padding: .75rem;
 }
 
 .tabs_userdata .tab-content .dados-socio-list li:last-child {
@@ -6265,6 +6269,118 @@ header .marca img {
   .tabs_userdata .tab-content {
     position: relative;
   }
+}
+
+.select-country {
+  width: 100%;
+  height: 3.7rem;
+  padding: .75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border: 2px solid #AFAFAF;
+  border-radius: .5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1em;
+  color: #212121;
+  margin-bottom: 0;
+}
+
+.select-country img {
+  opacity: 1;
+  width: 2.5rem;
+  height: auto;
+}
+
+.select-country p {
+  margin: 0 .4rem;
+  color: #000000;
+}
+
+.select-country i {
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+.select-country i img {
+  width: 1.2rem;
+}
+
+#select-country-movel:checked ~ .country-list,
+#select-country-phone:checked ~ .country-list {
+  display: block;
+}
+
+#select-country-movel:checked ~ .select-country i,
+#select-country-phone:checked ~ .select-country i {
+  transform: rotate(180deg);
+  animation: rotateImg .3s ease-out;
+}
+
+.country-list {
+  width: 100%;
+  max-height: 28rem;
+  overflow-y: scroll;
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  transform: translateX(50%);
+  background-color: #FFFFFF;
+  border: 1px solid #ffd201;
+  border-radius: .5rem;
+  transition: all .3s ease-out;
+  z-index: 99;
+}
+
+.country-list::-webkit-scrollbar {
+  width: .8rem;
+  background: #AFAFAF;
+  border-radius: 1rem;
+}
+
+.country-list::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.country-list li {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 1.6rem;
+  cursor: pointer;
+}
+
+.country-list li img {
+  width: 2rem;
+  margin: 0 .5rem;
+}
+
+.country-list li span {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0 .5rem;
+}
+
+.country-list li span:last-child {
+  font-weight: 900;
+}
+
+.country-list li:hover {
+  background-color: #f0f0f0;
+  transition: all .3s ease-out;
 }
 
 .clube-fan-container {

@@ -59,7 +59,7 @@
 .userdata {
   margin-bottom: 3rem;
   position: relative;
-  height: 130vh;
+  height: 180vh;
 
   @include md {
     height: auto;
@@ -141,7 +141,7 @@
     form {
       margin-top: 0;
       margin-bottom: 1.5rem;
-      @include flex(row, flex-start, flex-start, flex-start);
+      @include flex(row, flex-start, flex-end, flex-end);
       flex-wrap: wrap;
 
       @include xs {
@@ -230,9 +230,9 @@
 
     .dados-socio-list {
       width: 100%;
-      @include flex(row, center, flex-start, flex-start);
+      @include flex(column, center, flex-start, flex-start);
       flex-wrap: wrap;
-      margin-bottom: 3rem;
+      // margin-bottom: 3rem;
 
       li {
         text-align: left;
@@ -248,7 +248,11 @@
           line-height: 1em;
           color: #212121;
           text-transform: lowercase;
-          // padding-left: .5rem;
+          padding-left: .5rem;
+        }
+
+        span {
+          padding: .75rem;
         }
 
         &:last-child {
@@ -375,6 +379,103 @@
     }
   }
 }
+
+.select-country {
+  width: 100%;
+  height: 3.7rem;
+  padding: .75rem;
+  @include flex(row, space-between, center, center);
+  border: 2px solid $gray-01;
+  border-radius: .5rem;
+  @include font(1.6rem, 300, 1em);
+  color: $primary-01;
+  margin-bottom: 0;
+
+  img {
+    opacity: 1;
+    width: 2.5rem;
+    height: auto;
+  }
+
+  p {
+    margin: 0 .4rem;
+    color: $black-01;
+  }
+
+  i {
+    display: inline-block;
+    margin-left: 3rem;
+
+    img {
+      width: 1.2rem;
+    }
+  }
+}
+
+#select-country-movel:checked~.country-list,
+#select-country-phone:checked~.country-list {
+  display: block;
+}
+
+#select-country-movel:checked~.select-country i,
+#select-country-phone:checked~.select-country i {
+  transform: rotate(180deg);
+  animation: rotateImg .3s ease-out;
+}
+
+.country-list {
+  width: 100%;
+  max-height: 28rem;
+  overflow-y: scroll;
+  display: none;
+  @include absolute(4rem, 50%, auto, auto);
+  transform: translateX(50%);
+  background-color: #FFFFFF;
+  border: 1px solid $secondary-01;
+  border-radius: .5rem;
+  transition: all .3s ease-out;
+  z-index: 99;
+
+  &::-webkit-scrollbar {
+    width: .8rem;
+    background: $gray-01;
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+    background: $white-01;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+
+  li {
+    width: auto;
+    @include flex(row, space-between, center, center);
+    padding: 1.6rem;
+    cursor: pointer;
+
+    img {
+      width: 2rem;
+      margin: 0 .5rem;
+    }
+
+    span {
+      @include font(1.4rem, 300, 1.2em);
+      margin: 0 .5rem;
+
+      &:last-child {
+        font-weight: 900;
+      }
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+      transition: all .3s ease-out;
+    }
+  }
+}
+
 
 // MODAL CLUBE FAN
 .clube-fan-container {
