@@ -11,7 +11,7 @@ form {
     width: 100%;
     position: relative;
     margin-bottom: .5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
     @include flex(row, flex-start, center, center);
     flex-wrap: wrap;
     text-align: left;
@@ -53,11 +53,14 @@ form {
   .input-validate {
     border: 2px solid $secondary-02;
     color: $secondary-02;
+    position: relative;
   }
 
   span.input-validate {
     @include font(1.2rem, 700, 1em);
     border: none;
+    position: absolute;
+    bottom: 0;
   }
 
   // .btn {

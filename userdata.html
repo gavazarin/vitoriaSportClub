@@ -246,6 +246,7 @@
                   <div class="container-input col-lg-12" style="display: none;">
                     <label for="smv_udata_VAT" smv-langtext="lblnif">NIF</label>
                     <input name="smv_udata_VAT" id="smv_udata_VAT" type="tel" value="" smv-inival="">
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
                   <div class="container-input col-lg-12" style="display: none;">
@@ -271,12 +272,14 @@
                       <option value="257" smv-isdefaultcountry="false" smv-countrycode="XX" smv-langtext="xcountry257"
                         smv-langtext-default="Outro">Outro</option>
                     </select>
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
                   <div class="container-input col-lg-12">
                     <label for="smv_udata_Address" class="form-label" smv-langtext="lbladdress">Morada</label>
                     <input name="smv_udata_Address" id="smv_udata_Address" smv-filterchars="addy" type="text"
                       value="RUA RAÚL BRANDÃO 152 RC ESQ" smv-inival="RUA RAÚL BRANDÃO 152 RC ESQ">
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
                   <!-- Código Postal - Portugal  smv-countryfilter="smv_udata_PT" -->
@@ -286,23 +289,19 @@
                       onkeyup="javascript:smv_changeCP('smv_udata_')" value="1000-100" smv-inival="1000-100" type="text"
                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                       class="col-lg-6 col-md-6 col-sm-6">
+                    <span class="input-validate">Obrigatório!</span>
                     <input name="smv_udata_CPValid" id="smv_udata_CPValid" type="hidden" value="1" smv-inival="1">
+                    <span class="input-validate">Obrigatório!</span>
                     <p class="col-lg-6 col-md-6 col-sm-6" id="smv_udata_CPLocDisplay">
                       Lisboa
                     </p>
                   </div>
 
-                  <!-- 
-                        <div class="container-input codigo-postal-pt" smv-countryfilter="smv_udata_OTHER" style="display:none">
-                            <label for="smv_udata_CPOther" smv-langtext="lblpostalcode">Código postal</label>
-                            <input name="smv_udata_CPOther" id="smv_udata_CPOther" value="1000-100" smv-inival="1000-100" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="col-lg-6 col-md-6 col-sm-6"/>
-                        </div>
--->
-
                   <div class="container-input col-lg-12">
                     <label for="smv_udata_Loc" smv-langtext="lblloc">Localidade</label>
                     <input name="smv_udata_Loc" id="smv_udata_Loc" smv-filterchars="addy" type="text" value="LISBOA"
                       smv-inival="LISBOA">
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
                   <div class="container-input col-lg-4" style="display: none;">
@@ -331,6 +330,7 @@
                       <p>País</p>
                       <i><img src="images/svg/icon-down.svg" alt=""></i>
                     </label>
+                    <span class="input-validate">Obrigatório!</span>
 
                     <ul class="country-list">
                       <li>
@@ -380,11 +380,11 @@
                     </ul>
                   </div>
 
-
                   <div class="container-input col-lg-8">
                     <label for="smv_udata_Mobile" smv-langtext="lblmobile">Telemóvel</label>
                     <input name="smv_udata_Mobile" id="smv_udata_Mobile" type="tel" value="444444111"
                       smv-inival="444444111">
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
                   <div class="container-input col-lg-4" style="display: none;">
@@ -400,6 +400,7 @@
                       <!-- smv-langtext="xcountry257" smv-langtext-default="Outro"-->
                       <option value="257" smv-isdefaultcountry="false" smv-countrycode="XX">Outro ()</option>
                     </select>
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
                   <div class="container-input col-lg-4">
@@ -410,6 +411,7 @@
                       <p>País</p>
                       <i><img src="images/svg/icon-down.svg" alt=""></i>
                     </label>
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
 
                     <ul class="country-list">
                       <li>
@@ -684,7 +686,7 @@
                 <div class="container-input">
                   <label for="email" class="form-label">E-mail</label>
                   <input type="email" id="email">
-                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                  <span class="input-validate">Obrigatório!</span>
                 </div>
 
                 <div class="container-input">

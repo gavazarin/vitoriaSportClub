@@ -1913,7 +1913,7 @@ form .container-input {
   width: 100%;
   position: relative;
   margin-bottom: .5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1965,6 +1965,7 @@ form label:disabled {
 form .input-validate {
   border: 2px solid #f1c500;
   color: #f1c500;
+  position: relative;
 }
 
 form span.input-validate {
@@ -1972,6 +1973,8 @@ form span.input-validate {
   font-weight: 700;
   line-height: 1em;
   border: none;
+  position: absolute;
+  bottom: 0;
 }
 
 .container-input .info-cartao {
@@ -4604,6 +4607,12 @@ header .marca img {
   padding-top: 1.5rem;
 }
 
+@media (max-width: 575px) {
+  .check-new-number-content-icon {
+    text-align: center;
+  }
+}
+
 .check-new-number-content i {
   display: inline-block;
   width: auto;
@@ -4623,6 +4632,29 @@ header .marca img {
   width: 50%;
   font-size: 1.8rem;
   text-align: left;
+}
+
+@media (max-width: 992px) {
+  .check-new-number-content-text h2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .check-new-number-content-text {
+    text-align: center;
+  }
+  .check-new-number-content-text h2 {
+    width: 70%;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .check-new-number-content-text h2 {
+    width: 100%;
+  }
 }
 
 .check-new-number form {

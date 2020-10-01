@@ -12,6 +12,12 @@
     text-align: right;
     padding-top: 1.5rem;
 
+    &-icon {
+      @include xs {
+        text-align: center;
+      }
+    }
+
     i {
       display: inline-block;
       width: auto;
@@ -30,8 +36,29 @@
         width: 50%;
         font-size: 1.8rem;
         text-align: left;
+
+        @include md {
+          width: 100%;
+        }
+      }
+
+      @include xs {
+        text-align: center;
+
+        h2 {
+          width: 70%;
+          margin: 0.5rem auto;
+          text-align: center;
+        }
+      }
+
+      @include xxs {
+        h2 {
+          width: 100%;
+        }
       }
     }
+
   }
 
   form {
