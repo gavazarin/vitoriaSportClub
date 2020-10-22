@@ -365,15 +365,11 @@
 }
 
 .recuperar-senha {
-  padding: 1.5rem 3rem;
+  width: 100%;
   @include flex(column, flex-start, center, center);
 
-  form {
-    width: 70%;
-  }
-
   h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   button,

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitória Sport Clube - Área de Sócio</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <div class="spinner-loader" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav class="navMenu col-lg-12">
+      <img src="images/svg/pattern_smartFan-white.svg" alt="Pattern SmartFan" class="pattern__smartFan"
+        style="display: none;">
+      <div class="container">
+        <div class="row">
+          <div class="marca col-lg-2 col-md-2">
+            <a href="index.html"><img src="images/logo-vitoriasc.png" alt="Logo do Vitória SC"></a>
+          </div>
+
+          <ul class="menu col-lg-10 col-md-10">
+            <li class="menu-list">
+              <ul class="menu-list-ul">
+                <li class="menu-item"><a href="pagar-quotas_inicio.html">pagar quotas</a></li>
+                <li class="menu-item"><a href="userdata.html">perfil</a></li>
+                <li class="menu-item menu__btn">
+                  <a href="#" class="btn btn-primary btn-login" data-toggle="modal"
+                    data-target="#exampleModal">login</a>
+                </li>
+
+                <li class="menu-item menu-logado" style="display:none;">
+                  <i class="icon-user"><img src="images/svg/user-avatar.svg" alt=""></i>
+                  <input id="user-dropdown" type="checkbox">
+                  <label for="user-dropdown">
+                    <p class="user-dropdown">
+                      Olá, <span><b>Usuário</b></span>! <i><img src="images/svg/icon-down.svg" alt=""></i></p>
+                  </label>
+
+                  <ul class="user-dropdown__list">
+                    <li>
+                      <a href="userdata.html">Perfil</a>
+                    </li>
+                    <li>
+                      <a href="#">Sair</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==== MENU MOBILE ==== -->
+    <nav class="navMenu-mobile col-md-12">
+      <a href="index.html" class="marca"><img src="images/logo-vitoriasc.png" alt="Vitória SC"></a>
+
+      <a href="#" class="btnMenu btnMenu__open"><img src="images/svg/icon-menu-white.svg" alt="Abrir Menu"></a>
+
+      <div id="#menuMobile" class="menuMobile">
+        <a href="#menuMobile" class="btnMenu btnMenu__close"><img src="images/svg/close-menu.svg" alt="Fechar Menu"></a>
+
+        <a href="index.html" class="marca"><img src="images/logo-vitoriasc.png" alt="Vitória SC"></a>
+
+        <ul class="menuMobile__list">
+          <li class="menuMobile__list__item"><a href="pagar-quotas_inicio.html">pagar quotas</a></li>
+          <li class="menuMobile__list__item"><a href="userdata.html">perfil</a></li>
+
+          <li class="menu-item menu__btn">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">login</button>
+          </li>
+
+          <li class="menu-item menu-logado" style="display:none;">
+            <i class="icon-user"><img src="images/svg/user-avatar.svg" alt=""></i>
+            <p class="user-dropdown">
+              Olá, <span><b>Usuário</b></span>!
+            </p>
+          </li>
+
+          <li class="menu-item menu__item__sair" style="display:none;">
+            <a href="#">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="bannerFullScreen">
+    <img src="images/img-user.jpg" alt="Banner do Vitória SC" class="background">
+  </section>
+
+  <section class="estruturaPadrao">
+    <div class="container">
+      <div class="row">
+        <div class="mainContent col-lg-9 col-md-12">
+          <section class="check-new-number">
+            <h1>Renumeração de sócios</h1>
+            <div class="check-new-number-content col-lg-12">
+              <div class="check-new-number-content-icon col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <i>
+                  <img src="images/vitoria-card-number.png" alt="">
+                </i>
+              </div>
+
+              <div class="check-new-number-content-text col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h2>Consulta já o teu novo número de sócio!</h2>
+                <a href="" class="btn btn-primary">Consultar</a>
+              </div>
+            </div>
+
+            <!-- INSERIR NÚMERO ANTIGO -->
+            <!-- <form class="col-lg-4 col-md-6 col-sm-12">
+              <div class="container-input">
+                <label for="old-number">número de sócio:</label>
+                <input type="text" id="old-number">
+              </div>
+              <a href="#" class="btn btn-primary">Validar</a>
+              <a href="#" class="btn-link">voltar</a>
+            </form>
+
+            <p style="display: none;">O teu novo número de sócio é: <span class="span-number">13258</span></p>
+            <p class="p-erro">O teu número de sócio está <strong>inválido</strong></p> -->
+          </section>
+
+          <div smv-type="widgetcontainer" smv-widget="games" smv-param="">
+            <div smv-type="widgetpage" id="smv_wp_games">
+              <div class="load-screen" smv-type="loader" smv-widget="games" style="display:none"></div>
+
+              <section class="proximos-jogos">
+                <h1 smv-langtext="headgamesteam">Próximos Jogos</h1>
+
+                <section>
+                  <ul class="jogos">
+                    <li class="jogos__item col-lg-12 col-md-12 col-sm-12">
+                      <p class="jornada">Jornada 02</p>
+                      <ul class="jogos__item--infos">
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-1rioavefc.png" alt="Rio Ave FC">
+                          <span>Rio Ave FC</span>
+                        </li>
+                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <ul class="infos__list">
+                            <li class="infos__list--liga">Liga NOS</li>
+                            <li class="infos__list--data">
+
+                              <span smv-langtext="xweekdayabrv3">Dom</span>, <span>27 </span><span
+                                smv-langtext="xmonthabrv06">set</span>
+                              <span>19:00</span>
+
+                            </li>
+                            <li class="infos__list--local">Estádio do Rio Ave FC</li>
+                          </ul>
+                        </li>
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-vitoriasc.png" alt="">
+                          <span>Vitória SC</span>
+                        </li>
+
+                        <div class="div-hover">
+                          <a href="#" class="btn btn__orange" disabled="disabled">jogo à porta fechada</a>
+                        </div>
+                        <div class="div-btnMobile col-md-12">
+                          <a href="#" class="btn btn__orange btn__fullContainer">jogo à porta fechada</a>
+                        </div>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="jogos">
+                    <li class="jogos__item col-lg-12 col-md-12 col-sm-12">
+                      <p class="jornada">Jornada 03</p>
+                      <ul class="jogos__item--infos">
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-vitoriasc.png" alt="Vitória SC">
+                          <span>Vitória SC</span>
+                        </li>
+
+                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <ul class="infos__list">
+                            <li class="infos__list--liga">Liga NOS</li>
+                            <li class="infos__list--data">
+
+                              <span smv-langtext="xweekdayabrv2">Sex</span>, <span>02 </span><span
+                                smv-langtext="xmonthabrv06">Out</span>
+                              <span>21:15</span>
+
+                            </li>
+                            <li class="infos__list--local">Estádio D. Afonso Henriques</li>
+                          </ul>
+                        </li>
+
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-1FCPFerreira.png" alt="FC P.Ferreira">
+                          <span>FC P.Ferreira</span>
+                        </li>
+
+                        <div class="div-hover">
+                          <a href="#" class="btn btn__orange" disabled="disabled">jogo à porta fechada</a>
+                        </div>
+                        <div class="div-btnMobile col-md-12">
+                          <a href="#" class="btn btn__orange btn__fullContainer">jogo à porta fechada</a>
+                        </div>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="jogos">
+                    <li class="jogos__item col-lg-12 col-md-12 col-sm-12">
+                      <p class="jornada">Jornada 04</p>
+                      <ul class="jogos__item--infos">
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-1boavistafc.png" alt="Boavista FC">
+                          <span>Boavista FC</span>
+                        </li>
+
+                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <ul class="infos__list">
+                            <li class="infos__list--liga">Liga NOS</li>
+                            <li class="infos__list--data">
+                              <span smv-langtext="xweekdayabrv1">Dom</span>, <span>18 </span><span
+                                smv-langtext="xmonthabrv06">Out</span>
+                              <span>16:00</span>
+                            </li>
+                            <li class="infos__list--local">Estádio do Bessa Sec. XXI</li>
+                          </ul>
+                        </li>
+
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-vitoriasc.png" alt="São Paulo">
+                          <span>Vitória SC</span>
+                        </li>
+
+                        <div class="div-hover">
+                          <a href="#" class="btn btn__orange" disabled="disabled">jogo à porta fechada</a>
+                        </div>
+                        <div class="div-btnMobile col-md-12">
+                          <a href="#" class="btn btn__orange btn__fullContainer">jogo à porta fechada</a>
+                        </div>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="jogos">
+                    <li class="jogos__item col-lg-12 col-md-12 col-sm-12">
+                      <p class="jornada">Jornada 05</p>
+                      <ul class="jogos__item--infos">
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-vitoriasc.png" alt="Vitória SC">
+                          <span>Vitória SC</span>
+                        </li>
+
+                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <ul class="infos__list">
+                            <li class="infos__list--liga">Liga NOS</li>
+                            <li class="infos__list--data">
+                              <span smv-langtext="xweekdayabrv0">Dom</span>, <span>25 </span><span
+                                smv-langtext="xmonthabrv06">Out</span>
+                              <span>16:00</span>
+                            </li>
+                            <li class="infos__list--local">Estádio D. Afonso Henriques</li>
+                          </ul>
+                        </li>
+
+                        <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <img src="images/logo-1scbraga.png" alt="SC Braga">
+                          <span>SC Braga</span>
+                        </li>
+                        <div class="div-hover">
+                          <a href="#" class="btn btn__orange" disabled="disabled">jogo à porta fechada</a>
+                        </div>
+                        <div class="div-btnMobile col-md-12">
+                          <a href="#" class="btn btn__orange btn__fullContainer">jogo à porta fechada</a>
+                        </div>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <div class="jogos__verMais col-lg-12">
+                    <a href="#" class="btn-link">ver mais</a>
+                  </div>
+                </section>
+
+                <div class="no-games col-lg-12" style="display: none;">
+                  <img src="images/svg/no-game.svg" alt="">
+                  <h1> Não há jogos disponíveis!</h1>
+                </div>
+              </section>
+            </div>
+
+            <section class="vantagens-socio-container col-lg-12 col-md-12 col-sm-12 ">
+              <div class="sou-socio col-lg-3 col-md-4 col-sm-6 ">
+                <h1>Já és sócio?</h1>
+                <i><img src="images/svg/icon-payCard.svg " alt="ícone de cartão "></i>
+                <p>Pague já as suas quotas sem sair de casa!</p>
+                <a href="pagar-quotas_inicio.html" class="btn btn-primary">Pagar mensalidades</a>
+              </div>
+
+              <div class="vantagens col-lg-7 col-md-8 col-sm-12 ">
+                <h1>Vantagens em ser sócio!</h1>
+                <ul class="vantagens__list ">
+                  <li>
+                    <i><img src="images/svg/promocoes-exclusivas.svg " alt=" "></i>
+                    <h2>Promoções exclusivas</h2>
+                    <a href="#" target="_blank" class="btn btn-primary only-mobile">seja
+                      sócio!</a>
+                    <div class="vantagens__hover ">
+                      <a href="#" target="_blank" class="btn btn-primary btn__fullContainer">seja sócio!</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <i><img src="images/svg/formacao-atletas.svg " alt=" "></i>
+                    <h2>Apoie a formação do seu clube</h2>
+                    <a href="#" target="_blank" class="btn btn-primary only-mobile">seja
+                      sócio!</a>
+                    <div class="vantagens__hover ">
+                      <a href="#" target="_blank" class="btn btn-primary btn__fullContainer">seja sócio!</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <i><img src="images/svg/acesso-jogos.svg " alt=""></i>
+                    <h2>Vantagens no acesso aos jogos</h2>
+                    <a href="#" target="_blank" class="btn btn-primary only-mobile">seja
+                      sócio!</a>
+                    <div class="vantagens__hover ">
+                      <a href="#" target="_blank" class="btn btn-primary btn__fullContainer">seja sócio!</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="redes-sociais col-lg-12 col-md-12 col-sm-12">
+              <h1>Acompanha o Vitória SC onde estiveres!</h1>
+              <h2 class="hashtags_clubes">#Conquistadores #SomosAAlmaDoRei</h2>
+              <div class="redes-sociais__container col-lg-12 col-md-12 col-sm-12">
+                <div class="twitter-clube">
+                  <a class="twitter-timeline" data-dnt="true" data-theme="dark"
+                    href="https://twitter.com/VitoriaSC1922?ref_src=twsrc%5Etfw">Tweets by VitóriaSC</a>
+                </div>
+
+                <div class="youtube-clube embed-responsive embed-responsive-21by9">
+                  <iframe src="https://www.youtube.com/embed/GVBfg6bgwcU" class="embed-responsive-item" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="sidebar col-lg-3 col-md-10 ">
+          <div class="classificacao">
+            <h1>
+              Classificação
+            </h1>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Pos.</th>
+                  <th></th>
+                  <th>J</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>SL Benfica</td>
+                  <td>1</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>FC Porto</td>
+                  <td>1</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Moreirense FC</td>
+                  <td>1</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Santa Clara</td>
+                  <td>1</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Belenenses SAD</td>
+                  <td>1</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Boavista FC</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>CD Nacional</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>CD Tondela</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>FC P.Ferreira</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Portimonense</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Rio Ave FC</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr class="time-destaque">
+                  <td>12</td>
+                  <td>Vitória SC</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>SC Braga</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>Marítimo M.</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>SC Farense</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>FC Famalicão</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>Gil Vicente FC</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>Sporting CP</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+              </tr>
+            </table>
+          </div>
+
+          <div class="last-game">
+            <h1>último jogo</h1>
+            <div smv-type="widgetcontainer " smv-widget="gamedisplay " smv-param="last ">
+              <div smv-type="widgetpage " id="smv_wp_gamedisplay_last ">
+                <!--<div class="load-screen " smv-type="loader " smv-widget="games " style="display:none "></div>-->
+                <ul class="jogos ">
+                  <li class="jogos__item col-lg-12 col-md-12 col-sm-12 ">
+                    <ul class="jogos__item--infos ">
+                      <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                        <img src="images/logo-vitoriasc.png" alt="">
+                        <span>Vitória SC</span>
+                      </li>
+                      <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                        <ul class="infos__list">
+                          <li class="infos__list--liga">Liga NOS</li>
+                          <li class="infos__list--placar">
+                            0 - 1
+                          </li>
+                          <li class="infos__list--local">
+                            Estádio D. Afonso Henriques
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                        <img src="images/logo-1osbelenenses.png" alt="">
+                        <span>Belenenses SAD</span>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar__social-media col-lg-12 col-md-12">
+            <ul class="clube-social-media">
+              <li><img src="images/logo-vitoriasc.png" alt="Logo Vitória Sport Clube"></li>
+              <li>Segue o <strong>Vitória SC</strong> nas Redes</li>
+            </ul>
+            <ul class="links-social-media ">
+              <li>
+                <a href="https://www.instagram.com/vitoriasc_oficial/" target="_blank" class="icon-social-media"><img
+                    src="images/svg/instagram.svg" alt="ícone instagram"></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/vitoriasportclube" target="_blank " class="icon-social-media"><img
+                    src="images/svg/facebook.svg" alt="ícone facebook"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li><a href="#">Termos e Compromissos</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+
+        <ul class="footerList footerList__center col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li>
+            <span>Apoio ao cliente</span>
+            <a href="#">helpdesk@smartticketing.pt</a>
+          </li>
+        </ul>
+
+        <ul class="payList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
+          <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+          <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+          <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
+          <li class="logo-visa"><img src="images/svg/mbway.svg" alt="Multibanco"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape">
+      <div class="container">
+        <div class="row">
+          <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <li>
+              <span>SmartFan.Tickets</span>
+              <a href="#">contato@contato.pt</a>
+            </li>
+          </ul>
+
+          <div class="logoSmartmove col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg"
+                alt="Smartmove"></a>
+          </div>
+
+          <ul class="socialmedia_list col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <li>
+              <a href="https://www.linkedin.com/company/smartmove---servi-os-de-mobilidade-s.a." target="_blank"
+                class="icon-socialmedia"><img src="images/linkedin.png" alt="Linkedin"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="politicaCookies slideInDown" style="display: none;">
+    <div class="inner">
+      <p>Este site usa cookies. Ao fechar esta mensagem, e exceto se tiver desativado as cookies, concorda com o seu uso
+        neste dispositivo. Para saber mais informações sobre a nossa política de privacidade
+        <a class="btn-link" target=" _blank " href="/privacy ">clique aqui</a>.</p>
+      <div class="cookiesOK">
+        <a id="cookie-policy-close-btn " class="btn btn-primary ">Fechar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL LOGIN================= -->
+  <div id="modalLogin" class="modal-login-container">
+    <div class="modal-content">
+      <a href="#" class="closeModal">
+        <img src="images/svg/close-popUp.svg" alt="">
+      </a>
+
+      <div smv-type="widgetcontainer" smv-widget="useraccess" smv-param="">
+        <div smv-type="widgetpage" id="smv_wp_useraccess">
+          <!--<div class="load-screen" smv-type="loader" smv-widget="useraccess" style="display:none"></div>-->
+
+          <nav class="nav_tabs" smv-type="wuaccessarea" id="smv_uaccessforms">
+            <ul>
+              <!-- Login -->
+              <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="smv_uacc_ulogin" checked="checked">
+                <label for="smv_uacc_ulogin" class="tab_label" smv-langtext="tabuserlogin">login</label>
+
+
+                <div class="tab-content">
+                  <img src="images/logo-vitoriasc.png" alt="" class="logo-clube">
+
+                  <h2 smv-langtext="fraselogin">Insere o teu e-mail e password e faz login!</h2>
+                  <form name="smv_fUserLogin" id="smv_fUserLogin" autocomplete="off" novalidate="novalidate">
+                    <div class="container-input">
+                      <label for="smv_ulogin_Email" class="form-label" smv-langtext="lblemail">E-mail</label>
+                      <input name="smv_ulogin_Email" id="smv_ulogin_Email"
+                        onblur="javascript:smv_fieldTrim('smv_ulogin_Email')" type="email" maxlength="75"
+                        autocapitalize="none" autocorrect="off">
+                    </div>
+
+                    <div class="container-input">
+                      <label for="smv_ulogin_Pwd" class="form-label" smv-langtext="lblpassword">Password</label>
+                      <input name="smv_ulogin_Pwd" id="smv_ulogin_Pwd" type="password" maxlength="30">
+                    </div>
+
+                    <a href="javascript:smv_showPwdRequest()" class="esqueci-senha"
+                      smv-langtext="linkforgotpwd">Recuperar a password</a>
+
+                    <a href="javascript:smv_UserLogin()" class="btn btn-primary">
+                      <span smv-langtext="btlogin">entrar</span>
+                    </a>
+                  </form>
+
+                  <a href="javascript:smv_uaccess_goUFM()" class="esqueci-senha link-registo"
+                    smv-langtext="linkgotonewuser">Ainda não tens conta Smartfan? Regista-te aqui.</a>
+
+                </div>
+              </li>
+
+              <!-- New -->
+              <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="smv_uacc_unew">
+                <label for="smv_uacc_unew" class="tab_label" smv-langtext="tabusernew"
+                  onclick="javascript:smv_uaccess_goUFM()">registo</label>
+                <div class="tab-content">
+
+
+                  <!--
+      <section class="section-confirmar-socio">
+        <div class="container">
+            <div class="row">
+                <div class="proximo-jogo">
+                    <img src="https://lisboa.smartmove.pt:8083/VSC/PortalSocioVSC/Resources/images/dna_digital.png" alt="" class="bg-digital-dna"/>
+                    <ul>
+                        <li class="txt-confirmar-socio">
+                            <span smv-langtext="ufmlinktitle">Já é sócio?</span>
+                            <span smv-langtext="ufmlinkfrase">Confirme aqui seus dados!</span>
+                        </li>
+                        <li class="comprar-jogo">
+                            <a href="javascript:smv_uaccess_goUserFromMember()" class="btn btn-primary"><span>Confirmar</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+              -->
+
+                  <div class="cadastrar-redes-sociais">
+                    <span smv-langtext="uanewfrase">Regista-te</span>
+                  </div>
+
+
+
+                </div>
+              </li>
+              <!-- end New-->
+            </ul>
+          </nav>
+          <!-- end forms useraccess -->
+
+
+
+          <div class="registo-finalizado alert-link" smv-type="wuaccessarea" id="smv_uaccess_result_nok"
+            style="display:none">
+
+            <i><img src="https://lisboa.smartmove.pt:8083/VSC/PortalSocioVSC/Resources/images/svg/error-icon.svg"
+                alt=""></i>
+            <h2 id="smvUAccessNOKmsg" smv-langtext="nok_useracc_msg">Não foi possível concluir a operação. Por favor
+              volta a tentar.</h2>
+
+            <button id="smvUAccessNOKbt" type="button" class="btn btn-primary"
+              onclick="javascript:smv_ToggleAreas('','smv_uaccessforms', 'wuaccessarea','')">
+              <span id="smvUAccessNOKbtText" smv-langtext="btback">Voltar</span>
+            </button>
+          </div>
+
+          <div class="registo-finalizado alert-link" smv-type="wuaccessarea" id="smv_uaccess_result_ok"
+            style="display:none">
+
+            <i><img src="https://lisboa.smartmove.pt:8083/VSC/PortalSocioVSC/Resources/images/svg/check-icon.svg"
+                alt=""></i>
+            <h2 id="smvUAccessOKmsg" smv-langtext="ok_useracc_msg">Operação concluída com sucesso.</h2>
+
+            <button id="smvUAccessOKbt" type="button" class="btn btn-primary" style="display:none">
+              <span id="smvUAccessOKbtText" smv-langtext="btcontinue">Continuar</span>
+            </button>
+          </div>
+
+
+          <div class="registo-finalizado alert-link" smv-type="wuaccessarea" id="smv_uaccess_wip" style="display:none">
+            <i><img src="https://lisboa.smartmove.pt:8083/VSC/PortalSocioVSC/Resources/images/svg/wait-icon.svg"
+                alt=""></i>
+            <h2 smv-langtext="wiptext">Aguarda por favor...</h2>
+          </div>
+
+
+          <div class="registo-finalizado alert-link" smv-type="wuaccessarea" id="smv_ua_confirmcode"
+            style="display:none">
+            <h2 smv-langtext="codefromemailtext">Coloca o código que recebeste por e-mail</h2>
+
+            <form name="smv_fUserNewConfCode" id="smv_fUserNewConfCode" novalidate="novalidate">
+
+              <div class="input-wrapper col-lg-12">
+                <div class="item-form nome col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <label for="smv_uacc_ConfirmCod" class="form-label" smv-langtext="lblcodigo">Código</label>
+                  <input id="smv_uacc_ConfirmCod" name="smv_uacc_ConfirmCod" type="text" maxlength="10">
+                </div>
+              </div>
+
+              <div class="btns-form center col-lg-12">
+                <a href="javascript:smv_UserAccess_ConfirmCode()">
+                  <span smv-langtext="btnext">Avançar</span>
+                </a>
+              </div>
+
+            </form>
+          </div>
+
+
+
+          <section class="recuperar-senha" smv-type="wuaccessarea" id="smv_confirm_form" style="display:none">
+            <!--<a href="javascript:smv_closeModalDiv('modalLogin')" class="closeModal"><img src="images/svg/close_menu.svg" alt=""/></a>-->
+
+
+            <!--<form name="smv_fUserConfirm" id="smv_fUserConfirm">-->
+            <!-- form: smv_i_UserAccessConfirmForm.handlebars -->
+            <!--</form>-->
+
+
+            <div id="smv_FormConfirmContainer">
+
+            </div>
+
+          </section>
+
+
+          <section class="recuperar-senha" smv-type="wuaccessarea" id="smv_page_pwdrequest" style="display:none">
+
+            <form name="smv_fUserPwdReq" id="smv_fUserPwdReq" novalidate="novalidate">
+              <h2 smv-langtext="userpwdreqfrase">Digita o teu e-mail para recuperares a password</h2>
+
+              <div class="container-input">
+                <label for="smv_upwdreq_Email" class="form-label" smv-langtext="lblemail">E-mail</label>
+                <input name="smv_upwdreq_Email" id="smv_upwdreq_Email"
+                  onblur="javascript:smv_fieldTrim('smv_upwdreq_Email')" type="email" maxlength="75"
+                  autocapitalize="none" autocorrect="off">
+              </div>
+
+              <div>
+                <div align="center" class="g-recaptcha" id="smv_upwdreq_gre">
+                  <div style="width: 304px; height: 78px;">
+                    <div><iframe
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld-8QcTAAAAAL0ECiIL_q3pdF_gwfTzwZnRA962&amp;co=aHR0cHM6Ly92c2Mtc29jaW9zLWRldi5zbWFydGFyZW5hLnB0OjQ0Mw..&amp;hl=pt-PT&amp;v=yXSLJBpiFoTYkexaPhFknpU7&amp;size=normal&amp;cb=rutrxzxzqpl8"
+                        width="304" height="78" role="presentation" name="a-g0q84l90s53e" frameborder="0" scrolling="no"
+                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                    </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                      style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                  </div><iframe style="display: none;"></iframe>
+                </div>
+                <input type="hidden" name="smv_upwdreq_valBLAH" id="smv_upwdreq_valBLAH" value="" smv-captchaon="1"
+                  smv-rcwidgetid="0">
+              </div>
+
+
+              <button type="button" class="btn btn-primary" onclick="javascript:smv_UserPwdRecoverReq()">
+                <span smv-langtext="btrecoverpwd">Recuperar password</span>
+              </button>
+
+              <a href="javascript:smv_ToggleAreas('','smv_uaccessforms', 'wuaccessarea','')" class="esqueci-senha"
+                smv-langtext="linkbacklogin">Voltar ao Login</a>
+
+            </form>
+
+          </section>
+
+        </div>
+
+      </div>
+
+
+      <div class="registo-finalizado" smv-type="widgetloading" smv-widget="useraccess" style="display: none;">
+        <i class="icon-animate"><img
+            src="https://vsc-socios-dev.smartarena.pt/wp-content/themes/smv-vsc-socios/images/svg/wait-icon.svg"
+            alt=""></i>
+        <h2>aguarde por favor...</h2>
+      </div>
+      <div class="div-error" smv-type="widgeterror" smv-widget="useraccess" style="display:none;">
+        <div class="container">
+          <div class="row">
+            <i><img
+                src="https://vsc-socios-dev.smartarena.pt/wp-content/themes/smv-vsc-socios/images/svg/error-icon.svg"
+                alt="Ícone de erro"></i>
+            <p>desculpe! ocorreu um problema ao carregar os dados</p>
+            <a href="javascript:retryWidget('useraccess')" class="btn btn__orange"
+              smv-type="widgetreloadbutton"><span>tentar novamente</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+
+  <!-- tabs login e cadastro -->
+  <script>
+    $('#myTab a').on('click', function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    $('#myTab a[href="#login"]').tab('show')
+    $('#myTab a[href="#cadastro"]').tab('show')
+  </script>
+
+  <script src="js/menu.js "></script>
+  <script src="js/popUpLogin.js "></script>
+
+  <!--Timeline Twitter -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -217,27 +217,27 @@
                   novalidate="novalidate">
 
                   <ul class="dados-socio-list">
-                    <li class="col-lg-8">
+                    <li class="col-lg-12">
                       <h2 smv-langtext="lblname">Nome</h2>
                       <span>João Fátima Novais Nobre</span>
                     </li>
 
-                    <li class="col-lg-4">
+                    <li class="col-lg-12">
                       <h2 smv-langtext="lblbdate">Sexo</h2>
                       <span>Masculino</span>
                     </li>
 
-                    <li class="col-lg-4">
+                    <li class="col-lg-12">
                       <h2 smv-langtext="lbldocid">Bilhete de Identidade</h2>
                       <span>255</span>
                     </li>
 
-                    <li class="col-lg-4">
+                    <li class="col-lg-12">
                       <h2 smv-langtext="lblbdate">Data de Nascimento</h2>
                       <span>01-01-1937</span>
                     </li>
 
-                    <li class="col-lg-4">
+                    <li class="col-lg-12">
                       <h2 smv-langtext="lblbdate">NIF</h2>
                       <span>01-01-1937</span>
                     </li>
@@ -289,9 +289,9 @@
                       onkeyup="javascript:smv_changeCP('smv_udata_')" value="1000-100" smv-inival="1000-100" type="text"
                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                       class="col-lg-6 col-md-6 col-sm-6">
-                    <span class="input-validate">Obrigatório!</span>
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                     <input name="smv_udata_CPValid" id="smv_udata_CPValid" type="hidden" value="1" smv-inival="1">
-                    <span class="input-validate">Obrigatório!</span>
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
                     <p class="col-lg-6 col-md-6 col-sm-6" id="smv_udata_CPLocDisplay">
                       Lisboa
                     </p>
@@ -322,15 +322,16 @@
                     </select>
                   </div>
 
-                  <div class="container-input col-lg-4">
-                    <!-- <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País</label> -->
+                  <div class="container-input col-lg-5 col-md-4 col-sm-4">
+                    <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País telemóvel</label>
+
                     <input type="checkbox" id="select-country-movel" style="display: none;">
                     <label for="select-country-movel" class="select-country">
                       <img src="images/flag/pt.svg" alt="">
                       <p>País</p>
                       <i><img src="images/svg/icon-down.svg" alt=""></i>
                     </label>
-                    <span class="input-validate">Obrigatório!</span>
+                    <!-- <span class="input-validate">Obrigatório!</span> -->
 
                     <ul class="country-list">
                       <li>
@@ -380,14 +381,14 @@
                     </ul>
                   </div>
 
-                  <div class="container-input col-lg-8">
+                  <div class="container-input col-lg-7 col-md-8 col-sm-8">
                     <label for="smv_udata_Mobile" smv-langtext="lblmobile">Telemóvel</label>
                     <input name="smv_udata_Mobile" id="smv_udata_Mobile" type="tel" value="444444111"
                       smv-inival="444444111">
                     <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
-                  <div class="container-input col-lg-4" style="display: none;">
+                  <div class="container-input col-lg-5 col-md-4 col-sm-4" style="display: none;">
                     <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País</label>
                     <select id="smv_udata_PhoneCountry" name="smv_udata_PhoneCountry"
                       onchange="smv_uData_ChangeContactCountry('smv_udata_', 'Phone', true)" smv-inival="182">
@@ -403,8 +404,8 @@
                     <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
-                  <div class="container-input col-lg-4">
-                    <!-- <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País</label>-->
+                  <div class="container-input col-lg-5 col-md-4 col-sm-4">
+                    <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País telefone</label>
                     <input type="checkbox" id="select-country-phone" style="display: none;">
                     <label for="select-country-phone" class="select-country">
                       <img src="images/flag/pt.svg" alt="">
@@ -461,81 +462,25 @@
                     </ul>
                   </div>
 
-                  <div class="container-input col-lg-8">
+                  <div class="container-input col-lg-7 col-md-8 col-sm-8">
                     <label for="smv_udata_Phone" smv-langtext="lblphone">Telefone</label>
                     <input name="smv_udata_Phone" id="smv_udata_Phone" type="tel" value="654644655"
                       smv-inival="654644655">
                   </div>
 
-                  <div class="last-update" style="display:none;">
+                  <div class="last-update" style="display:block;">
                     <span smv-langtext="lbllastupdated">Última atualização</span> 29-09-2020 12:57
                   </div>
 
-                  <div class="no-edit-msg">Não é possível alterar
+                  <div class="no-edit-msg" style="display:none;">Não é possível alterar
                     os dados neste momento.</div>
 
                   <div class="container-btn col-lg-12">
-                    <a href="javascript:smv_udata_UpdMember()" class="btn btn-secondary">
+                    <a href="javascript:smv_udata_UpdMember()" class="btn btn-primary" smv-type="udataeditbt">
                       <span smv-langtext="btsave">Gravar</span>
                     </a>
                   </div>
 
-                </form>
-              </div>
-            </li>
-
-            <!------- DADOS CONTATO ------->
-            <li class="li-tabs">
-              <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-contato">
-              <label for="dados-contato" class="label-userdata col-lg-3 col-md-3 col-sm-3 col-xs-6">Dados de
-                Contato</label>
-              <div class="tab-content col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <form class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
-                  <div class="container-input col-lg-12">
-                    <label for="codigo-postal">Morada</label>
-                    <input type="text" id="codigo-postal">
-                  </div>
-
-                  <!-- Código Postal - Portugal -->
-                  <div class="container-input col-lg-6">
-                    <label for="codigo-postal">Código postal</label>
-                    <input type="text" id="codigo-postal">
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="localidade-postal">Localidade Postal</label>
-                    <p class="localidade-postal">Castanheira do Ribatejo</p>
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="localidade">Localidade</label>
-                    <input type="text" id="localidade">
-                  </div>
-
-                  <div class="container-input col-lg-6">
-                    <label for="pais">País</label>
-                    <select name="pais" id="pais" aria-placeholder="Selecione">
-                      <option value="#"></option>
-                      <option value="Portugal">Portugal</option>
-                      <option value="Outro">Outro</option>
-                    </select>
-                    <!-- <span>obrigatório</span> -->
-                  </div>
-
-                  <!-- Fim Código Postal - Portugal -->
-
-                  <!-- Código Postal - resto Mundo -->
-                  <!-- <div class="container-input">
-                    <label for="codigo-postal">Código postal</label>
-                    <input type="text">
-                  </div> -->
-                  <!-- Fim Código Postal - resto Mundo -->
-
-                  <div class="container-btn col-lg-12">
-                    <a href="#" class="btn btn-secondary">
-                      <span>salvar</span>
-                    </a>
-                  </div>
                 </form>
               </div>
             </li>

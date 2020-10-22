@@ -232,7 +232,6 @@
       width: 100%;
       @include flex(column, center, flex-start, flex-start);
       flex-wrap: wrap;
-      // margin-bottom: 3rem;
 
       li {
         text-align: left;
@@ -259,11 +258,11 @@
           border-right: none;
         }
 
-        @include md {
-          padding: .8rem 0;
-          border-right: none;
-          border-bottom: 1px solid $gray-01;
-        }
+        // @include md {
+        //   padding: .8rem 0;
+        //   border-right: none;
+        //   border-bottom: 1px solid $gray-01;
+        // }
       }
     }
 
@@ -428,11 +427,11 @@
   max-height: 28rem;
   overflow-y: scroll;
   display: none;
-  @include absolute(4rem, 50%, auto, auto);
+  @include absolute(6rem, 50%, auto, auto);
   transform: translateX(50%);
   background-color: #FFFFFF;
   border: 1px solid $secondary-01;
-  border-radius: .5rem;
+  border-radius: .25rem;
   transition: all .3s ease-out;
   z-index: 99;
 
@@ -475,7 +474,6 @@
     }
   }
 }
-
 
 // MODAL CLUBE FAN
 .clube-fan-container {
