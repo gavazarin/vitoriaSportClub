@@ -39,7 +39,8 @@
   }
 
   &-secondary {
-    background-color: $gray-01;
+    background-color: $black-01;
+    color: $gray-01;
     transition: all .3s ease-in;
 
     &:hover {

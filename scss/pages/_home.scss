@@ -114,6 +114,63 @@
   }
 }
 
+.hero {
+  width: 100%;
+  height: 35rem;
+  padding: 3rem 0;
+  position: relative;
+  overflow-x: hidden;
+
+  &-background {
+    width: 100%;
+    height: 100%;
+    @include absolute(0, auto, auto, 0);
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &-logo {
+    z-index: 1;
+    height: 5rem;
+
+    a {
+      display: inline-block;
+      height: 100%;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &-text {
+    @include flex(row, center, center, center);
+    @include absolute(auto, auto, 0, auto);
+
+    h1 {
+      width: 100%;
+      @include font(3.5rem, 700, 1.4em);
+      color: $white-01;
+      text-align: center;
+      border-bottom: none;
+    }
+
+    .markdown {
+      &-white {
+        padding: 0 .75rem;
+        background: $white-01;
+        color: $black-01;
+      }
+
+      &-black {
+        padding: 0 .75rem;
+        background: $black-01;
+      }
+    }
+  }
+}
+
 .section-login {
   width: 100%;
   height: auto;
@@ -123,12 +180,11 @@
   .container-login {
     width: 100%;
     margin: 0 auto;
-    @include flex(column, flex-start, center, center);
   }
 
   .nav-tabs {
     width: 100%;
-    border-bottom: 1px solid $gray-02;
+    border: none;
     @include flex(row, center, center, center);
     @include font(1.4rem, 900, 1.4em);
     text-transform: uppercase;
@@ -138,19 +194,21 @@
 
       &:hover {
         color: $primary-01;
-        border-color: #eceeef #eceeef $white-01;
+        border-color: #eceeef;
         transition: all .2s linear;
       }
     }
 
     .nav-link.active {
+      background: $secondary-01;
       color: $primary-02;
-      border-color: $gray-02 $gray-02 transparent;
+      border: none;
     }
   }
 
   .tab-content {
     width: 100%;
+    position: relative;
 
     .active {
       display: flex;
@@ -159,11 +217,58 @@
       align-items: center;
       align-content: center;
     }
+
+    .tab-pane-registo {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      padding-top: 3rem;
+    }
+  }
+
+  .registo-member,
+  .registo-noMember {
+    form {
+      margin: 1.5rem auto;
+    }
+
+    p {
+      width: 100%;
+      @include font(1.4rem, 300, 1.4em);
+      text-align: center;
+    }
+  }
+
+  .registo-member {
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 80%;
+      background-color: $gray-01;
+      opacity: .8;
+      @include absolute(0, 0, auto, auto);
+    }
+
+    @include sm {
+      &:before {
+        display: none;
+      }
+    }
   }
 
   form {
     .container-input {
       justify-content: space-between;
+    }
+
+    .show-password {
+      display: inline-block;
+      @include absolute (50%, 1rem, auto, auto);
+      transform: translateY(-30%);
     }
   }
 

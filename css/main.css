@@ -1793,6 +1793,7 @@ body {
   height: auto;
   position: relative;
   font-family: "Nunito Sans", sans-serif;
+  background-color: #f5f5f5;
 }
 
 section {
@@ -2078,7 +2079,8 @@ form span.input-validate {
 }
 
 .btn-secondary {
-  background-color: #AFAFAF;
+  background-color: #000000;
+  color: #AFAFAF;
   transition: all .3s ease-in;
 }
 
@@ -3201,9 +3203,8 @@ label:hover img {
 
 footer {
   width: 100%;
-  background: #0a0a0a;
   padding-top: 3rem;
-  border-top: 0.5rem solid #ffd201;
+  border-top: 1px solid #AFAFAF;
 }
 
 footer .row {
@@ -3239,12 +3240,13 @@ footer .footerList {
 
 footer .footerList li {
   margin-bottom: 1rem;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 footer .footerList li a {
   border-bottom: 1px solid rgba(240, 240, 240, 0);
   transition: all .3s ease-out;
+  color: #000000;
 }
 
 footer .footerList li:last-child {
@@ -3254,7 +3256,7 @@ footer .footerList li:last-child {
 footer .footerList li:hover a {
   border-bottom: 1px solid #f0f0f0;
   transition: all .3s ease-in;
-  color: #FFFFFF;
+  color: #707070;
   text-decoration: none;
 }
 
@@ -3336,7 +3338,7 @@ footer .payList li img {
 }
 
 footer .rodape {
-  background-color: #000000;
+  background-color: #FFFFFF;
   margin-top: 3rem;
   padding: 1.5rem 0;
   position: relative;
@@ -3354,7 +3356,7 @@ footer .rodape:before {
   content: '';
   width: 100%;
   height: 1px;
-  background-color: #ffd201;
+  background-color: #AFAFAF;
   position: absolute;
   top: 0;
   right: auto;
@@ -5271,6 +5273,75 @@ header .marca img {
   color: #FFFFFF;
 }
 
+.hero {
+  width: 100%;
+  height: 35rem;
+  padding: 3rem 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero-logo {
+  z-index: 1;
+  height: 5rem;
+}
+
+.hero-logo a {
+  display: inline-block;
+  height: 100%;
+}
+
+.hero-logo img {
+  height: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: auto;
+}
+
+.hero-text h1 {
+  width: 100%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.4em;
+  color: #FFFFFF;
+  text-align: center;
+  border-bottom: none;
+}
+
+.hero-text .markdown-white {
+  padding: 0 .75rem;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.hero-text .markdown-black {
+  padding: 0 .75rem;
+  background: #000000;
+}
+
 .section-login {
   width: 100%;
   height: auto;
@@ -5281,16 +5352,11 @@ header .marca img {
 .section-login .container-login {
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
 }
 
 .section-login .nav-tabs {
   width: 100%;
-  border-bottom: 1px solid #707070;
+  border: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -5308,17 +5374,19 @@ header .marca img {
 
 .section-login .nav-tabs .nav-link:hover {
   color: #212121;
-  border-color: #eceeef #eceeef #FFFFFF;
+  border-color: #eceeef;
   transition: all .2s linear;
 }
 
 .section-login .nav-tabs .nav-link.active {
+  background: #ffd201;
   color: #0f0e0e;
-  border-color: #707070 #707070 transparent;
+  border: none;
 }
 
 .section-login .tab-content {
   width: 100%;
+  position: relative;
 }
 
 .section-login .tab-content .active {
@@ -5329,8 +5397,64 @@ header .marca img {
   align-content: center;
 }
 
+.section-login .tab-content .tab-pane-registo {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+
+.section-login .registo-member form,
+.section-login .registo-noMember form {
+  margin: 1.5rem auto;
+}
+
+.section-login .registo-member p,
+.section-login .registo-noMember p {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.section-login .registo-member {
+  position: relative;
+}
+
+.section-login .registo-member:before {
+  content: '';
+  width: 1px;
+  height: 80%;
+  background-color: #AFAFAF;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .section-login .registo-member:before {
+    display: none;
+  }
+}
+
 .section-login form .container-input {
   justify-content: space-between;
+}
+
+.section-login form .show-password {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-30%);
 }
 
 .section-login .aviso-noMember {
