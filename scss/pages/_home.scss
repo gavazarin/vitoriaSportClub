@@ -132,7 +132,7 @@
 
   &-logo {
     z-index: 1;
-    height: 5rem;
+    height: 8rem;
 
     a {
       display: inline-block;
@@ -191,6 +191,7 @@
 
     .nav-link {
       color: $gray-02;
+      border-radius: .25rem;
 
       &:hover {
         color: $primary-01;

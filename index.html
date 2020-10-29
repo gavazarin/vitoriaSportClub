@@ -22,7 +22,7 @@
       <div class="row">
         <div class="hero-logo col-lg-2">
           <a href="index.html">
-            <img src="images/logo-vitoriasc.png" alt="">
+            <img src="images/vitoria_branco.png" alt="">
           </a>
         </div>
         <div class="hero-text col-lg-12">
@@ -66,12 +66,12 @@
 
                 <a href="javascript:smv_showPwdRequest()" class="esqueci-senha" smv-langtext="linkforgotpwd">Recuperar a password</a>
 
-                <a href="javascript:smv_UserLogin()" class="btn btn-primary">
+                <a href="javascript:smv_UserLogin()" class="btn btn-secondary">
                   <span smv-langtext="btlogin">entrar</span>
                 </a>
 
                 <a href="javascript:smv_uaccess_goUFM()" class="esqueci-senha link-registo"
-                  smv-langtext="linkgotonewuser">Ainda não tens conta Smartfan? Regista-te aqui.</a>
+                  smv-langtext="linkgotonewuser">Ainda não tem uma conta? Registe-se aqui.</a>
               </form>
 
               <!-- pwd request -->
@@ -97,7 +97,7 @@
             <div class="tab-pane tab-pane-registo fade" id="registo" role="tabpanel" aria-labelledby="registo-tab">
               <!-- members -->
               <div class="registo-member col-lg-6 col-md-6">
-                <h2>Registo para sócio</h2>
+                <h2>Registo para sócios</h2>
                 <p>
                   Se já é sócio do Vitória SC, valide a sua conta preenchendo os seus dados.
                 </p>
@@ -119,7 +119,7 @@
 
                     <i class="info-cartao ">
                       <img
-                        src="https://lisboa.smartmove.pt:8083/SmartFan.Tickets/Portal/Resources/images/svg/information.svg "
+                        src="images/svg/information.svg"
                         alt="Informação sobre o cartão de sócio ">
                       <div class="member-card">
                         <img src="images/memberCard.png" alt="">
@@ -144,7 +144,7 @@
                       smv-rcwidgetid="1">
                   </div>
 
-                  <a href="javascript:smv_UserFromMemberValidate()" class="btn btn-primary">
+                  <a href="javascript:smv_UserFromMemberValidate()" class="btn btn-secondary">
                     <span smv-langtext="btvalidate">Validar</span>
                   </a>
                 </form>
@@ -152,24 +152,27 @@
 
               <!-- no members -->
               <div class="registo-noMember col-lg-6 col-md-6">
-                <h2>Registo para não sócio</h2>
+                <h2>Registo para não sócios</h2>
                 <p>
                   Se não é sócio do Vitória SC, preencha os seus dados para ter uma conta.
                 </p>
+
                 <form class="col-lg-8"> 
                   <div class="container-input">
-                    <label for="member-email" class="form-label">E-mail</label>
-                    <input type="text" name="member-email" id="member-email" maxlength="10">
+                    <label for="member-name" class="form-label">Nome</label>
+                    <input type="text" name="member-name" id="member-name" maxlength="10">
+                  </div>
+
+                  <div class="container-input">
+                    <label for="member-e-mail" class="form-label">E-mail</label>
+                    <input type="email" name="member-e-mail" id="member-e-mail" maxlength="10">
                   </div>
 
                   <div class="container-input">
                     <label for="member-password" class="form-label">Password</label>
                     <input type="password" name="member-password" id="member-password" maxlength="10">
-                  </div>
-
-                  <div class="container-input">
-                    <label for="member-confirm-password" class="form-label">Confirmar password</label>
-                    <input type="password" name="member-confirm-password" id="member-confirm-password" maxlength="10">
+                    <a href="#" class="show-password"><img src="images/svg/eye.svg" alt=""></a>
+                    <a href="#" class="show-password" style="display: none;"><img src="images/svg/eye-off.svg" alt=""></a>
                   </div>
 
                   <div class="registo_captcha" style="display: none;">
@@ -189,14 +192,14 @@
                       smv-rcwidgetid="1">
                   </div>
 
-                  <a href="javascript:smv_UserFromMemberValidate()" class="btn btn-primary">
+                  <a href="javascript:smv_UserFromMemberValidate()" class="btn btn-secondary">
                     <span smv-langtext="btvalidate">Registar</span>
                   </a>
                 </form>
               </div>
 
               <a href="javascript:smv_uaccess_goUAccess()" class="esqueci-senha link-registo"
-                smv-langtext="linkgotologin">Já tens conta Smartfan? Faz o teu login aqui.</a>
+                smv-langtext="linkgotologin">Já tem conta? Faça o seu login aqui.</a>
             </div>
           </div>
         </div>
@@ -286,11 +289,11 @@
         </ul>
 
         <ul class="payList col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
-          <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
-          <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
-          <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
-          <li class="logo-visa"><img src="images/svg/mbway.svg" alt="Multibanco"></li>
+          <li class="logo-meowallet"><img src="images/svg/meowallet-gray.svg" alt="MEO Wallet"></li>
+          <li class="logo-visa"><img src="images/payment-visa-gray.png" alt="Visa"></li>
+          <li class="logo-mastercard"><img src="images/payment-mastercard-gray.png" alt="Mastercard"></li>
+          <li class="logo-multibanco"><img src="images/svg/multibanco-gray.svg" alt="Multibanco"></li>
+          <li class="logo-visa"><img src="images/svg/mbway.svg" alt="MB Way"></li>
         </ul>
       </div>
     </div>
