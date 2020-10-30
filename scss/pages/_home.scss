@@ -121,6 +121,10 @@
   position: relative;
   overflow-x: hidden;
 
+  @include sm {
+    padding: 1.2rem 0;
+  }
+
   &-background {
     width: 100%;
     height: 100%;
@@ -282,6 +286,33 @@
 
       &:after {
         display: none;
+      }
+    }
+  }
+
+  .container-sucesso {
+    @include flex(column, center, center, center);
+    margin: 1.5rem 0;
+
+    i {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      width: 5rem;
+    }
+
+    h1 {
+      border: none;
+      text-align: center;
+    }
+
+    .container-btn {
+      margin-top: 1.5rem;
+      @include flex(row, center, flex-end, flex-end);
+
+      a {
+        margin: 0 1rem;
       }
     }
   }

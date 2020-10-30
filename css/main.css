@@ -1875,7 +1875,7 @@ h1 {
   color: #212121;
   text-transform: uppercase;
   text-align: left;
-  border-bottom: 2px solid #FFFF00;
+  border-bottom: 2px solid #ffd201;
 }
 
 h2 {
@@ -2150,7 +2150,7 @@ form span.input-validate {
 }
 
 .btn-link:focus {
-  color: #FFFF00;
+  color: #ffd201;
   text-decoration: none;
 }
 
@@ -2284,11 +2284,11 @@ form span.input-validate {
 }
 
 .termos-condicoes .checkbox-periodo p a {
-  color: #FFFF00;
+  color: #ffd201;
 }
 
 .termos-condicoes .checkbox-periodo p a:hover, .termos-condicoes .checkbox-periodo p a:focus {
-  color: #FFFF00;
+  color: #ffd201;
   text-decoration: none;
 }
 
@@ -2321,7 +2321,7 @@ form span.input-validate {
   margin: 24rem 0;
   left: calc(50% - 1.8rem);
   border: 4px solid rgba(255, 255, 255, 0.2);
-  border-left-color: #FFFF00;
+  border-left-color: #ffd201;
   border-radius: 50%;
   animation: spin 1.3s linear infinite;
 }
@@ -2339,7 +2339,7 @@ table {
 }
 
 table thead {
-  border-bottom: 2px solid #FFFF00;
+  border-bottom: 2px solid #ffd201;
 }
 
 table tr {
@@ -2384,9 +2384,9 @@ table tbody tr.totalpayment td {
 table .status__atrasado {
   padding: .5rem;
   border-radius: .5rem;
-  border: 2px solid #FFFF00;
+  border: 2px solid #ffd201;
   font-size: 1.2rem;
-  color: #FFFF00;
+  color: #ffd201;
 }
 
 table .btn {
@@ -2670,7 +2670,7 @@ table .btn {
   content: '';
   width: 100%;
   height: 60%;
-  background-color: #FFFF00;
+  background-color: #ffd201;
   position: absolute;
   top: auto;
   right: auto;
@@ -2905,7 +2905,7 @@ label:before {
   content: '';
   width: 100%;
   height: 3px;
-  background-color: #FFFF00;
+  background-color: #ffd201;
   position: absolute;
   top: auto;
   right: auto;
@@ -3103,7 +3103,7 @@ label:hover img {
 
 .no-games h1 {
   width: 25%;
-  color: #FFFF00;
+  color: #ffd201;
   margin: 0 .5rem;
   text-align: center;
   border: none;
@@ -3593,7 +3593,7 @@ header .marca img {
   height: 3.2rem;
   padding: 4px;
   background-color: #FFFFFF;
-  border: 2px solid #FFFF00;
+  border: 2px solid #ffd201;
   border-radius: 50%;
   margin-right: 1rem;
 }
@@ -3607,13 +3607,13 @@ header .marca img {
     height: 4rem;
     padding: 6px;
     background-color: #000000;
-    border: 1px solid #FFFF00;
+    border: 1px solid #ffd201;
   }
 }
 
 .menu-logado b {
   font-weight: 900;
-  color: #FFFF00;
+  color: #ffd201;
 }
 
 .menu-logado input {
@@ -3686,7 +3686,7 @@ header .marca img {
 }
 
 .menu-logado .user-dropdown__list li:last-child a {
-  color: #FFFF00;
+  color: #ffd201;
   font-size: 1.1rem;
   font-weight: 900;
   line-height: 1.2em;
@@ -3775,7 +3775,7 @@ header .marca img {
 }
 
 .navMenu-mobile .menuMobile .menu__item__sair a {
-  color: #FFFF00;
+  color: #ffd201;
   text-transform: lowercase;
 }
 
@@ -4141,7 +4141,7 @@ header .marca img {
   left: auto;
   padding: .6rem;
   background-color: #FFFFFF;
-  border: 1px solid #FFFF00;
+  border: 1px solid #ffd201;
   border-radius: 50%;
   transition: all .3s ease-in-out;
 }
@@ -4196,7 +4196,7 @@ header .marca img {
   text-transform: uppercase;
   font-weight: 900;
   background-color: #000000;
-  color: #FFFF00;
+  color: #ffd201;
   margin: 0;
   transition: all .3s ease-out;
 }
@@ -4213,7 +4213,7 @@ header .marca img {
 
 .nav_tabs .rd_tabs:checked ~ label {
   background-color: #FFFFFF;
-  color: #FFFF00;
+  color: #ffd201;
   cursor: default;
   border: none;
 }
@@ -4320,7 +4320,7 @@ header .marca img {
   left: auto;
   transform: translateX(50%);
   background-color: #FFFFFF;
-  border: 1px solid #FFFF00;
+  border: 1px solid #ffd201;
   border-radius: .5rem;
   transition: all .3s ease-out;
   z-index: 99;
@@ -5283,6 +5283,12 @@ header .marca img {
   overflow-x: hidden;
 }
 
+@media (max-width: 767px) {
+  .hero {
+    padding: 1.2rem 0;
+  }
+}
+
 .hero-background {
   width: 100%;
   height: 100%;
@@ -5382,7 +5388,7 @@ header .marca img {
 }
 
 .section-login .nav-tabs .nav-link.active {
-  background: #FFFF00;
+  background: #ffd201;
   color: #0f0e0e;
   border: none;
 }
@@ -5475,6 +5481,41 @@ header .marca img {
   display: none;
 }
 
+.section-login .container-sucesso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 1.5rem 0;
+}
+
+.section-login .container-sucesso i {
+  margin-bottom: 1.5rem;
+}
+
+.section-login .container-sucesso img {
+  width: 5rem;
+}
+
+.section-login .container-sucesso h1 {
+  border: none;
+  text-align: center;
+}
+
+.section-login .container-sucesso .container-btn {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.section-login .container-sucesso .container-btn a {
+  margin: 0 1rem;
+}
+
 .error-404 {
   width: 100%;
   min-height: 80vh;
@@ -5512,7 +5553,7 @@ header .marca img {
   font-size: 5rem;
   font-weight: 900;
   line-height: 1.2em;
-  color: #FFFF00;
+  color: #ffd201;
   margin: 0;
   text-align: left;
   border: none;
@@ -5809,7 +5850,7 @@ header .marca img {
 }
 
 .fluxoPagamentos .payList .input-validate {
-  color: #FFFF00;
+  color: #ffd201;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.2em;
@@ -5860,7 +5901,7 @@ header .marca img {
   text-transform: lowercase;
   color: #000000;
   padding: 1rem 2rem;
-  border: 2px solid #FFFF00;
+  border: 2px solid #ffd201;
   text-transform: uppercase;
   border-radius: .5rem;
 }
@@ -5872,7 +5913,7 @@ header .marca img {
 .aviso-multibanco {
   max-width: 60%;
   padding: 1.5rem;
-  border: 2px solid #FFFF00;
+  border: 2px solid #ffd201;
   border-radius: .5rem;
   text-align: center;
   font-size: 1.4rem;
@@ -6106,7 +6147,7 @@ header .marca img {
 .userdata {
   margin-bottom: 3rem;
   position: relative;
-  height: 185vh;
+  height: 120vh;
 }
 
 @media (max-width: 992px) {
@@ -6141,7 +6182,7 @@ header .marca img {
   content: '';
   width: 100%;
   height: 2px;
-  background-color: #FFFF00;
+  background-color: #ffd201;
   position: absolute;
   top: auto;
   right: 0;
@@ -6195,7 +6236,8 @@ header .marca img {
 }
 
 .tabs_userdata .li-tabs .container-btn {
-  text-align: right;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .tabs_userdata .tab-content {
@@ -6255,12 +6297,43 @@ header .marca img {
 
 .tabs_userdata .tab-content .clube__socio {
   width: 100%;
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 2rem 3rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
-  margin-bottom: 3rem;
+  background-color: #ececec;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+@media (max-width: 575px) {
+  .tabs_userdata .tab-content .clube__socio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.tabs_userdata .tab-content .clube__socio-background {
+  height: 220%;
+  position: absolute;
+  top: 70%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  opacity: .1;
+}
+
+.tabs_userdata .tab-content .clube__socio-background img {
+  height: 100%;
 }
 
 .tabs_userdata .tab-content .clube__socio--infos {
@@ -6273,7 +6346,6 @@ header .marca img {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.2em;
-  margin-bottom: 1.2rem;
 }
 
 .tabs_userdata .tab-content .clube__socio--infos strong {
@@ -6308,7 +6380,7 @@ header .marca img {
 }
 
 .tabs_userdata .tab-content .clube__socio--infos ul .quotas-atrasadas strong {
-  color: #FFFF00;
+  color: #ffd201;
 }
 
 .tabs_userdata .tab-content .clube__socio--infos ul .icon-quotas {
@@ -6320,6 +6392,10 @@ header .marca img {
 @media (max-width: 767px) {
   .tabs_userdata .tab-content .clube__socio--infos ul {
     margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .tabs_userdata .tab-content .clube__socio--infos ul li {
+    text-align: center;
   }
 }
 
@@ -6332,11 +6408,12 @@ header .marca img {
 .tabs_userdata .tab-content .dados-socio-list {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
 .tabs_userdata .tab-content .dados-socio-list li {
@@ -6369,7 +6446,7 @@ header .marca img {
 .tabs_userdata .tab-content .no-edit-msg {
   width: 100%;
   padding: 0 1.5rem;
-  text-align: left;
+  text-align: right;
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.4em;
@@ -6379,8 +6456,9 @@ header .marca img {
 .tabs_userdata .tab-content .no-edit-msg {
   font-weight: 900;
   padding: .8rem 1.5rem;
-  border: 2px solid #FFFF00;
+  border: 2px solid #ffd201;
   border-radius: .5rem;
+  text-align: center;
 }
 
 .tabs_userdata .tab-content .clube__fan {
@@ -6399,7 +6477,7 @@ header .marca img {
 }
 
 .tabs_userdata .tab-content .clube__fan h1 .destaque {
-  color: #FFFF00;
+  color: #ffd201;
 }
 
 .tabs_userdata .tab-content .clube__fan__list {
@@ -6424,7 +6502,7 @@ header .marca img {
 .tabs_userdata .tab-content .clube__fan .not-fan {
   border: 2px solid #212121;
   border-radius: .5rem;
-  color: #FFFF00;
+  color: #ffd201;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.4em;
@@ -6444,16 +6522,16 @@ header .marca img {
 
 .tabs_userdata .tab-content__conta {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-end;
-  align-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
 }
 
 .tabs_userdata .tab-content__conta .email-pwd-atual {
   width: 100%;
-  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6469,12 +6547,18 @@ header .marca img {
   margin-bottom: .5rem;
 }
 
+@media (max-width: 575px) {
+  .tabs_userdata .tab-content__conta .email-pwd-atual {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .tabs_userdata .tab-content .termos-condicoes {
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.2em;
   color: #212121;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   text-align: right;
 }
 
@@ -6483,16 +6567,22 @@ header .marca img {
 }
 
 .tabs_userdata .tab-content .termos-condicoes .checkbox-periodo {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .tabs_userdata .tab-content .termos-condicoes .checkbox-periodo__item .cbx {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .tabs_userdata .tab-content .termos-condicoes .checkbox-periodo__item .cbx p {
   width: 80%;
-  text-align: right;
+  text-align: left;
+}
+
+@media (max-width: 575px) {
+  .tabs_userdata .tab-content .termos-condicoes {
+    margin: 1.5rem 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -6562,7 +6652,7 @@ header .marca img {
   left: auto;
   transform: translateX(50%);
   background-color: #FFFFFF;
-  border: 1px solid #FFFF00;
+  border: 1px solid #ffd201;
   border-radius: .25rem;
   transition: all .3s ease-out;
   z-index: 99;
@@ -6693,7 +6783,7 @@ header .marca img {
 }
 
 .clube-fan-content h1 .destaque {
-  color: #FFFF00;
+  color: #ffd201;
 }
 
 .clube-fan-content .clubes-fan__list {
@@ -6723,7 +6813,7 @@ header .marca img {
 
 .clube-fan-content .clubes-fan__list .clube-fan__select {
   background: #FFFFFF;
-  border: 2px solid #FFFF00;
+  border: 2px solid #ffd201;
   border-radius: 50%;
 }
 

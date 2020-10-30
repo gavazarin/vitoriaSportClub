@@ -12,14 +12,10 @@
 
 <body>
   <header>
-    <img src="images/svg/pattern_smartFan.svg" alt="Pattern SmartFan" class="pattern__smartFan" style="display: none;">
-
     <nav class="navMenu col-lg-12">
-      <img src="images/svg/pattern_smartFan-white.svg" alt="Pattern SmartFan" class="pattern__smartFan"
-        style="display: none;">
       <div class="container">
         <div class="row">
-          <a href="index.html" class="marca col-lg-2 col-md-2"><img src="images/logo-vitoriasc.png"
+          <a href="index.html" class="marca col-lg-2 col-md-2"><img src="images/vitoria_preto.png"
               alt="Logo do Vitória SC"></a>
 
           <ul class="menu col-lg-10 col-md-10">
@@ -27,7 +23,7 @@
               <ul class="menu-list-ul">
                 <li class="menu-item"><a href="pagar-quotas_inicio.html">pagar quotas</a></li>
                 <li class="menu-item menu-item-active"><a href="userdata.html">perfil</a></li>
-                
+
                 <li class="menu-item menu__btn" style="display:none;">
                   <button type="button" class="btn btn-primary" data-toggle="modal"
                     data-target="#exampleModal">login</button>
@@ -114,8 +110,8 @@
               <label for="dados-conta" class="label-userdata col-lg-3 col-md-6 col-sm-6 col-xs-6">Dados de Conta</label>
 
               <div class="tab-content col-lg-9 col-md-12">
-                <div class="tab-content__conta col-lg-7 col-md-10 col-sm-12 col-xs-12">
-                  <div class="email-pwd-atual">
+                <div class="tab-content__conta col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="email-pwd-atual col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h2>email</h2>
                     <span>taveira.joao@gmail.com</span>
                     <span id="smv_UserChangeMailText" smv-langtext="umailchangefrase" smv-externallogin="NONE"
@@ -126,12 +122,12 @@
                     <a href="#" class="btn-link">editar</a>
                   </div>
 
-                  <div class="email-pwd-atual">
+                  <div class="email-pwd-atual col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h2>password</h2>
                     <a href="#" class="btn-link">editar</a>
                   </div>
 
-                  <div class="termos-condicoes">
+                  <div class="termos-condicoes col-lg-12">
                     <ul class="checkbox-periodo">
                       <li class="checkbox-periodo__item">
                         <input type="checkbox" id="smv_ufm_privacy" name="smv_ufm_privacy" value="1" class="inp-cbx"
@@ -180,7 +176,7 @@
 
                   <div class="container-btn col-lg-12">
                     <a href="#" class="btn btn-secondary">
-                      <span>salvar</span>
+                      <span>Gravar</span>
                     </a>
                   </div>
                 </div>
@@ -190,11 +186,14 @@
             <!-------- DADOS DE SÓCIO ------->
             <li class="li-tabs">
               <input type="radio" name="tabs_userdata" class="rd_userdata_tabs" id="dados-socio" checked>
-              <label for="dados-socio" class="label-userdata col-lg-3 col-md-6 col-sm-6 col-xs-6" checked>Dados de
-                Sócio</label>
+              <label for="dados-socio" class="label-userdata col-lg-3 col-md-6 col-sm-6 col-xs-6" checked>Dados de Sócio</label>
 
               <div class="tab-content tab-content__clubes col-lg-9 col-md-12">
-                <div class="clube__socio col-lg-6 col-md-6 col-sm-12">
+                <div class="clube__socio col-lg-12 col-md-12 col-sm-12">
+                  <div class="clube__socio-background">
+                    <img src="images/svg/mascote-conquistador.svg" alt="">
+                  </div>
+
                   <div class="clube__socio--infos">
                     <ul>
                       <li>
@@ -214,31 +213,29 @@
                   </a>
                 </div>
 
-                <form name="smv_fUserData_Member" id="smv_fUserData_Member" class="col-lg-7 col-md-10 col-xs-12"
-                  novalidate="novalidate">
-
+                <form name="smv_fUserData_Member" id="smv_fUserData_Member" novalidate="novalidate">
                   <ul class="dados-socio-list">
-                    <li class="col-lg-12">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <h2 smv-langtext="lblname">Nome</h2>
                       <span>João Fátima Novais Nobre</span>
                     </li>
 
-                    <li class="col-lg-12">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <h2 smv-langtext="lblbdate">Sexo</h2>
                       <span>Masculino</span>
                     </li>
 
-                    <li class="col-lg-12">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <h2 smv-langtext="lbldocid">Bilhete de Identidade</h2>
                       <span>255</span>
                     </li>
 
-                    <li class="col-lg-12">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <h2 smv-langtext="lblbdate">Data de Nascimento</h2>
                       <span>01-01-1937</span>
                     </li>
 
-                    <li class="col-lg-12">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <h2 smv-langtext="lblbdate">NIF</h2>
                       <span>01-01-1937</span>
                     </li>
@@ -261,7 +258,7 @@
                     </select>
                   </div>
 
-                  <div class="container-input col-lg-12">
+                  <div class="container-input col-lg-6 col-md-6 col-sm-6">
                     <label for="smv_udata_Country" smv-langtext="lblcountry">País</label>
                     <select id="smv_udata_Country" name="smv_udata_Country"
                       onchange="smv_uData_ChangeCountry('smv_udata_', true,true)" smv-inival="">
@@ -276,7 +273,7 @@
                     <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
-                  <div class="container-input col-lg-12">
+                  <div class="container-input col-lg-6 col-md-6 col-sm-6">
                     <label for="smv_udata_Address" class="form-label" smv-langtext="lbladdress">Morada</label>
                     <input name="smv_udata_Address" id="smv_udata_Address" smv-filterchars="addy" type="text"
                       value="RUA RAÚL BRANDÃO 152 RC ESQ" smv-inival="RUA RAÚL BRANDÃO 152 RC ESQ">
@@ -284,7 +281,7 @@
                   </div>
 
                   <!-- Código Postal - Portugal  smv-countryfilter="smv_udata_PT" -->
-                  <div class="container-input codigo-postal-pt col-lg-12">
+                  <div class="container-input codigo-postal-pt col-lg-6 col-md-6 col-sm-6">
                     <label for="smv_udata_CP" smv-langtext="lblpostalcode">Código Postal</label>
                     <input name="smv_udata_CP" id="smv_udata_CP" onblur="javascript:smv_CountryValidateCP('smv_udata_')"
                       onkeyup="javascript:smv_changeCP('smv_udata_')" value="1000-100" smv-inival="1000-100" type="text"
@@ -298,7 +295,7 @@
                     </p>
                   </div>
 
-                  <div class="container-input col-lg-12">
+                  <div class="container-input col-lg-6 col-md-6 col-sm-6">
                     <label for="smv_udata_Loc" smv-langtext="lblloc">Localidade</label>
                     <input name="smv_udata_Loc" id="smv_udata_Loc" smv-filterchars="addy" type="text" value="LISBOA"
                       smv-inival="LISBOA">
@@ -323,7 +320,7 @@
                     </select>
                   </div>
 
-                  <div class="container-input col-lg-5 col-md-4 col-sm-4">
+                  <div class="container-input col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <label for="smv_udata_MobileCountry" smv-langtext="lblmobilecountry">País telemóvel</label>
 
                     <input type="checkbox" id="select-country-movel" style="display: none;">
@@ -382,14 +379,14 @@
                     </ul>
                   </div>
 
-                  <div class="container-input col-lg-7 col-md-8 col-sm-8">
+                  <div class="container-input col-lg-3 col-md-3 col-sm-8 col-xs-12">
                     <label for="smv_udata_Mobile" smv-langtext="lblmobile">Telemóvel</label>
                     <input name="smv_udata_Mobile" id="smv_udata_Mobile" type="tel" value="444444111"
                       smv-inival="444444111">
                     <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
-                  <div class="container-input col-lg-5 col-md-4 col-sm-4" style="display: none;">
+                  <div class="container-input col-lg-3 col-md-3 col-sm-3" style="display: none;">
                     <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País</label>
                     <select id="smv_udata_PhoneCountry" name="smv_udata_PhoneCountry"
                       onchange="smv_uData_ChangeContactCountry('smv_udata_', 'Phone', true)" smv-inival="182">
@@ -405,7 +402,7 @@
                     <!-- <span class="input-validate">Obrigatório!</span> -->
                   </div>
 
-                  <div class="container-input col-lg-5 col-md-4 col-sm-4">
+                  <div class="container-input col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <label for="smv_udata_PhoneCountry" smv-langtext="lblphonecountry">País telefone</label>
                     <input type="checkbox" id="select-country-phone" style="display: none;">
                     <label for="select-country-phone" class="select-country">
@@ -463,7 +460,7 @@
                     </ul>
                   </div>
 
-                  <div class="container-input col-lg-7 col-md-8 col-sm-8">
+                  <div class="container-input col-lg-3 col-md-3 col-sm-8 col-xs-12">
                     <label for="smv_udata_Phone" smv-langtext="lblphone">Telefone</label>
                     <input name="smv_udata_Phone" id="smv_udata_Phone" type="tel" value="654644655"
                       smv-inival="654644655">
@@ -473,11 +470,12 @@
                     <span smv-langtext="lbllastupdated">Última atualização</span> 29-09-2020 12:57
                   </div>
 
-                  <div class="no-edit-msg" style="display:none;">Não é possível alterar
-                    os dados neste momento.</div>
+                  <div class="no-edit-msg" style="display:none;">
+                    Não é possível alterar os dados neste momento.
+                  </div>
 
                   <div class="container-btn col-lg-12">
-                    <a href="javascript:smv_udata_UpdMember()" class="btn btn-primary" smv-type="udataeditbt">
+                    <a href="javascript:smv_udata_UpdMember()" class="btn btn-secondary" smv-type="udataeditbt">
                       <span smv-langtext="btsave">Gravar</span>
                     </a>
                   </div>
@@ -507,11 +505,11 @@
         </ul>
 
         <ul class="payList col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
-          <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
-          <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
-          <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
-          <li class="logo-visa"><img src="images/svg/mbway.svg" alt="Multibanco"></li>
+          <li class="logo-meowallet"><img src="images/svg/meowallet-gray.svg" alt="MEO Wallet"></li>
+          <li class="logo-visa"><img src="images/payment-visa-gray.png" alt="Visa"></li>
+          <li class="logo-mastercard"><img src="images/payment-mastercard-gray.png" alt="Mastercard"></li>
+          <li class="logo-multibanco"><img src="images/svg/multibanco-gray.svg" alt="Multibanco"></li>
+          <li class="logo-visa"><img src="images/svg/mbway.svg" alt="MB Way"></li>
         </ul>
       </div>
     </div>

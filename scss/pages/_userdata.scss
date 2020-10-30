@@ -59,7 +59,7 @@
 .userdata {
   margin-bottom: 3rem;
   position: relative;
-  height: 185vh;
+  height: 120vh;
 
   @include md {
     height: auto;
@@ -129,7 +129,8 @@
     }
 
     .container-btn {
-      text-align: right;
+      text-align: center;
+      margin-top: 1.5rem;
     }
   }
 
@@ -172,14 +173,34 @@
 
     .clube__socio {
       width: 100%;
-      @include flex(column, center, center, center);
+      position: relative;
       margin-bottom: 3rem;
+      padding: 2rem 3rem;
+      @include flex(row, space-between, center, center);
+      background-color: #ececec;
+      border: 1px solid #e0e0e0;
+      overflow: hidden;
+
+      @include xs {
+        @include flex(column, space-between, center, center);
+      }
+
+      &-background {
+        height: 220%;
+        @include absolute(70%, auto, auto, 50%);
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        opacity: .1;
+
+        img {
+          height: 100%;
+        }
+      }
 
       &--infos {
         @include flex(row, center, center, center);
         color: $primary-01;
         @include font(1.6rem, 300, 1.2em);
-        margin-bottom: 1.2rem;
 
         strong {
           font-weight: 900;
@@ -219,6 +240,11 @@
 
           @include sm {
             margin-right: 0;
+            margin-bottom: 1.5rem;
+
+            li {
+              text-align: center;
+            }
           }
         }
       }
@@ -230,8 +256,9 @@
 
     .dados-socio-list {
       width: 100%;
-      @include flex(column, center, flex-start, flex-start);
+      @include flex(row, flex-start, flex-start, flex-start);
       flex-wrap: wrap;
+      margin-bottom: 1.5rem;
 
       li {
         text-align: left;
@@ -270,7 +297,7 @@
     .no-edit-msg {
       width: 100%;
       padding: 0 1.5rem;
-      text-align: left;
+      text-align: right;
       @include font(1.4rem, 300, 1.4em);
       margin: .8rem 0;
     }
@@ -280,6 +307,7 @@
       padding: .8rem 1.5rem;
       border: 2px solid $secondary-01;
       border-radius: .5rem;
+      text-align: center;
     }
 
     .clube__fan {
@@ -330,12 +358,12 @@
     }
 
     &__conta {
-      @include flex(column, flex-start, flex-end, flex-end);
+      @include flex(row, flex-start, flex-start, flex-start);
+      flex-wrap: wrap;
       margin-bottom: 1.5rem;
 
       .email-pwd-atual {
         width: 100%;
-        margin-bottom: 3rem;
         @include flex(column, flex-start, flex-start, flex-start);
         color: $primary-01;
         @include font(1.6rem, 300, 1.2em);
@@ -343,13 +371,17 @@
         span {
           margin-bottom: .5rem;
         }
+
+        @include xs {
+          margin-bottom: 1.5rem;
+        }
       }
     }
 
     .termos-condicoes {
       @include font(1.3rem, 300, 1.2em);
       color: $primary-01;
-      margin-bottom: 3rem;
+      margin: 3rem 0;
       text-align: right;
 
       strong {
@@ -357,18 +389,22 @@
       }
 
       .checkbox-periodo {
-        justify-content: flex-end;
+        justify-content: flex-start;
 
         &__item {
           .cbx {
-            justify-content: flex-end;
+            justify-content: flex-start;
 
             p {
               width: 80%;
-              text-align: right;
+              text-align: left;
             }
           }
         }
+      }
+
+      @include xs {
+        margin: 1.5rem 0;
       }
     }
 
