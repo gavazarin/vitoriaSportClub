@@ -183,6 +183,7 @@
 
       @include xs {
         @include flex(column, space-between, center, center);
+        padding: 1.5rem;
       }
 
       &-background {
@@ -300,6 +301,10 @@
       text-align: right;
       @include font(1.4rem, 300, 1.4em);
       margin: .8rem 0;
+
+      @include xxs {
+        text-align: center;
+      }
     }
 
     .no-edit-msg {

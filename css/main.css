@@ -1987,7 +1987,7 @@ form span.input-validate {
 .container-input .info-cartao {
   position: absolute;
   top: 0;
-  right: 0.5rem;
+  right: -1rem;
   bottom: auto;
   left: auto;
   display: inline-block;
@@ -4434,7 +4434,7 @@ header .marca img {
   font-weight: 700;
   line-height: 1.2em;
   color: #212121;
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -6317,6 +6317,7 @@ header .marca img {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    padding: 1.5rem;
   }
 }
 
@@ -6451,6 +6452,13 @@ header .marca img {
   font-weight: 300;
   line-height: 1.4em;
   margin: .8rem 0;
+}
+
+@media (max-width: 425px) {
+  .tabs_userdata .tab-content .last-update,
+  .tabs_userdata .tab-content .no-edit-msg {
+    text-align: center;
+  }
 }
 
 .tabs_userdata .tab-content .no-edit-msg {
