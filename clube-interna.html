@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitória FC - SmartFan</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <header>
+    <nav class="navMenu col-lg-12">
+      <img src="images/svg/pattern_smartFan-white.svg" alt="Pattern SmartFan" class="pattern__smartFan"
+        style="display: none" />
+      <div class="container">
+        <div class="row">
+          <a href="index.html" class="marca col-lg-2 col-md-2">
+            <img src="images/vitoria_preto.png" alt="Logo do Vitória SC" />
+            </a>
+
+          <ul class="menu col-lg-10 col-md-10">
+            <li class="menu-list">
+              <ul class="menu-list-ul">
+                <li class="menu-item">
+                  <a href="pagar-quotas_inicio.html">pagar quotas</a>
+                </li>
+                <li class="menu-item menu-item-active">
+                  <a href="userdata.html">perfil</a>
+                </li>
+
+                <li class="menu-item menu__btn"></li>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">login</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==== MENU MOBILE ==== -->
+    <nav class="navMenu-mobile col-md-12">
+      <a href="index.html" class="marca"><img src="images/logo-vitoriasc.png" alt="Vitória SC" /></a>
+
+      <a href="#" class="btnMenu btnMenu__open"><img src="images/svg/icon-menu-white.svg" alt="Abrir Menu" /></a>
+
+      <div id="#menuMobile" class="menuMobile">
+        <a href="#menuMobile" class="btnMenu btnMenu__close"><img src="images/svg/close-menu.svg"
+            alt="Fechar Menu" /></a>
+
+        <a href="index.html" class="marca"><img src="images/logo-vitoriasc.png" alt="Vitória SC" /></a>
+
+        <ul class="menuMobile__list">
+          <li class="menuMobile__list__item">
+            <a href="pagar-quotas_inicio.html">pagar quotas</a>
+          </li>
+          <li class="menuMobile__list__item">
+            <a href="userdata.html">perfil</a>
+          </li>
+
+          <li class="menu-item menu__btn">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+              login
+            </button>
+          </li>
+
+          <li class="menu-item menu-logado" style="display: none">
+            <i class="icon-user"><img src="images/svg/user-avatar.svg" alt="" /></i>
+            <p class="user-dropdown">
+              Olá, <span><b>Usuário</b></span>!
+            </p>
+          </li>
+
+          <li class="menu-item menu__item__sair" style="display: none">
+            <a href="#">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Vitória Sport Clube  -->
+  <section class="bannerFullScreen">
+    <img src="images/banner_VitoriaSC.png" alt="Banner do Vitória Sport Clube" class="background" />
+  </section>
+
+  <section class="estruturaPadrao">
+    <div class="container">
+      <div class="row">
+        <div class="mainContent col-lg-9 col-md-12">
+
+          <section class="check-new-number">
+            <h1>Consulte seu novo número de sócio</h1>
+            <div class="check-new-number-content col-lg-12">
+              <div class="check-new-number-content-icon col-lg-6">
+                <i><img src="images/vitoria-card-number.png" alt="" /></i>
+              </div>
+
+              <div class="check-new-number-content-text col-lg-6">
+                <h2>Consulte já o teu novo número de sócio!</h2>
+                <a href="#" class="btn btn-primary">Novo número de sócio</a>
+              </div>
+            </div>
+          </section>
+
+          <div smv-type="widgetcontainer" smv-widget="games" smv-param="">
+            <div smv-type="widgetpage" id="smv_wp_games">
+            </div>
+            <section class="vantagens-socio-container col-lg-12 col-md-12 col-sm-12">
+              <div class="sou-socio col-lg-4 col-md-4 col-sm-6">
+                <img src="images/estadio-socio.png" class="background-vantagens"/>
+
+                <h1>Já és sócio?</h1>
+                <p>Paga já as tuas quotas!</p>
+
+                <a href="#" class="btn btn-primary">Pagar quotas</a>
+              </div>
+
+              <div class="vantagens col-lg-8 col-md-8 col-sm-12">
+                <h1>Vantagens em ser sócio!</h1>
+                <ul class="vantagens__list">
+                  <li>
+                    <img src="images/vantagem1.png" class="background-vantagens"/>
+                    <h2>Vantagens no acesso aos jogos</h2>
+
+                    <a href="#" class="btn btn-primary only-mobile">faz-te sócio!</a>
+                    <div class="vantagens__hover">
+                      <a href="#" class="btn btn-primary">faz-te sócio!</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <img src="images/vantagem2.png" class="background-vantagens"/>
+                    <h2>Promoções exclusivas</h2>
+
+                    <a href="#" class="btn btn-primary only-mobile">faz-te sócio!</a>
+                    <div class="vantagens__hover">
+                      <a href="#" class="btn btn-primary">faz-te sócio!</a>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <img src="images/vantagem3.png" class="background-vantagens"/>
+                    <h2>Apoia a formação do teu clube</h2>
+
+                    <a href="#" class="btn btn-primary only-mobile">faz-te sócio!</a>
+                    <div class="vantagens__hover">
+                      <a href="#" class="btn btn-primary">faz-te sócio!</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Vitória SC -->
+            <section class="redes-sociais col-lg-12 col-md-12 col-sm-12">
+              <h1>Acompanha o Vitória SC onde estiveres!</h1>
+              <h2 class="hashtags_clubes">
+                #SomosVitória #JuntosPeloVitória
+              </h2>
+              <div class="redes-sociais__container col-lg-12 col-md-12 col-sm-12">
+                <div class="twitter-clube">
+                  <a class="twitter-timeline" data-dnt="true" data-theme="dark"
+                    href="https://twitter.com/oficialvfc?ref_src=twsrc%5Etfw">Tweets by VitóriaFC</a>
+                </div>
+
+                <div class="youtube-clube embed-responsive embed-responsive-21by9">
+                  <iframe src="https://www.youtube.com/embed/2xE1gg_vO8M" class="embed-responsive-item" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="sidebar col-lg-3 col-md-10">
+          <div class="sidebar__social-media col-lg-12 col-md-12">
+            <ul class="clube-social-media">
+              <li>
+                <img src="images/logo-vitoriasc.png" alt="Logo Vitória Sport Clube" />
+              </li>
+              <li>Segue o <strong>Vitória SC</strong> nas Redes</li>
+            </ul>
+
+            <ul class="links-social-media">
+              <li>
+                <a href="https://www.instagram.com/vitoriasc_oficial/" target="_blank" class="icon-social-media"><img
+                    src="images/svg/instagram.svg" alt="ícone instagram" /></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/vitoriasportclube" target="_blank" class="icon-social-media"><img
+                    src="images/svg/facebook.svg" alt="ícone facebook" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li><a href="#">Termos e Compromissos</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+
+        <ul class="footerList footerList__center col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li>
+            <span>Apoio ao cliente</span>
+            <a href="#">helpdesk@smartticketing.pt</a>
+          </li>
+        </ul>
+
+        <ul class="payList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <li class="logo-meowallet">
+            <img src="images/svg/meowallet-gray.svg" alt="MEO Wallet" />
+          </li>
+          <li class="logo-visa">
+            <img src="images/payment-visa-gray.png" alt="Visa" />
+          </li>
+          <li class="logo-mastercard">
+            <img src="images/payment-mastercard-gray.png" alt="Mastercard" />
+          </li>
+          <li class="logo-multibanco">
+            <img src="images/svg/multibanco-gray.svg" alt="Multibanco" />
+          </li>
+          <li class="logo-visa">
+            <img src="images/svg/mbway.svg" alt="MB Way" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape">
+      <div class="container">
+        <div class="row">
+          <ul class="footerList col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <li>
+              <span>SmartFan.Tickets</span>
+              <a href="#">contato@contato.pt</a>
+            </li>
+          </ul>
+
+          <div class="logoSmartmove col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg"
+                alt="Smartmove" /></a>
+          </div>
+
+          <ul class="socialmedia_list col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <li>
+              <a href="https://www.linkedin.com/company/smartmove---servi-os-de-mobilidade-s.a." target="_blank"
+                class="icon-socialmedia"><img src="images/linkedin.png" alt="Linkedin" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL LOGIN ================= -->
+  <div id="modalLogin" class="modal-login-container">
+    <div class="modal-content">
+      <nav class="nav_tabs">
+        <a href="# " class="closeModal"><img src="images/svg/close-popUp.svg " alt=" " /></a>
+        <ul>
+          <!-------- ENTRAR ------->
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="entrar" checked />
+            <label for="entrar" class="tab_label" checked>login</label>
+
+            <div class="tab-content">
+              <h2>Insere o teu e-mail e password e faz login!</h2>
+              <form>
+                <div class="container-input">
+                  <label for="email " class="form-label">E-mail</label>
+                  <input type="email " name="email " class="input-validate" />
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <div class="container-input">
+                  <label for="password " class="form-label">Password</label>
+                  <input type="password " name="password " />
+                  <!-- <span class="input-validate ">Obrigatório!</span> -->
+                </div>
+
+                <a href="# " class="esqueci-senha">esqueci a password</a>
+
+                <a href="# " class="btn btn__orange">
+                  <span>entrar</span>
+                </a>
+              </form>
+            </div>
+          </li>
+        </ul>
+
+        <!-- CONCLUÍDO -->
+        <div class="registo-finalizado" style="display: none">
+          <i><img src="images/svg/check-icon.svg " alt="Ícone de confirmação " /></i>
+
+          <h2>Login efetuado com sucesso!</h2>
+
+          <button class="btn btn__blue">
+            <span>continuar</span>
+          </button>
+        </div>
+
+        <!-- ERRO -->
+        <div class="registo-finalizado" style="display: none">
+          <i><img src="images/svg/error-icon.svg " alt="Ícone de erro " /></i>
+
+          <h2>
+            Os dados de login estão inválidos. Por favor, verifique os dados
+          </h2>
+
+          <button class="btn btn__orange">
+            <span>voltar</span>
+          </button>
+        </div>
+
+        <!-- WAIT -->
+        <div class="registo-finalizado" style="display: none">
+          <i class="icon-animate"><img src="images/svg/wait-icon.svg " alt=" " /></i>
+          <h2>Aguarde por favor...</h2>
+        </div>
+
+        <!-- CÓDIGO E-MAIL -->
+        <div class="registo-finalizado" style="display: none">
+          <h2 smv-langtext="codefromemailtext ">
+            Coloque o código que recebeu por email
+          </h2>
+
+          <form>
+            <div class="container-input">
+              <label for="smv_uacc_ConfirmCod ">Código</label>
+              <input id="smv_uacc_ConfirmCod " type="text " maxlength="10 " />
+            </div>
+
+            <a href="# " class="btn btn__blue">Avançar</a>
+          </form>
+        </div>
+
+        <!-- PWD REQUEST -->
+        <section class="recuperar-senha" style="display: none">
+          <form>
+            <h2 smv-langtext="userpwdreqfrase ">
+              Digite seu e-mail para recuperar a senha
+            </h2>
+
+            <div class="container-input">
+              <label for="smv_upwdreq_Email " class="form-label" smv-langtext="lblemail ">E-mail</label>
+              <input name="smv_upwdreq_Email " id="smv_upwdreq_Email "
+                onblur="javascript:smv_fieldTrim( 'smv_upwdreq_Email') " type="email "
+                smv-langplaceholder="plholderuseremail " autocapitalize="none " autocorrect="off " />
+            </div>
+
+            <button type="button " class="btn btn__blue">
+              <span>Recuperar password</span>
+            </button>
+          </form>
+        </section>
+      </nav>
+    </div>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/popUpLogin.js"></script>
+  <!--Timeline Twitter -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+
+</html>

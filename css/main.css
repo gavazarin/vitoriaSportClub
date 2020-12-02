@@ -4748,20 +4748,40 @@ header .marca img {
 }
 
 .vantagens-socio-container .sou-socio {
+  height: 35rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   align-content: center;
-  background: #212121;
-  height: 35rem;
+  position: relative;
   padding: 3rem 1.5rem;
   border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.vantagens-socio-container .sou-socio .background-vantagens {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 0;
 }
 
 .vantagens-socio-container .sou-socio h1,
 .vantagens-socio-container .sou-socio p {
-  color: #FFFFFF;
+  color: #212121;
+  z-index: 3;
+}
+
+.vantagens-socio-container .sou-socio h1 {
+  border-bottom: none;
+  position: absolute;
+  top: 3rem;
 }
 
 .vantagens-socio-container .sou-socio p {
@@ -4769,11 +4789,11 @@ header .marca img {
   font-weight: 300;
   line-height: 1.2em;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.vantagens-socio-container .sou-socio i {
-  display: inline-block;
-  width: 10rem;
+.vantagens-socio-container .sou-socio .btn-primary {
+  z-index: 3;
 }
 
 .vantagens-socio-container .vantagens {
@@ -4814,31 +4834,36 @@ header .marca img {
   width: 32%;
   height: 22rem;
   position: relative;
-  border: 2px solid #212121;
+  background-color: #000;
   border-radius: 1rem;
   padding: 3rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   align-content: center;
   overflow: hidden;
 }
 
-.vantagens-socio-container .vantagens li i {
-  width: 40%;
-  display: inline-block;
-  margin-bottom: 1.5rem;
+.vantagens-socio-container .vantagens li .background-vantagens {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
 }
 
 .vantagens-socio-container .vantagens li h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.4em;
-  color: #212121;
+  color: #ffd201;
   text-align: center;
   text-transform: initial;
+  padding: 0 .8rem;
+  z-index: 2;
 }
 
 .vantagens-socio-container .vantagens li .only-mobile {
@@ -4849,11 +4874,25 @@ header .marca img {
   .vantagens-socio-container .vantagens li {
     height: auto;
   }
+  .vantagens-socio-container .vantagens li:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 1;
+  }
   .vantagens-socio-container .vantagens li h2 {
     height: 5rem;
+    padding: 0;
   }
   .vantagens-socio-container .vantagens li .only-mobile {
     display: inline-block;
+    z-index: 5;
   }
 }
 
@@ -4861,7 +4900,7 @@ header .marca img {
   .vantagens-socio-container .vantagens li {
     width: 100%;
     margin-bottom: 1.5rem;
-    padding: 1rem;
+    padding: 3.2rem 0;
   }
   .vantagens-socio-container .vantagens li i {
     width: 40%;
@@ -4898,6 +4937,7 @@ header .marca img {
   align-content: flex-end;
   transform: translateY(100%);
   transition: all .3s ease-in-out;
+  z-index: 5;
 }
 
 @media (max-width: 992px) {
