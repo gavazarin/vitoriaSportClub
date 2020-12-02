@@ -250,6 +250,20 @@
         }
       }
 
+      .btn-wrapper {
+        text-align: center;
+
+        p {
+          font-size: 1.4rem;
+          margin: 1.2rem 0 0;
+          color: $black-01;
+
+          strong {
+            font-weight: 900;
+          }
+        }
+      }
+
       @include sm {
         margin: 1.5rem 0;
       }

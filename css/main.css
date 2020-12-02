@@ -6440,6 +6440,20 @@ header .marca img {
   }
 }
 
+.tabs_userdata .tab-content .clube__socio .btn-wrapper {
+  text-align: center;
+}
+
+.tabs_userdata .tab-content .clube__socio .btn-wrapper p {
+  font-size: 1.4rem;
+  margin: 1.2rem 0 0;
+  color: #000000;
+}
+
+.tabs_userdata .tab-content .clube__socio .btn-wrapper p strong {
+  font-weight: 900;
+}
+
 @media (max-width: 767px) {
   .tabs_userdata .tab-content .clube__socio {
     margin: 1.5rem 0;
